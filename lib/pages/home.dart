@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_hunter/pages/catalog.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -65,25 +66,6 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          // Container(
-          //   margin: EdgeInsets.all(16.0), // Adjust margin as needed
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(10.0), // Border radius of 10
-          //     border: Border.all(
-          //       color: Colors.grey, // Border color
-          //       width: 1.0, // Border width
-          //     ),
-          //   ),
-          //   child: TextField(
-          //     decoration: InputDecoration(
-          //       hintText: 'Search',
-          //       hintStyle: TextStyle(color: Colors.grey),
-          //       contentPadding: EdgeInsets.all(16.0), // Adjust padding as needed
-          //       prefixIcon: Icon(Icons.search), // Magnifying glass icon
-          //       border: InputBorder.none, // Remove the default underline
-          //     ),
-          //   ),
-          // ),
           SizedBox(
             height: 24
           ),
@@ -237,8 +219,11 @@ class _HomePageState extends State<HomePage> {
           ),
           ElevatedButton(
             onPressed: () {
-              // Add navigation to the catalog page here
-              // Navigator.push(context, MaterialPageRoute(builder: (context) => CatalogPage()));
+                Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => CatalogPage(),
+                ),
+              );
             },
             child: Text(
               'Browse Foods',

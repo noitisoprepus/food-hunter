@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Food Hunter',
-      home: HomePage()
+      home: HomePage(),
     );
   }
 }
