@@ -30,46 +30,52 @@ class CatalogPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Number of columns
-                crossAxisSpacing: 16.0, // Horizontal spacing between grid items
-                mainAxisSpacing: 16.0, // Vertical spacing between grid items
-              ),
-              itemCount: 12, // Number of grid items
-              padding: EdgeInsets.symmetric(horizontal: 8.0), // Padding around the grid
-              itemBuilder: (BuildContext context, int index) {
-                // Wrap each grid item with a ListTile
-                return ListTile(
-                  onTap: () {
-                    // Navigate to the FoodPage when item is clicked
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => FoodPage(itemIndex: index),
-                      ),
-                    );
-                  },
-                  title: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.blue, // Change to your preferred background color
-                      borderRadius: BorderRadius.circular(10.0), // Border radius of each box
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Item $index',
-                        style: TextStyle(
-                          color: Colors.white, // Text color
-                          fontSize: 18.0, // Text font size
-                        ),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
+            child: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 2,
+              children: <Widget>[
+                _buildGridItem(context, 0, 'He\'d have you all unravel at the'),
+                _buildGridItem(context, 1, 'Heed not the rabble'),
+                _buildGridItem(context, 2, 'Sound of screams but the'),
+                _buildGridItem(context, 3, 'Who scream'),
+                _buildGridItem(context, 4, 'Revolution is coming...'),
+                _buildGridItem(context, 5, 'Revolution, they...'),
+                _buildGridItem(context, 6, 'Revolution, they...'),
+                _buildGridItem(context, 7, 'Revolution, they...'),
+                _buildGridItem(context, 8, 'Revolution, they...'),
+                _buildGridItem(context, 9, 'Revolution, they...'),
+              ],
+            )
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildGridItem(BuildContext context, int index, String text) {
+    return GestureDetector(
+      onTap: () {
+        // Navigate to the FoodPage when item is clicked
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => FoodPage(itemIndex: index),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        // color: Colors.teal[100 * (index + 1)],
+        decoration: BoxDecoration(
+          color: Colors.blue, // Change to your preferred background color
+          borderRadius: BorderRadius.circular(10.0), // Border radius of each box
+        ),
+        child: Center(
+          child: Text(text),
+        ),
       ),
     );
   }
