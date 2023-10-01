@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food_hunter/pages/catalog.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -43,10 +45,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 40
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween, // Align elements at the start and end of the row
@@ -66,20 +68,20 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 24
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: SizedBox(
               height: 120,
               child: Container(
-                constraints: BoxConstraints.expand(),
+                constraints: const BoxConstraints.expand(),
                 decoration: BoxDecoration(
                   color: Colors.blue, // Change to your preferred background color
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Featured banner',
                     style: TextStyle(
@@ -91,10 +93,10 @@ class _HomePageState extends State<HomePage> {
               )
             )
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -106,11 +108,11 @@ class _HomePageState extends State<HomePage> {
                 )
               )
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding for the entire ListView
+            padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding for the entire ListView
             child: SizedBox(
               height: 120, // Adjust the height as needed
               child: ListView.builder(
@@ -129,24 +131,24 @@ class _HomePageState extends State<HomePage> {
                         child: Center(
                           child: Text(
                             seasonalFoods[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
                               color: Colors.white, // Change text color as needed
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(width: 16.0), // Add horizontal spacing between items
+                      const SizedBox(width: 16.0), // Add horizontal spacing between items
                     ],
                   );
                 },
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -158,11 +160,11 @@ class _HomePageState extends State<HomePage> {
                 )
               )
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: SizedBox(
               height: 220, // Adjust the height as needed
               child: PageView.builder(
@@ -181,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                         child: Center(
                           child: Text(
                             informationEntries[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
                               color: Colors.white, // Change text color as needed
                             ),
@@ -194,7 +196,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -204,7 +206,7 @@ class _HomePageState extends State<HomePage> {
               (index) => Container(
                 width: 12,
                 height: 12,
-                margin: EdgeInsets.symmetric(horizontal: 4),
+                margin: const EdgeInsets.symmetric(horizontal: 4),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: index == selectedInformationIndex
@@ -214,18 +216,18 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           ElevatedButton(
             onPressed: () {
                 Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => CatalogPage(),
+                  builder: (context) => const CatalogPage(),
                 ),
               );
             },
-            child: Text(
+            child: const Text(
               'Browse Foods',
               style: TextStyle(
                 fontSize: 16

@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:food_hunter/pages/food.dart';
 
 class CatalogPage extends StatelessWidget {
+  const CatalogPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Food Catalog'),
+        title: const Text('Food Catalog'),
       ),
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(16.0),
+            margin: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               border: Border.all(
@@ -19,7 +21,7 @@ class CatalogPage extends StatelessWidget {
                 width: 1.0,
               ),
             ),
-            child: TextField(
+            child: const TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
                 hintStyle: TextStyle(color: Colors.grey),
@@ -66,15 +68,18 @@ class CatalogPage extends StatelessWidget {
           ),
         );
       },
-      child: Container(
-        padding: const EdgeInsets.all(8),
-        // color: Colors.teal[100 * (index + 1)],
-        decoration: BoxDecoration(
-          color: Colors.blue, // Change to your preferred background color
-          borderRadius: BorderRadius.circular(10.0), // Border radius of each box
-        ),
-        child: Center(
-          child: Text(text),
+      child: Hero(
+        tag: 'food_item_$index',
+        child: Container(
+          padding: const EdgeInsets.all(8),
+          // color: Colors.teal[100 * (index + 1)],
+          decoration: BoxDecoration(
+            color: Colors.blue, // Change to your preferred background color
+            borderRadius: BorderRadius.circular(10.0), // Border radius of each box
+          ),
+          child: Center(
+            child: Text(text),
+          ),
         ),
       ),
     );
