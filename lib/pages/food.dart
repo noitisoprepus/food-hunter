@@ -38,6 +38,9 @@ class _FoodPageState extends State<FoodPage> {
     // Generate a dynamic title based on the itemIndex
     String itemTitle = 'Item ${widget.itemIndex}';
 
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(itemTitle), // Set the app bar title to the item name
@@ -45,7 +48,7 @@ class _FoodPageState extends State<FoodPage> {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(0.0),
             child: SizedBox(
               height: 220, // Adjust the height as needed
               child: PageView.builder(
@@ -58,10 +61,9 @@ class _FoodPageState extends State<FoodPage> {
                       Hero(
                         tag: 'food_item_${widget.itemIndex}',
                         child: Container(
-                          width: 384, // Adjust the width as needed
+                          width: screenWidth, // Adjust the width as needed
                           decoration: BoxDecoration(
-                              color: Colors.blue, // Change to your preferred background color
-                              borderRadius: BorderRadius.circular(10)),
+                              color: Colors.blue), // Change to your preferred background color
                           child: Center(
                             child: Text(
                               informationEntries[index],

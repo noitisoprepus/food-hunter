@@ -1,0 +1,79 @@
+{
+    "banana": {
+        "name": "Banana",
+        "binomial": "Musa",
+        "type": "Fruit",
+        "season": "Any",
+        "nutrients": {
+            "calories": 110,
+            "carbohydrates": 28,
+            "protein": 1,
+            "fat": 0,
+            "sugar": 15,
+            "fiber": 3,
+            "potassium": 450,
+            "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium."
+        }
+    },
+    "calamansi": {
+        "name": "Calamansi",
+        "binomial": "Citrus × microcarpa",
+        "type": "Fruit",
+        "season": "Any",
+        "nutrients": {
+            "calories": 37,
+            "carbohydrates": 27,
+            "protein": 0.8,
+            "fat": 0.1,
+            "calcium": 40,
+            "phosphorus": 22,
+            "potassium": 37,
+            "src": "https://www.fruitsinfo.com/calamansi-fruit.php"
+        }
+    },
+    "coconut": {
+        "name": "Coconut (Niyog)",
+        "binomial": "Cocos nucifera",
+        "type": "Fruit",
+        "season": "Any",
+        "nutrients": {
+            "calories": 187,
+            "carbohydrates": 7,
+            "protein": 2,
+            "fat": 16.2,
+            "sugar": 2.1,
+            "fiber": 4.6,
+            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+        }
+    },
+    "dragon_fruit": {
+        "name": "Dragon Fruit (Pitaya)",
+        "binomial": "Hylocereus undatus",
+        "type": "Fruit",
+        "season": "January",
+        "nutrients": {
+            "calories": 42.8,
+            "carbohydrates": 11.4,
+            "protein": 0.27,
+            "fat": 0.1,
+            "sugar": 7.31,
+            "fiber": 2.32,
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2344729/nutrients"
+        }
+    },
+    "tamarind": {
+        "name": "Tamarind (Sampalok)",
+        "binomial": "Tamarindus indica",
+        "type": "Fruit",
+        "season": "December",
+        "nutrients": {
+            "calories": 4.78,
+            "carbohydrates": 1.25,
+            "protein": 0.056,
+            "fat": 0.012,
+            "sugar": 0.776,
+            "fiber": 0.102,
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/167763/nutrients"
+        }
+    }
+}
