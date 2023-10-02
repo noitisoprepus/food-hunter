@@ -1,8 +1,17 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/food.dart';
 
-class CatalogPage extends StatelessWidget {
+class CatalogPage extends StatefulWidget {
   const CatalogPage({super.key});
+
+  @override
+  State<CatalogPage> createState() => _CatalogPageState();
+}
+
+class _CatalogPageState extends State<CatalogPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -83,5 +92,10 @@ class CatalogPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> readJson() async {
+      final String response = await rootBundle.loadString('assets/foods.json');
+      Map<String, dynamic> foods = jsonDecode(response);
   }
 }
