@@ -1,5 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/catalog.dart';
+import 'package:food_hunter/pages/food.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,21 +21,15 @@ class _HomePageState extends State<HomePage> {
     // Add more information entries here
   ];
 
-  final List<String> seasonalFoods = [
-    'Food A',
-    'Food B',
-    'Food C',
-    'Food D',
-    'Food E'
-  ];
+  late Map<String, dynamic> _foodsData = {};
+  late List<String> _seasonalFoods = [];
 
   final PageController _pageController = PageController();
 
   @override
   void initState() {
     super.initState();
-
-    // Listen for page changes and update selectedInformationIndex
+    _loadSeasonalFoods();
     _pageController.addListener(() {
       setState(() {
         selectedInformationIndex = _pageController.page?.round() ?? 0;
@@ -40,8 +37,30 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  Future<void> _loadSeasonalFoods() async {
+    DateTime now = DateTime.now();
+    String currMonth = getMonthString(now.month);
+
+    final String response = await rootBundle.loadString('assets/foods.json');
+    Map<String, dynamic> foodsData = jsonDecode(response);
+    setState(() {
+      _foodsData = foodsData;
+    });
+
+    foodsData.forEach((key, value) {
+      List<dynamic> seasons = value['season'];
+      if (seasons.contains(currMonth)) {
+        setState(() {
+          _seasonalFoods.add(key);
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    DateTime now = DateTime.now();
+    String currMonth = getMonthString(now.month);
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -96,13 +115,13 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(
             height: 24,
           ),
-          const Align(
+          Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
-                  'FOODS IN SEASON',
-                  style: TextStyle(
+                  'SEASONAL PRODUCE ($currMonth)',
+                  style: const TextStyle(
                     fontSize: 18,
                   ),
                 )
@@ -117,23 +136,37 @@ class _HomePageState extends State<HomePage> {
               height: 120, // Adjust the height as needed
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: seasonalFoods.length,
+                itemCount: _seasonalFoods.length,
                 itemBuilder: (BuildContext context, int index) {
                   // Add spacing between items
                   return Row(
                     children: [
-                      Container(
-                        width: 120, // Adjust the width as needed
-                        decoration: BoxDecoration(
-                          color: Colors.blue, // Change to your preferred background color
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            seasonalFoods[index],
-                            style: const TextStyle(
-                              fontSize: 18,
-                              color: Colors.white, // Change text color as needed
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FoodPage(itemKey: _seasonalFoods[index], itemData: _foodsData[_seasonalFoods[index]],),
+                            ),
+                          );
+                        },
+                        child: Hero(
+                          tag: _seasonalFoods[index],
+                          child: Container(
+                            width: 120, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              color: Colors.blue, // Change to your preferred background color
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Text(
+                                _foodsData[_seasonalFoods[index]]['name'],
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.white, // Change text color as needed
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -243,5 +276,36 @@ class _HomePageState extends State<HomePage> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
+  }
+
+  String getMonthString(int month) {
+    switch (month) {
+      case 1:
+        return 'January';
+      case 2:
+        return 'February';
+      case 3:
+        return 'March';
+      case 4:
+        return 'April';
+      case 5:
+        return 'May';
+      case 6:
+        return 'June';
+      case 7:
+        return 'July';
+      case 8:
+        return 'August';
+      case 9:
+        return 'September';
+      case 10:
+        return 'October';
+      case 11:
+        return 'November';
+      case 12:
+        return 'December';
+      default:
+        return 'Invalid Month';
+    }
   }
 }

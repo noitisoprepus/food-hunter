@@ -9,23 +9,33 @@ class CatalogPage extends StatefulWidget {
 }
 
 class _CatalogPageState extends State<CatalogPage> {
-  late Future<Map<String, dynamic>> _foodsData;
+  late Map<String, dynamic> _foodsData = {};
+  String _searchQuery = '';
 
   @override
   void initState() {
     super.initState();
-    _foodsData = _loadFoodsData();
+    _loadFoodsData();
   }
 
-  Future<Map<String, dynamic>> _loadFoodsData() async {
+  Future<void> _loadFoodsData() async {
     final String response = await rootBundle.loadString('assets/foods.json');
-    return jsonDecode(response);
+    setState(() {
+      _foodsData = jsonDecode(response);
+    });
   }
 
-  String _searchQuery = '';
+  List<String> _getFilteredFoodKeys() {
+    return _foodsData.keys
+        .where((foodName) => foodName.toLowerCase().contains(_searchQuery.toLowerCase()))
+        .toList()
+        ..sort();
+  }
 
   @override
   Widget build(BuildContext context) {
+    List<String> _foodsKeys = _getFilteredFoodKeys();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Food Catalog'),
@@ -47,7 +57,7 @@ class _CatalogPageState extends State<CatalogPage> {
                   _searchQuery = query;
                 });
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Search',
                 hintStyle: TextStyle(color: Colors.grey),
                 contentPadding: EdgeInsets.all(16.0),
@@ -57,36 +67,17 @@ class _CatalogPageState extends State<CatalogPage> {
             ),
           ),
           Expanded(
-            child: FutureBuilder<Map<String, dynamic>>(
-              future: _foodsData,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
-                } else if (snapshot.hasError) {
-                  return Center(child: Text('Error loading data: ${snapshot.error}'));
-                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return Center(child: Text('No data available.'));
-                } else {
-                  Map<String, dynamic> _foodsData = snapshot.data!;
-                  List<String> _foodsKeys = _foodsData.keys
-                      .where((foodName) => foodName.toLowerCase().contains(_searchQuery.toLowerCase()))
-                      .toList();
-
-                  return GridView.builder(
-                    padding: const EdgeInsets.all(20),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                    ),
-                    itemCount: _foodsKeys.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      final food = _foodsData[_foodsKeys[index]];
-                      final String foodName = food['name'];
-                      return _buildGridItem(context, index, foodName);
-                    },
-                  );
-                }
+            child: GridView.builder(
+              padding: const EdgeInsets.all(20),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+              ),
+              itemCount: _foodsKeys.length,
+              itemBuilder: (BuildContext context, int index) {
+                final String foodKey = _foodsKeys[index];
+                return _buildGridItem(context, index, foodKey);
               },
             ),
           ),
@@ -95,26 +86,36 @@ class _CatalogPageState extends State<CatalogPage> {
     );
   }
 
-  Widget _buildGridItem(BuildContext context, int index, String text) {
+  Widget _buildGridItem(BuildContext context, int index, String key) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FoodPage(itemIndex: index, itemName: text),
+            builder: (context) => FoodPage(itemKey: key, itemData: _foodsData[key],),
           ),
         );
       },
       child: Hero(
-        tag: text,
+        tag: key,
         child: Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Center(
-            child: Text(text),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Center(
+              child: Text(
+                _foodsData[key]['name'],
+                style: const TextStyle(
+                  fontSize: 24,
+                  color: Colors.white
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
           ),
         ),
       ),
