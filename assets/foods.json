@@ -1,0 +1,109 @@
+{
+    "banana": {
+        "name": "Banana",
+        "binomial": "Musa",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium."
+        }
+    },
+    "calamansi": {
+        "name": "Calamansi",
+        "binomial": "Citrus × microcarpa",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "37",
+            "Carbohydrates": "27g",
+            "Protein": "0.8g",
+            "Fat": "0.1g",
+            "Calcium": "40g",
+            "Phosphorus": "22g",
+            "Potassium": "37g",
+            "src": "https://www.fruitsinfo.com/calamansi-fruit.php"
+        }
+    },
+    "coconut": {
+        "name": "Coconut (Niyog)",
+        "binomial": "Cocos nucifera",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "187",
+            "Carbohydrates": "7g",
+            "Protein": "2g",
+            "Fat": "16.2g",
+            "Sugar": "2.1g",
+            "Fiber": "4.6g",
+            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+        }
+    },
+    "dragon_fruit": {
+        "name": "Dragon Fruit (Pitaya)",
+        "binomial": "Hylocereus undatus",
+        "type": "Fruit",
+        "season": ["January", "October"],
+        "nutrients": {
+            "Calories": "42.8",
+            "Carbohydrates": "11.4g",
+            "Protein": "0.27g",
+            "Fat": "0.1g",
+            "Sugar": "7.31g",
+            "Fiber": "2.32g",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2344729/nutrients"
+        }
+    },
+    "tamarind": {
+        "name": "Tamarind (Sampalok)",
+        "binomial": "Tamarindus indica",
+        "type": "Fruit",
+        "season": ["December"],
+        "nutrients": {
+            "Calories": "4.78",
+            "Carbohydrates": "1.25g",
+            "Protein": "0.056g",
+            "Fat": "0.012g",
+            "Sugar": "0.776g",
+            "Fiber": "0.102g",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/167763/nutrients"
+        }
+    },
+    "cashew": {
+        "name": "Cashew (Kasoy)",
+        "binomial": "Anacardium occidentale",
+        "type": "Fruit",
+        "season": ["February"],
+        "nutrients": {
+            "Calories": "53",
+            "Moisture": "86.3g",
+            "Carbohydrates": "11.1g",
+            "Fiber": "3.2g",
+            "Phosphorus": "67mg",
+            "Potassium": "124mg",
+            "src": "https://www.fruitsinfo.com/cashew-apple-fruit.php"
+        }
+    },
+    "canistel": {
+        "name": "Canistel (Tiesa)",
+        "binomial": "Pouteria campechiana",
+        "type": "Fruit",
+        "season": ["October"],
+        "nutrients": {
+            "Calories": "140",
+            "Protein": "1.7g",
+            "Fat": "0.1g",
+            "Carbohydrates": "37g",
+            "Vitamin C": "58mg",
+            "Phosphorus": "37mg",
+            "src": "https://www.fruitsinfo.com/Canistel-Exotic-fruits.php#health"
+        }
+    }
+}
