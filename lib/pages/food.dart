@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FoodPage extends StatefulWidget {
-  final int itemIndex; // Define the itemIndex
+  final int itemIndex;
+  final String itemName;
 
-  const FoodPage({Key? key, required this.itemIndex}) : super(key: key); // Update constructor
+  const FoodPage({Key? key, required this.itemIndex, required this.itemName}) : super(key: key); // Update constructor
 
   @override
   _FoodPageState createState() => _FoodPageState();
@@ -36,14 +37,13 @@ class _FoodPageState extends State<FoodPage> {
   @override
   Widget build(BuildContext context) {
     // Generate a dynamic title based on the itemIndex
-    String itemTitle = 'Item ${widget.itemIndex}';
-
+    String itemTitle = widget.itemName;
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(itemTitle), // Set the app bar title to the item name
+        title: Text('Food Data'), // Set the app bar title to the item name
       ),
       body: Column(
         children: <Widget>[
@@ -59,10 +59,10 @@ class _FoodPageState extends State<FoodPage> {
                   return Row(
                     children: [
                       Hero(
-                        tag: 'food_item_${widget.itemIndex}',
+                        tag: widget.itemName,
                         child: Container(
                           width: screenWidth, // Adjust the width as needed
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Colors.blue), // Change to your preferred background color
                           child: Center(
                             child: Text(

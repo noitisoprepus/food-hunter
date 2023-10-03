@@ -1,17 +1,28 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/food.dart';
 
 class CatalogPage extends StatefulWidget {
-  const CatalogPage({super.key});
-
   @override
-  State<CatalogPage> createState() => _CatalogPageState();
+  _CatalogPageState createState() => _CatalogPageState();
 }
 
 class _CatalogPageState extends State<CatalogPage> {
+  late Future<Map<String, dynamic>> _foodsData;
+
+  @override
+  void initState() {
+    super.initState();
+    _foodsData = _loadFoodsData();
+  }
+
+  Future<Map<String, dynamic>> _loadFoodsData() async {
+    final String response = await rootBundle.loadString('assets/foods.json');
+    return jsonDecode(response);
+  }
+
+  String _searchQuery = '';
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +41,12 @@ class _CatalogPageState extends State<CatalogPage> {
                 width: 1.0,
               ),
             ),
-            child: const TextField(
+            child: TextField(
+              onChanged: (query) {
+                setState(() {
+                  _searchQuery = query;
+                });
+              },
               decoration: InputDecoration(
                 hintText: 'Search',
                 hintStyle: TextStyle(color: Colors.grey),
@@ -41,25 +57,38 @@ class _CatalogPageState extends State<CatalogPage> {
             ),
           ),
           Expanded(
-            child: GridView.count(
-              primary: false,
-              padding: const EdgeInsets.all(20),
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              crossAxisCount: 2,
-              children: <Widget>[
-                _buildGridItem(context, 0, 'He\'d have you all unravel at the'),
-                _buildGridItem(context, 1, 'Heed not the rabble'),
-                _buildGridItem(context, 2, 'Sound of screams but the'),
-                _buildGridItem(context, 3, 'Who scream'),
-                _buildGridItem(context, 4, 'Revolution is coming...'),
-                _buildGridItem(context, 5, 'Revolution, they...'),
-                _buildGridItem(context, 6, 'Revolution, they...'),
-                _buildGridItem(context, 7, 'Revolution, they...'),
-                _buildGridItem(context, 8, 'Revolution, they...'),
-                _buildGridItem(context, 9, 'Revolution, they...'),
-              ],
-            )
+            child: FutureBuilder<Map<String, dynamic>>(
+              future: _foodsData,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error loading data: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return Center(child: Text('No data available.'));
+                } else {
+                  Map<String, dynamic> _foodsData = snapshot.data!;
+                  List<String> _foodsKeys = _foodsData.keys
+                      .where((foodName) => foodName.toLowerCase().contains(_searchQuery.toLowerCase()))
+                      .toList();
+
+                  return GridView.builder(
+                    padding: const EdgeInsets.all(20),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                    ),
+                    itemCount: _foodsKeys.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      final food = _foodsData[_foodsKeys[index]];
+                      final String foodName = food['name'];
+                      return _buildGridItem(context, index, foodName);
+                    },
+                  );
+                }
+              },
+            ),
           ),
         ],
       ),
@@ -69,22 +98,20 @@ class _CatalogPageState extends State<CatalogPage> {
   Widget _buildGridItem(BuildContext context, int index, String text) {
     return GestureDetector(
       onTap: () {
-        // Navigate to the FoodPage when item is clicked
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FoodPage(itemIndex: index),
+            builder: (context) => FoodPage(itemIndex: index, itemName: text),
           ),
         );
       },
       child: Hero(
-        tag: 'food_item_$index',
+        tag: text,
         child: Container(
           padding: const EdgeInsets.all(8),
-          // color: Colors.teal[100 * (index + 1)],
           decoration: BoxDecoration(
-            color: Colors.blue, // Change to your preferred background color
-            borderRadius: BorderRadius.circular(10.0), // Border radius of each box
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(10.0),
           ),
           child: Center(
             child: Text(text),
@@ -92,10 +119,5 @@ class _CatalogPageState extends State<CatalogPage> {
         ),
       ),
     );
-  }
-
-  Future<void> readJson() async {
-      final String response = await rootBundle.loadString('assets/foods.json');
-      Map<String, dynamic> foods = jsonDecode(response);
   }
 }
