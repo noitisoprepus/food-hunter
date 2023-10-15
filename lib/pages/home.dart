@@ -14,15 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int selectedInformationIndex = 0;
 
-  final List<String> informationEntries = [
-    'Food preservation info 1',
-    'Food preservation info 2',
-    'Food preservation info 3',
-    // Add more information entries here
-  ];
-
   late Map<String, dynamic> _foodsData = {};
-  late final List<String> _seasonalFoods = [];
+  late List<String> _seasonalFoods = [];
+  late List<String> _preservationInfo = [];
 
   final PageController _pageController = PageController();
 
@@ -30,6 +24,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     _loadSeasonalFoods();
+    _loadPreservationInfo();
     _pageController.addListener(() {
       setState(() {
         selectedInformationIndex = _pageController.page?.round() ?? 0;
@@ -42,18 +37,26 @@ class _HomePageState extends State<HomePage> {
     String currMonth = getMonthString(now.month);
 
     final String response = await rootBundle.loadString('assets/foods.json');
-    Map<String, dynamic> foodsData = jsonDecode(response);
+    Map<String, dynamic> foodsDataMap = jsonDecode(response);
     setState(() {
-      _foodsData = foodsData;
+      _foodsData = foodsDataMap;
     });
 
-    foodsData.forEach((key, value) {
+    foodsDataMap.forEach((key, value) {
       List<dynamic> seasons = value['season'];
       if (seasons.contains(currMonth)) {
         setState(() {
           _seasonalFoods.add(key);
         });
       }
+    });
+  }
+
+  Future<void> _loadPreservationInfo() async {
+    final String response = await rootBundle.loadString('assets/preservation.json');
+    Map<String, dynamic> preservationInfoMap = jsonDecode(response);
+    setState(() {
+      _preservationInfo = List<String>.from(preservationInfoMap['homeInfo']);
     });
   }
 
@@ -71,16 +74,13 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'FOOD HUNTER',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Image(
+                    image: AssetImage('assets/pics/logo/banner-logo.png'),
+                    height: 32,
                   ),
                   Icon(
-                    Icons.settings,
-                    color: Colors.black,
+                    Icons.info,
+                    color: Colors.blue,
                     size: 24.0,
                   ),
                 ],
@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
               child: PageView.builder(
                 controller: _pageController,
                 scrollDirection: Axis.horizontal,
-                itemCount: informationEntries.length,
+                itemCount: _preservationInfo.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Row(
                     children: [
@@ -214,7 +214,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: Center(
                             child: Text(
-                              informationEntries[index],
+                              _preservationInfo[index],
                               style: const TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
@@ -234,7 +234,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                informationEntries.length,
+                _preservationInfo.length,
                 (index) => Container(
                   width: 12,
                   height: 12,
