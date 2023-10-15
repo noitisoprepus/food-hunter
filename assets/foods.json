@@ -13,6 +13,26 @@
             "Fiber": "3g",
             "Potassium": "450g",
             "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium."
+        },
+        "preservation": {
+            "Freezing": {
+                "description": "blah blah blah",
+                "process": [
+                    "Line a baking sheet with parchment paper.",
+                    "Slice the banana.",
+                    "Set the sliced bananas on the baking sheet evenly, without letting them touch."
+                ],
+                "src": "somewhere"
+            },
+            "Solar Drying": {
+                "description": "blah blah blah",
+                "process": [
+                    "Line a baking sheet with parchment paper.",
+                    "Slice the banana.",
+                    "Set the sliced bananas on the baking sheet evenly, without letting them touch."
+                ],
+                "src": "somewhere"
+            }
         }
     },
     "calamansi": {

@@ -1,6 +1,5 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:food_hunter/pages/preservation.dart';
 
 class FoodPage extends StatefulWidget {
   final String itemKey;
@@ -43,170 +42,183 @@ class _FoodPageState extends State<FoodPage> {
     nutrients.remove('src');
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Food Data'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(0.0),
-              child: SizedBox(
-                height: 220,
-                child: PageView.builder(
-                  controller: _pageController,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(0.0),
+                child: SizedBox(
+                  height: 220,
+                  child: PageView.builder(
+                    controller: _pageController,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: informationEntries.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Row(
+                        children: [
+                          Hero(
+                            tag: widget.itemKey,
+                            child: Container(
+                              width: screenWidth,
+                              decoration: const BoxDecoration(
+                                  color: Colors.blue),
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: Text(
+                                    informationEntries[index],
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['name'],
+                    style: const TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                    )
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['binomial'],
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    )
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                    'PRESERVATION METHODS',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),
+                  )
+                )
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 160,
+                child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: informationEntries.length,
+                  itemCount: 5,
                   itemBuilder: (BuildContext context, int index) {
+      
+                    bool isFirst = index == 0;
+                    bool isLast = index == 4; // Change accordingly
+      
                     return Row(
                       children: [
-                        Hero(
-                          tag: widget.itemKey,
-                          child: Container(
-                            width: screenWidth,
-                            decoration: const BoxDecoration(
-                                color: Colors.blue),
-                            child: Material(
-                              type: MaterialType.transparency,
+                        SizedBox(width: isFirst ? 16.0 : 8.0),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PreservationPage(itemKey: widget.itemKey, itemData: widget.itemData),
+                              ),
+                            );
+                          },
+                          child: Hero(
+                            tag: 'method$index',
+                            child: Container(
+                              width: 120,
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
                               child: Center(
                                 child: Text(
-                                  informationEntries[index],
+                                  'Method $index',
                                   style: const TextStyle(
                                     fontSize: 18,
-                                    color: Colors.white, // Change text color as needed
+                                    color: Colors.white,
                                   ),
                                 ),
                               ),
                             ),
                           ),
                         ),
+                        SizedBox(width: isLast ? 16.0 : 8.0),
                       ],
                     );
                   },
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Align(
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  foodData['name'],
-                  style: const TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
+                    'HEALTH BENEFITS',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),
                   )
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  foodData['binomial'],
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
-                  )
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'PRESERVATION METHODS',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                  ),
                 )
-              )
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding for the entire ListView
-              child: SizedBox(
-                height: 160, // Adjust the height as needed
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  itemBuilder: (BuildContext context, int index) {
-                    // Add spacing between items
-                    return Row(
-                      children: [
-                        Container(
-                          width: 120, // Adjust the width as needed
-                          decoration: BoxDecoration(
-                            color: Colors.blue, // Change to your preferred background color
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Method $index',
-                              style: const TextStyle(
-                                fontSize: 18,
-                                color: Colors.white, // Change text color as needed
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 16.0), // Add horizontal spacing between items
-                      ],
-                    );
-                  },
-                ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'HEALTH BENEFITS',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: DataTable(
+                    columns: const [
+                      DataColumn(label: Text('Nutrient')),
+                      DataColumn(label: Text('Amount')),
+                    ],
+                    rows: [
+                      for (var nutrientEntry in nutrients.entries)
+                        buildDataRow(nutrientEntry.key, nutrientEntry.value.toString()),
+                    ],
                   ),
-                )
-              )
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: DataTable(
-                  columns: const [
-                    DataColumn(label: Text('Nutrient')),
-                    DataColumn(label: Text('Amount')),
-                  ],
-                  rows: [
-                    for (var nutrientEntry in nutrients.entries)
-                      buildDataRow(nutrientEntry.key, nutrientEntry.value.toString()),
-                  ],
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+            ],
+          ),
         ),
       ),
     );

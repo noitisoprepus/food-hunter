@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/food.dart';
 
 class CatalogPage extends StatefulWidget {
+  const CatalogPage({super.key});
+
   @override
   _CatalogPageState createState() => _CatalogPageState();
 }
@@ -34,54 +36,56 @@ class _CatalogPageState extends State<CatalogPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> _foodsKeys = _getFilteredFoodKeys();
+    List<String> foodsKeys = _getFilteredFoodKeys();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Food Catalog'),
-      ),
-      body: Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.all(16.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              border: Border.all(
-                color: Colors.grey,
-                width: 1.0,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Material(
+              elevation: 10,
+              child: Container(
+                margin: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(
+                    color: Colors.grey,
+                    width: 1.0,
+                  ),
+                ),
+                child: TextField(
+                  onChanged: (query) {
+                    setState(() {
+                      _searchQuery = query;
+                    });
+                  },
+                  decoration: const InputDecoration(
+                    hintText: 'Search',
+                    hintStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.all(16.0),
+                    prefixIcon: Icon(Icons.search),
+                    border: InputBorder.none,
+                  ),
+                ),
               ),
             ),
-            child: TextField(
-              onChanged: (query) {
-                setState(() {
-                  _searchQuery = query;
-                });
-              },
-              decoration: const InputDecoration(
-                hintText: 'Search',
-                hintStyle: TextStyle(color: Colors.grey),
-                contentPadding: EdgeInsets.all(16.0),
-                prefixIcon: Icon(Icons.search),
-                border: InputBorder.none,
+            Expanded(
+              child: GridView.builder(
+                padding: const EdgeInsets.all(20),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                itemCount: foodsKeys.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final String foodKey = foodsKeys[index];
+                  return _buildGridItem(context, index, foodKey);
+                },
               ),
             ),
-          ),
-          Expanded(
-            child: GridView.builder(
-              padding: const EdgeInsets.all(20),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-              ),
-              itemCount: _foodsKeys.length,
-              itemBuilder: (BuildContext context, int index) {
-                final String foodKey = _foodsKeys[index];
-                return _buildGridItem(context, index, foodKey);
-              },
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

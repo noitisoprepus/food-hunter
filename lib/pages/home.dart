@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int selectedInformationIndex = 0; // Track the currently selected information entry
+  int selectedInformationIndex = 0;
 
   final List<String> informationEntries = [
     'Food preservation info 1',
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   late Map<String, dynamic> _foodsData = {};
-  late List<String> _seasonalFoods = [];
+  late final List<String> _seasonalFoods = [];
 
   final PageController _pageController = PageController();
 
@@ -59,88 +59,88 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     DateTime now = DateTime.now();
     String currMonth = getMonthString(now.month);
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          const SizedBox(
-            height: 40
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween, // Align elements at the start and end of the row
-              children: [
-                Text(
-                  'FOOD HUNTER', // Replace with your desired title text
-                  style: TextStyle(
-                    fontSize: 24, // Adjust the font size as needed
-                    fontWeight: FontWeight.bold, // Adjust the font weight as needed
-                  ),
-                ),
-                Icon(
-                  Icons.settings,
-                  color: Colors.black,
-                  size: 24.0, // Adjust the icon size as needed
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 24
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: SizedBox(
-              height: 120,
-              child: Container(
-                constraints: const BoxConstraints.expand(),
-                decoration: BoxDecoration(
-                  color: Colors.blue, // Change to your preferred background color
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Featured banner',
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'FOOD HUNTER',
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white, // Change text color as needed
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(
+                    Icons.settings,
+                    color: Colors.black,
+                    size: 24.0,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 8
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: SizedBox(
+                height: 120,
+                child: Container(
+                  constraints: const BoxConstraints.expand(),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Featured banner',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      )
                     )
                   )
                 )
               )
-            )
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'SEASONAL PRODUCE ($currMonth)',
-                  style: const TextStyle(
-                    fontSize: 18,
-                  ),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                    'SEASONAL PRODUCE ($currMonth)',
+                    style: const TextStyle(
+                      fontSize: 18,
+                    ),
+                  )
                 )
-              )
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding for the entire ListView
-            child: SizedBox(
-              height: 120, // Adjust the height as needed
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              height: 120,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: _seasonalFoods.length,
                 itemBuilder: (BuildContext context, int index) {
-                  // Add spacing between items
+                  bool isFirst = index == 0;
+                  bool isLast = index == (_seasonalFoods.length - 1);
+      
                   return Row(
                     children: [
+                      SizedBox(width: isFirst ? 16.0 : 8.0),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -153,9 +153,9 @@ class _HomePageState extends State<HomePage> {
                         child: Hero(
                           tag: _seasonalFoods[index],
                           child: Container(
-                            width: 120, // Adjust the width as needed
+                            width: 120,
                             decoration: BoxDecoration(
-                              color: Colors.blue, // Change to your preferred background color
+                              color: Colors.blue,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Center(
@@ -164,42 +164,39 @@ class _HomePageState extends State<HomePage> {
                                 textAlign: TextAlign.center,
                                 style: const TextStyle(
                                   fontSize: 18,
-                                  color: Colors.white, // Change text color as needed
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 16.0), // Add horizontal spacing between items
+                      SizedBox(width: isLast ? 16.0 : 8.0),
                     ],
                   );
                 },
               ),
             ),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'WHY PRESERVE FOOD?',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                    'WHY PRESERVE FOOD?',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  )
                 )
-              )
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: SizedBox(
-              height: 220, // Adjust the height as needed
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              height: 220,
               child: PageView.builder(
                 controller: _pageController,
                 scrollDirection: Axis.horizontal,
@@ -207,67 +204,70 @@ class _HomePageState extends State<HomePage> {
                 itemBuilder: (BuildContext context, int index) {
                   return Row(
                     children: [
-                      Container(
-                        width: 355, // Adjust the width as needed
-                        decoration: BoxDecoration(
-                          color: Colors.blue, // Change to your preferred background color
-                          borderRadius: BorderRadius.circular(10)
-                        ),
-                        child: Center(
-                          child: Text(
-                            informationEntries[index],
-                            style: const TextStyle(
-                              fontSize: 18,
-                              color: Colors.white, // Change text color as needed
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Container(
+                          width: screenWidth - 32,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: Center(
+                            child: Text(
+                              informationEntries[index],
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
-                      ),
+                      )
                     ]
                   );
                 },
               ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              informationEntries.length,
-              (index) => Container(
-                width: 12,
-                height: 12,
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: index == selectedInformationIndex
-                      ? Colors.red // Highlight the selected circle
-                      : Colors.grey, // Default color for other circles
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                informationEntries.length,
+                (index) => Container(
+                  width: 12,
+                  height: 12,
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: index == selectedInformationIndex
+                        ? Colors.red
+                        : Colors.grey,
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          ElevatedButton(
-            onPressed: () {
-                Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => CatalogPage(),
+            const SizedBox(
+              height: 12,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                  Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CatalogPage(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Browse Foods',
+                style: TextStyle(
+                  fontSize: 16
                 ),
-              );
-            },
-            child: const Text(
-              'Browse Foods',
-              style: TextStyle(
-                fontSize: 16
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
