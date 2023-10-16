@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/catalog.dart';
 import 'package:food_hunter/pages/food.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -64,24 +65,32 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     DateTime now = DateTime.now();
     String currMonth = getMonthString(now.month);
+
+    ColorFilter darkenFilter = ColorFilter.mode(
+      Colors.black.withOpacity(0.4),
+      BlendMode.srcOver,
+    );
+    
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            const Padding(
-              padding: EdgeInsets.all(16.0),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/pics/logo/banner-logo.png'),
                     height: 32,
                   ),
                   Icon(
                     Icons.info,
-                    color: FHColorScheme.primaryColor,
+                    color: Colors.blue[600],
                     size: 24.0,
                   ),
                 ],
@@ -93,22 +102,46 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SizedBox(
-                height: 120,
-                child: Container(
-                  constraints: const BoxConstraints.expand(),
-                  decoration: BoxDecoration(
-                    color: FHColorScheme.primaryColor,
-                    borderRadius: BorderRadius.circular(10),
+                height: screenHeight * 0.15,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CatalogPage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    constraints: const BoxConstraints.expand(),
+                    decoration: BoxDecoration(
+                      color: FHColorScheme.primaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: <Widget>[
+                        ColorFiltered(
+                          colorFilter: darkenFilter,
+                          child: const Image(
+                            image: AssetImage('assets/pics/preservation/market_0.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            'BROWSE FOODS',
+                            style: GoogleFonts.hindSiliguri(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Featured banner',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      )
-                    )
-                  )
                 )
               )
             ),
@@ -122,7 +155,9 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                     'SEASONAL PRODUCE ($currMonth)',
                     style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.primaryColor
                     ),
                   )
                 )
@@ -131,7 +166,7 @@ class _HomePageState extends State<HomePage> {
               height: 10,
             ),
             SizedBox(
-              height: 120,
+              height: 150,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: _seasonalFoods.length,
@@ -154,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                         child: Hero(
                           tag: _seasonalFoods[index],
                           child: Container(
-                            width: 120,
+                            width: 150,
                             decoration: BoxDecoration(
                               color: FHColorScheme.primaryColor,
                               borderRadius: BorderRadius.circular(10),
@@ -188,7 +223,9 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                     'WHY PRESERVE FOOD?',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.primaryColor
                     ),
                   )
                 )
@@ -197,7 +234,7 @@ class _HomePageState extends State<HomePage> {
               height: 10,
             ),
             SizedBox(
-              height: 220,
+              height: screenHeight * 0.325,
               child: PageView.builder(
                 controller: _pageController,
                 scrollDirection: Axis.horizontal,
@@ -246,24 +283,6 @@ class _HomePageState extends State<HomePage> {
                         ? FHColorScheme.primaryColor
                         : Colors.grey[400],
                   ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                  Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const CatalogPage(),
-                  ),
-                );
-              },
-              child: const Text(
-                'Browse Foods',
-                style: TextStyle(
-                  fontSize: 16
                 ),
               ),
             ),
