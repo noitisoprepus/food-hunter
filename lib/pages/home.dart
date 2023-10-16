@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_hunter/pages/catalog.dart';
 import 'package:food_hunter/pages/food.dart';
+import 'package:food_hunter/themes/color_scheme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   int selectedInformationIndex = 0;
 
   late Map<String, dynamic> _foodsData = {};
-  late List<String> _seasonalFoods = [];
+  late final List<String> _seasonalFoods = [];
   late List<String> _preservationInfo = [];
 
   final PageController _pageController = PageController();
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Icon(
                     Icons.info,
-                    color: Colors.blue,
+                    color: FHColorScheme.primaryColor,
                     size: 24.0,
                   ),
                 ],
@@ -96,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   constraints: const BoxConstraints.expand(),
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: FHColorScheme.primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
@@ -155,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                           child: Container(
                             width: 120,
                             decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: FHColorScheme.primaryColor,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Center(
@@ -209,7 +210,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           width: screenWidth - 32,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: FHColorScheme.primaryColor,
                             borderRadius: BorderRadius.circular(10)
                           ),
                           child: Center(
@@ -242,8 +243,8 @@ class _HomePageState extends State<HomePage> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: index == selectedInformationIndex
-                        ? Colors.red
-                        : Colors.grey,
+                        ? FHColorScheme.primaryColor
+                        : Colors.grey[400],
                   ),
                 ),
               ),
