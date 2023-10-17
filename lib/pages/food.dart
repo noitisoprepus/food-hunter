@@ -12,13 +12,6 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  final List<String> informationEntries = [
-    'Picture 1',
-    'Picture 2',
-    'Picture 3',
-    // Add more information entries here
-  ];
-
   int selectedInformationIndex = 0;
   late PageController _pageController;
 
@@ -40,6 +33,7 @@ class _FoodPageState extends State<FoodPage> {
     Map<String, dynamic> foodData = widget.itemData;
     Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
     nutrients.remove('src');
+    String key = widget.itemKey;
 
     return Scaffold(
       body: SafeArea(
@@ -50,36 +44,16 @@ class _FoodPageState extends State<FoodPage> {
                 padding: const EdgeInsets.all(0.0),
                 child: SizedBox(
                   height: 220,
-                  child: PageView.builder(
-                    controller: _pageController,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: informationEntries.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Row(
-                        children: [
-                          Hero(
-                            tag: widget.itemKey,
-                            child: Container(
-                              width: screenWidth,
-                              decoration: const BoxDecoration(
-                                  color: Colors.blue),
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Center(
-                                  child: Text(
-                                    informationEntries[index],
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    },
+                  child: Hero(
+                    tag: key,
+                    child: Material(
+                      elevation: 10,
+                      child: Image(
+                        image: AssetImage('assets/pics/foods/$key.webp'),
+                        width: screenWidth,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -149,7 +123,7 @@ class _FoodPageState extends State<FoodPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => PreservationPage(itemKey: widget.itemKey, itemData: widget.itemData),
+                                builder: (context) => PreservationPage(itemKey: key, itemData: widget.itemData),
                               ),
                             );
                           },

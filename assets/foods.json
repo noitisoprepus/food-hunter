@@ -1,6 +1,7 @@
 {
     "banana": {
-        "name": "Banana",
+        "name": "Banana (Saging)",
+        "iconName": "Banana",
         "binomial": "Musa",
         "type": "Fruit",
         "season": [],
@@ -37,6 +38,7 @@
     },
     "calamansi": {
         "name": "Calamansi",
+        "iconName": "Calamansi",
         "binomial": "Citrus × microcarpa",
         "type": "Fruit",
         "season": [],
@@ -53,6 +55,7 @@
     },
     "coconut": {
         "name": "Coconut (Niyog)",
+        "iconName": "Coconut",
         "binomial": "Cocos nucifera",
         "type": "Fruit",
         "season": [],
@@ -68,6 +71,7 @@
     },
     "dragon_fruit": {
         "name": "Dragon Fruit (Pitaya)",
+        "iconName": "Dragon Fruit",
         "binomial": "Hylocereus undatus",
         "type": "Fruit",
         "season": ["January", "October"],
@@ -83,6 +87,7 @@
     },
     "tamarind": {
         "name": "Tamarind (Sampalok)",
+        "iconName": "Tamarind",
         "binomial": "Tamarindus indica",
         "type": "Fruit",
         "season": ["December"],
@@ -98,6 +103,7 @@
     },
     "cashew": {
         "name": "Cashew (Kasoy)",
+        "iconName": "Cashew",
         "binomial": "Anacardium occidentale",
         "type": "Fruit",
         "season": ["February"],
@@ -113,6 +119,7 @@
     },
     "canistel": {
         "name": "Canistel (Tiesa)",
+        "iconName": "Canistel",
         "binomial": "Pouteria campechiana",
         "type": "Fruit",
         "season": ["October"],

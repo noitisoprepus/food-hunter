@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/catalog.dart';
 import 'package:food_hunter/pages/food.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
@@ -17,8 +18,9 @@ class _HomePageState extends State<HomePage> {
   int selectedInformationIndex = 0;
 
   late Map<String, dynamic> _foodsData = {};
+  late Map<String, dynamic> _preservationData = {};
   late final List<String> _seasonalFoods = [];
-  late List<String> _preservationInfo = [];
+  late List<String> _preservationDataKeys = [];
 
   final PageController _pageController = PageController();
 
@@ -58,7 +60,8 @@ class _HomePageState extends State<HomePage> {
     final String response = await rootBundle.loadString('assets/preservation.json');
     Map<String, dynamic> preservationInfoMap = jsonDecode(response);
     setState(() {
-      _preservationInfo = List<String>.from(preservationInfoMap['homeInfo']);
+      _preservationData = preservationInfoMap['homeInfo'];
+      _preservationDataKeys = _preservationData.keys.toList();
     });
   }
 
@@ -69,35 +72,27 @@ class _HomePageState extends State<HomePage> {
 
     DateTime now = DateTime.now();
     String currMonth = getMonthString(now.month);
-
-    ColorFilter darkenFilter = ColorFilter.mode(
-      Colors.black.withOpacity(0.4),
-      BlendMode.srcOver,
-    );
     
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 10.0, bottom: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Image(
                     image: AssetImage('assets/pics/logo/banner-logo.png'),
-                    height: 32,
+                    height: 36,
                   ),
                   Icon(
                     Icons.info,
                     color: Colors.blue[600],
-                    size: 24.0,
+                    size: 28.0,
                   ),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 8
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -113,7 +108,6 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                   child: Container(
-                    constraints: const BoxConstraints.expand(),
                     decoration: BoxDecoration(
                       color: FHColorScheme.primaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -123,10 +117,22 @@ class _HomePageState extends State<HomePage> {
                       fit: StackFit.expand,
                       children: <Widget>[
                         ColorFiltered(
-                          colorFilter: darkenFilter,
+                          colorFilter: Helper.darkenFilter,
                           child: const Image(
                             image: AssetImage('assets/pics/preservation/market_0.jpg'),
                             fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.0),
+                                Colors.black.withOpacity(0.4),
+                              ],
+                            ),
                           ),
                         ),
                         Center(
@@ -135,7 +141,14 @@ class _HomePageState extends State<HomePage> {
                             style: GoogleFonts.hindSiliguri(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: Colors.grey[100],
+                              shadows: [
+                                Shadow(
+                                  color: Helper.textShadowCol,
+                                  offset: Helper.textShadowOffset,
+                                  blurRadius: 5,
+                                )
+                              ]
                             )
                           ),
                         ),
@@ -153,7 +166,7 @@ class _HomePageState extends State<HomePage> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                    'SEASONAL PRODUCE ($currMonth)',
+                    'SEASONAL PRODUCE (${currMonth.toUpperCase()})',
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -186,24 +199,62 @@ class _HomePageState extends State<HomePage> {
                             ),
                           );
                         },
-                        child: Hero(
-                          tag: _seasonalFoods[index],
-                          child: Container(
-                            width: 150,
-                            decoration: BoxDecoration(
-                              color: FHColorScheme.primaryColor,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Center(
-                              child: Text(
-                                _foodsData[_seasonalFoods[index]]['name'],
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
+                        child: Container(
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: FHColorScheme.primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              ColorFiltered(
+                                colorFilter: Helper.darkenFilter,
+                                child: Image(
+                                  image: AssetImage('assets/pics/foods/${_seasonalFoods[index]}.webp'),
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            ),
+                              Container(
+                                width: 150,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.center,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.black.withOpacity(0.0),
+                                      Colors.black.withOpacity(0.7),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Material(
+                                    type: MaterialType.transparency,
+                                    child: Text(
+                                      _foodsData[_seasonalFoods[index]]['iconName'],
+                                      style: GoogleFonts.hindSiliguri(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey[100],
+                                        height: 1,
+                                        shadows: [
+                                          Shadow(
+                                            color: Helper.textShadowCol,
+                                            offset: Helper.textShadowOffset,
+                                            blurRadius: Helper.textShadowBlurRadius
+                                          )
+                                        ]
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ]
                           ),
                         ),
                       ),
@@ -238,8 +289,12 @@ class _HomePageState extends State<HomePage> {
               child: PageView.builder(
                 controller: _pageController,
                 scrollDirection: Axis.horizontal,
-                itemCount: _preservationInfo.length,
+                itemCount: _preservationData.length,
                 itemBuilder: (BuildContext context, int index) {
+                  String imgPath = _preservationData[_preservationDataKeys[index]]['img'];
+                  String infoText = _preservationData[_preservationDataKeys[index]]['info'];
+                  String descrText = _preservationData[_preservationDataKeys[index]]['description'];
+
                   return Row(
                     children: [
                       Padding(
@@ -250,14 +305,71 @@ class _HomePageState extends State<HomePage> {
                             color: FHColorScheme.primaryColor,
                             borderRadius: BorderRadius.circular(10)
                           ),
-                          child: Center(
-                            child: Text(
-                              _preservationInfo[index],
-                              style: const TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
+                          clipBehavior: Clip.antiAlias,
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: <Widget>[
+                              ColorFiltered(
+                                colorFilter: Helper.darkenFilter,
+                                child: Image(
+                                  image: AssetImage(imgPath),
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
+                              Container(
+                                width: screenWidth - 32,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.center,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.black.withOpacity(0.0),
+                                      Colors.black.withOpacity(0.95),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      infoText,
+                                      style: GoogleFonts.hindSiliguri(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey[100],
+                                        shadows: [
+                                          Shadow(
+                                            color: Helper.textShadowCol,
+                                            offset: Helper.textShadowOffset,
+                                            blurRadius: Helper.textShadowBlurRadius
+                                          )
+                                        ]
+                                      ),
+                                    ),
+                                    Text(
+                                      descrText,
+                                      style: GoogleFonts.hindSiliguri(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.2,
+                                        color: Colors.grey[200],
+                                        shadows: [
+                                          Shadow(
+                                            color: Helper.textShadowCol,
+                                            offset: Helper.textShadowOffset,
+                                            blurRadius: Helper.textShadowBlurRadius
+                                          )
+                                        ]
+                                      ),
+                                    ),
+                                  ]
+                                ),
+                              ),
+                            ]
                           ),
                         ),
                       )
@@ -272,7 +384,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
-                _preservationInfo.length,
+                _preservationData.length,
                 (index) => Container(
                   width: 12,
                   height: 12,

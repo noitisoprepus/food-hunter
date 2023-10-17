@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/food.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CatalogPage extends StatefulWidget {
   const CatalogPage({super.key});
@@ -12,6 +14,7 @@ class CatalogPage extends StatefulWidget {
 
 class _CatalogPageState extends State<CatalogPage> {
   late Map<String, dynamic> _foodsData = {};
+  late List<String> _foodsDataKeys = [];
   String _searchQuery = '';
 
   @override
@@ -24,6 +27,7 @@ class _CatalogPageState extends State<CatalogPage> {
     final String response = await rootBundle.loadString('assets/foods.json');
     setState(() {
       _foodsData = jsonDecode(response);
+      _foodsDataKeys = _foodsData.keys.toList();
     });
   }
 
@@ -103,23 +107,58 @@ class _CatalogPageState extends State<CatalogPage> {
       child: Hero(
         tag: key,
         child: Container(
-          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Colors.blue,
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Center(
-              child: Text(
-                _foodsData[key]['name'],
-                style: const TextStyle(
-                  fontSize: 24,
-                  color: Colors.white
+          clipBehavior: Clip.antiAlias,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              ColorFiltered(
+                colorFilter: Helper.darkenFilter,
+                child: Image(
+                  image: AssetImage('assets/pics/foods/$key.webp'),
+                  fit: BoxFit.cover,
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.center,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.black.withOpacity(0.0),
+                      Colors.black.withOpacity(0.7),
+                    ],
+                  ),
+                ),
+              ),
+              Material(
+                type: MaterialType.transparency,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      _foodsData[key]['iconName'],
+                      style: GoogleFonts.hindSiliguri(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[100],
+                        height: 1.2,
+                        shadows: [
+                          Shadow(
+                            color: Helper.textShadowCol,
+                            offset: Helper.textShadowOffset,
+                            blurRadius: Helper.textShadowBlurRadius
+                          )
+                        ]
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ]
           ),
         ),
       ),
