@@ -212,7 +212,7 @@ class _HomePageState extends State<HomePage> {
                               ColorFiltered(
                                 colorFilter: Helper.darkenFilter,
                                 child: Image(
-                                  image: AssetImage('assets/pics/foods/${_seasonalFoods[index]}.webp'),
+                                  image: AssetImage('assets/pics/foods/${_seasonalFoods[index]}.jpg'),
                                   fit: BoxFit.cover,
                                 ),
                               ),

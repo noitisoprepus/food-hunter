@@ -117,7 +117,7 @@ class _CatalogPageState extends State<CatalogPage> {
               ColorFiltered(
                 colorFilter: Helper.darkenFilter,
                 child: Image(
-                  image: AssetImage('assets/pics/foods/$key.webp'),
+                  image: AssetImage('assets/pics/foods/$key.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),

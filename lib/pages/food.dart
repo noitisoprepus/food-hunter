@@ -49,7 +49,7 @@ class _FoodPageState extends State<FoodPage> {
                     child: Material(
                       elevation: 10,
                       child: Image(
-                        image: AssetImage('assets/pics/foods/$key.webp'),
+                        image: AssetImage('assets/pics/foods/$key.jpg'),
                         width: screenWidth,
                         fit: BoxFit.cover,
                       ),
