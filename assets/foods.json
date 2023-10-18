@@ -16,24 +16,61 @@
             "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium."
         },
         "preservation": {
-            "Freezing": {
-                "description": "blah blah blah",
-                "process": [
-                    "Line a baking sheet with parchment paper.",
-                    "Slice the banana.",
-                    "Set the sliced bananas on the baking sheet evenly, without letting them touch."
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
                 ],
-                "src": "somewhere"
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ]
             },
-            "Solar Drying": {
-                "description": "blah blah blah",
-                "process": [
-                    "Line a baking sheet with parchment paper.",
-                    "Slice the banana.",
-                    "Set the sliced bananas on the baking sheet evenly, without letting them touch."
+            "refrigeration": {
+                "name": "Refrigeration",
+                "description": "The cool, controlled environment of a refrigerator helps preserve their firm texture and natural flavor, allowing you to enjoy them over a more extended period. This method is especially useful when you have ripe bananas and want to prevent them from becoming overly soft or mushy.",
+                "ingredients": [
+                    "Ripe bananas"
                 ],
-                "src": "somewhere"
-            }
+                "process": [
+                    "Choose ripe bananas you want to preserve.",
+                    "Place the bananas in the refrigerator.",
+                    "Consume the bananas within a week."
+                ]
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Freezing not only halts the ripening process but also allows you to use the bananas later in smoothies, baking, or desserts. Frozen bananas maintain their natural sweetness and creamy texture, making them a versatile ingredient for various culinary delights.",
+                "ingredients": [
+                    "Ripe bananas"
+                ],
+                "process": [
+                    "Choose ripe bananas you want to preserve.",
+                    "Peel and slice the bananas into rounds or chunks",
+                    "Place the banana slices in a single layer on a baking sheet or tray lined with parchment paper.",
+                    "Place the tray inside the freezer, and let the banana slices freeze for about 2-3 hours.",
+                    "After freezing up, place them in an airtight container and put them back inside the freezer."
+                ]
+            },
+            "dehydration": {
+                "name": "Dehydration",
+                "description": "Dehydrated bananas, often known as banana chips, are a convenient and healthy snack option. By removing the moisture content, the bananas become shelf-stable, allowing you to enjoy them for an extended period without refrigeration.",
+                "ingredients": [
+                    "Ripe bananas",
+                    "Lemon juice (optional)"
+                ],
+                "process": [
+                    "Peel and slice the ripe bananas",
+                    "Place the slices on your dehydrator trays",
+                    "Set the dehydrator to a temperature of around 135°F (57°C).",
+                    "Periodically check the banana slices for dryness.",
+                    "Remove the dehydrated banana slices and allow them to cool completely before storing them in an airtight container or resealable bags."
+                ]
+            },
+            "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
         }
     },
     "calamansi": {
@@ -83,6 +120,18 @@
             "Sugar": "7.31g",
             "Fiber": "2.32g",
             "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2344729/nutrients"
+        },
+        "preservation": {
+            "freezing" : {
+                "name": "Freezing",
+                "description": "blah blah blah",
+                "process": [
+                    "Line a baking sheet with parchment paper.",
+                    "Slice the banana.",
+                    "Set the sliced bananas on the baking sheet evenly, without letting them touch."
+                ],
+                "src": "somewhere"
+            }
         }
     },
     "tamarind": {

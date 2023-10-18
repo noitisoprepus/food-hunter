@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/preservation.dart';
+import 'package:food_hunter/themes/color_scheme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FoodPage extends StatefulWidget {
   final String itemKey;
@@ -32,8 +35,23 @@ class _FoodPageState extends State<FoodPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     Map<String, dynamic> foodData = widget.itemData;
     Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
-    nutrients.remove('src');
+    Map<String, dynamic> preservation = foodData['preservation'] as Map<String, dynamic>;
+    List<String> preservationKeys = preservation.keys.toList();
+    List<String> seasonsList = List<String>.from(foodData['season']);
     String key = widget.itemKey;
+
+    nutrients.remove('src');
+    preservationKeys.remove('src');
+
+    String seasons = '';
+    for (int i = 0; i < seasonsList.length; i++) {
+      seasons += seasonsList[i];
+      if (i == (seasonsList.length - 1)) {
+        break;
+      }
+      seasons += ', ';
+    }
+    String seasonsText = (seasons == '') ? "Available year-round" : seasons;
 
     return Scaffold(
       body: SafeArea(
@@ -67,7 +85,7 @@ class _FoodPageState extends State<FoodPage> {
                   child: Text(
                     foodData['name'],
                     style: const TextStyle(
-                      fontSize: 40,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                     )
                   ),
@@ -83,6 +101,21 @@ class _FoodPageState extends State<FoodPage> {
                       fontSize: 20,
                       fontStyle: FontStyle.italic,
                     )
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 0,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    'Season: $seasonsText',
+                    style: const TextStyle(
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
@@ -106,14 +139,13 @@ class _FoodPageState extends State<FoodPage> {
                 height: 10,
               ),
               SizedBox(
-                height: 160,
+                height: 180,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: preservationKeys.length,
                   itemBuilder: (BuildContext context, int index) {
-      
                     bool isFirst = index == 0;
-                    bool isLast = index == 4; // Change accordingly
+                    bool isLast = index == (preservationKeys.length - 1);
       
                     return Row(
                       children: [
@@ -123,26 +155,67 @@ class _FoodPageState extends State<FoodPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => PreservationPage(itemKey: key, itemData: widget.itemData),
+                                builder: (context) => PreservationPage(itemKey: key, preservationKey: preservationKeys[index], preservationData: preservation),
                               ),
                             );
                           },
                           child: Hero(
-                            tag: 'method$index',
+                            tag: '$key${preservation[preservationKeys[index]]}',
                             child: Container(
-                              width: 120,
+                              width: 180,
                               decoration: BoxDecoration(
-                                color: Colors.blue,
+                                color: FHColorScheme.primaryColor,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Center(
-                                child: Text(
-                                  'Method $index',
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
+                              clipBehavior: Clip.antiAlias,
+                              child: Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  ColorFiltered(
+                                    colorFilter: Helper.darkenFilter,
+                                    child: Image(
+                                      image: AssetImage('assets/pics/foods/preservation/${key}_${preservationKeys[index]}.jpg'),
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.center,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Colors.black.withOpacity(0.0),
+                                          Colors.black.withOpacity(0.7),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Material(
+                                    type: MaterialType.transparency,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(16.0),
+                                      child: Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          preservation[preservationKeys[index]]['name'],
+                                          style: GoogleFonts.hindSiliguri(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey[100],
+                                            height: 1.0,
+                                            shadows: [
+                                              Shadow(
+                                                color: Helper.textShadowCol,
+                                                offset: Helper.textShadowOffset,
+                                                blurRadius: Helper.textShadowBlurRadius
+                                              )
+                                            ]
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ]
                               ),
                             ),
                           ),

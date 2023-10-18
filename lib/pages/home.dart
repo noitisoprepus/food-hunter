@@ -241,7 +241,7 @@ class _HomePageState extends State<HomePage> {
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.grey[100],
-                                        height: 1,
+                                        height: 1.0,
                                         shadows: [
                                           Shadow(
                                             color: Helper.textShadowCol,

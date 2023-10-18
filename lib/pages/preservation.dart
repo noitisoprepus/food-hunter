@@ -1,42 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:food_hunter/themes/color_scheme.dart';
 
 class PreservationPage extends StatefulWidget {
   final String itemKey;
-  final Map<String, dynamic> itemData;
+  final String preservationKey;
+  final Map<String, dynamic> preservationData;
 
-  const PreservationPage({Key? key, required this.itemKey, required this.itemData}) : super(key: key);
+  const PreservationPage({Key? key, required this.itemKey, required this.preservationKey, required this.preservationData}) : super(key: key);
 
   @override
   _PreservationPageState createState() => _PreservationPageState();
 }
 
 class _PreservationPageState extends State<PreservationPage> {
-  final List<String> informationEntries = [
-    'Picture 1',
-    'Picture 2',
-    'Picture 3',
-    // Add more information entries here
-  ];
-
-  int selectedInformationIndex = 0;
-  late PageController _pageController;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController();
-
-    _pageController.addListener(() {
-      setState(() {
-        selectedInformationIndex = _pageController.page?.round() ?? 0;
-      });
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    Map<String, dynamic> foodData = widget.itemData;
+    Map<String, dynamic> foodData = widget.preservationData;
     Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
     nutrients.remove('src');
 
@@ -49,36 +30,13 @@ class _PreservationPageState extends State<PreservationPage> {
                 padding: const EdgeInsets.all(0.0),
                 child: SizedBox(
                   height: 220,
-                  child: PageView.builder(
-                    controller: _pageController,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: informationEntries.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Row(
-                        children: [
-                          Hero(
-                            tag: widget.itemKey,
-                            child: Container(
-                              width: screenWidth,
-                              decoration: const BoxDecoration(
-                                  color: Colors.blue),
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Center(
-                                  child: Text(
-                                    informationEntries[index],
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    },
+                  child: Hero(
+                    tag: widget.preservationKey,
+                    child: Container(
+                      width: screenWidth,
+                      decoration: const BoxDecoration(
+                          color: FHColorScheme.primaryColor),
+                    ),
                   ),
                 ),
               ),
@@ -110,7 +68,6 @@ class _PreservationPageState extends State<PreservationPage> {
 
   @override
   void dispose() {
-    _pageController.dispose();
     super.dispose();
   }
 }
