@@ -3,6 +3,7 @@ import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/preservation.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/link.dart';
 
 class FoodPage extends StatefulWidget {
   final String itemKey;
@@ -87,6 +88,7 @@ class _FoodPageState extends State<FoodPage> {
                     style: const TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
                     )
                   ),
                 ),
@@ -130,7 +132,8 @@ class _FoodPageState extends State<FoodPage> {
                     'PRESERVATION METHODS',
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
                     ),
                   )
                 )
@@ -160,7 +163,7 @@ class _FoodPageState extends State<FoodPage> {
                             );
                           },
                           child: Hero(
-                            tag: '$key${preservation[preservationKeys[index]]}',
+                            tag: '${key}_${preservationKeys[index]}',
                             child: Container(
                               width: 180,
                               decoration: BoxDecoration(
@@ -237,7 +240,8 @@ class _FoodPageState extends State<FoodPage> {
                     'HEALTH BENEFITS',
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
                     ),
                   )
                 )
@@ -262,8 +266,33 @@ class _FoodPageState extends State<FoodPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Link(
+                    uri: Uri.parse(nutrients['src']),
+                    builder: (context, followLink) {
+                      return GestureDetector(
+                        onTap: followLink,
+                        child: const Text(
+                          'Source',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.blue,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              )
             ],
           ),
         ),
