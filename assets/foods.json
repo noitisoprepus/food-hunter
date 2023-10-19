@@ -13,7 +13,7 @@
             "Sugar": "15g",
             "Fiber": "3g",
             "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium."
+            "src": "https://www.hsph.harvard.edu/nutritionsource/food-features/bananas/#:~:text=One%20serving%2C%20or%20one%20medium,fiber%2C%20and%20450%20mg%20potassium"
         },
         "preservation": {
             "plastic_wrapping": {
@@ -27,7 +27,8 @@
                     "Gently peel the loose outer layers of the banana stem to expose its inner core.",
                     "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
                     "Store the banana in in a cool, dry place away from sunlight."
-                ]
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
             },
             "refrigeration": {
                 "name": "Refrigeration",
@@ -39,7 +40,8 @@
                     "Choose ripe bananas you want to preserve.",
                     "Place the bananas in the refrigerator.",
                     "Consume the bananas within a week."
-                ]
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
             },
             "freezing": {
                 "name": "Freezing",
@@ -53,7 +55,8 @@
                     "Place the banana slices in a single layer on a baking sheet or tray lined with parchment paper.",
                     "Place the tray inside the freezer, and let the banana slices freeze for about 2-3 hours.",
                     "After freezing up, place them in an airtight container and put them back inside the freezer."
-                ]
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
             },
             "dehydration": {
                 "name": "Dehydration",
@@ -68,9 +71,9 @@
                     "Set the dehydrator to a temperature of around 135°F (57°C).",
                     "Periodically check the banana slices for dryness.",
                     "Remove the dehydrated banana slices and allow them to cool completely before storing them in an airtight container or resealable bags."
-                ]
-            },
-            "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
         }
     },
     "calamansi": {
@@ -111,7 +114,7 @@
         "iconName": "Dragon Fruit",
         "binomial": "Hylocereus undatus",
         "type": "Fruit",
-        "season": ["January", "October"],
+        "season": ["January", "June", "July", "August", "September", "October", "December"],
         "nutrients": {
             "Calories": "42.8",
             "Carbohydrates": "11.4g",
@@ -139,7 +142,7 @@
         "iconName": "Tamarind",
         "binomial": "Tamarindus indica",
         "type": "Fruit",
-        "season": ["December"],
+        "season": ["October", "November", "December"],
         "nutrients": {
             "Calories": "4.78",
             "Carbohydrates": "1.25g",
@@ -155,7 +158,7 @@
         "iconName": "Cashew",
         "binomial": "Anacardium occidentale",
         "type": "Fruit",
-        "season": ["February"],
+        "season": ["February, March", "April", "May"],
         "nutrients": {
             "Calories": "53",
             "Moisture": "86.3g",
@@ -171,7 +174,7 @@
         "iconName": "Canistel",
         "binomial": "Pouteria campechiana",
         "type": "Fruit",
-        "season": ["October"],
+        "season": ["October", "November"],
         "nutrients": {
             "Calories": "140",
             "Protein": "1.7g",
@@ -180,6 +183,1821 @@
             "Vitamin C": "58mg",
             "Phosphorus": "37mg",
             "src": "https://www.fruitsinfo.com/Canistel-Exotic-fruits.php#health"
+        }
+    },
+    "bilimbi": {
+        "name": "Bilimbi (Kamias)",
+        "iconName": "Bilimbi",
+        "binomial": "Averrhoa bilimbi",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "carambola": {
+        "name": "Carambola (Balingbing)",
+        "iconName": "Carambola",
+        "binomial": "Averrhoa carambola",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "lemon": {
+        "name": "Lemon",
+        "iconName": "Lemon",
+        "binomial": "Citrus limon",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "orange": {
+        "name": "Orange",
+        "iconName": "Orange",
+        "binomial": "Citrus sinensis",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "pomelo": {
+        "name": "Pomelo",
+        "iconName": "Pomelo",
+        "binomial": "Citrus maxima",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "tangerine": {
+        "name": "Tangerine",
+        "iconName": "Tangerine",
+        "binomial": "Citrus reticulata",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "guava": {
+        "name": "Guava (Bayabas)",
+        "iconName": "Guava",
+        "binomial": "Psidium guajava",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "papaya": {
+        "name": "Papaya",
+        "iconName": "Papaya",
+        "binomial": "Carica papaya",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "sapodilla": {
+        "name": "Sapodilla (Chico)",
+        "iconName": "Sapodilla",
+        "binomial": "Manilkara zapota",
+        "type": "Fruit",
+        "season": ["January", "February"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "star_apple": {
+        "name": "Star Apple (Kaimito)",
+        "iconName": "Star Apple",
+        "binomial": "Chrysophyllum cainito",
+        "type": "Fruit",
+        "season": ["January", "February", "March"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "strawberry": {
+        "name": "Strawberry",
+        "iconName": "Strawberry",
+        "binomial": "Fragaria ananassa",
+        "type": "Fruit",
+        "season": ["January", "February", "March", "April", "May", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "sugar_apple": {
+        "name": "Sugar Apple (Atis)",
+        "iconName": "Sugar Apple",
+        "binomial": "Annona squamosa",
+        "type": "Fruit",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "tangerine_orange": {
+        "name": "Tangerine Orange (Dalanghita)",
+        "iconName": "Tangerine Orange",
+        "binomial": "Citrus reticulata Blanco",
+        "type": "Fruit",
+        "season": ["January", "February", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "grapes": {
+        "name": "Grapes (Ubas)",
+        "iconName": "Grapes",
+        "binomial": "Vitis vinifera",
+        "type": "Fruit",
+        "season": ["March", "April", "May", "September", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "jackfruit": {
+        "name": "Jackfruit (Langka)",
+        "iconName": "Jackfruit",
+        "binomial": "Artocarpus heterophyllus",
+        "type": "Fruit",
+        "season": ["March", "April", "May"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "java_apple": {
+        "name": "Java Apple (Makopa)",
+        "iconName": "Java Apple",
+        "binomial": "Syzygium samarangense",
+        "type": "Fruit",
+        "season": ["March", "April", "May"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "java_plum": {
+        "name": "Java Plum (Duhat)",
+        "iconName": "Java Plum",
+        "binomial": "Syzygium cumini",
+        "type": "Fruit",
+        "season": ["March", "April", "May", "June", "July"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "mango": {
+        "name": "Mango (Mangga)",
+        "iconName": "Manggo",
+        "binomial": "Mangifera carabao",
+        "type": "Fruit",
+        "season": ["March", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "watermelon": {
+        "name": "Watermelon (Pakwan)",
+        "iconName": "Watermelon",
+        "binomial": "Citrullus lanatus",
+        "type": "Fruit",
+        "season": ["March", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "jocote": {
+        "name": "Jocote (Sineguelas)",
+        "iconName": "Jocote",
+        "binomial": "Spondias purpura",
+        "type": "Fruit",
+        "season": ["April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "cantaloupe": {
+        "name": "Cantaloupe (Melon)",
+        "iconName": "Cantaloupe",
+        "binomial": "Cucumis melo var. cantalupensis",
+        "type": "Fruit",
+        "season": ["April", "May", "June", "July"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "monkeypod": {
+        "name": "Monkeypod (Kamatsile)",
+        "iconName": "Monkeypod",
+        "binomial": "Pithecellobium dulce",
+        "type": "Fruit",
+        "season": ["March", "April", "May"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "avocado": {
+        "name": "Avocado",
+        "iconName": "Avocado",
+        "binomial": "Persea americana",
+        "type": "Fruit",
+        "season": ["May", "June", "July", "August", "September"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "cotton_fruit": {
+        "name": "Cotton Fruit (Santol)",
+        "iconName": "Cotton Fruit",
+        "binomial": "Sandocirum koetjape",
+        "type": "Fruit",
+        "season": ["May", "June", "July"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "lychee": {
+        "name": "Lychee",
+        "iconName": "Lychee",
+        "binomial": "Litchi chinensis",
+        "type": "Fruit",
+        "season": ["May", "June", "July", "August"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "pineapple": {
+        "name": "Pineapple (Pinya)",
+        "iconName": "Pineapple",
+        "binomial": "Ananas comosus",
+        "type": "Fruit",
+        "season": ["May", "June", "July"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "durian": {
+        "name": "Durian",
+        "iconName": "Durian",
+        "binomial": "Durio zibethinus",
+        "type": "Fruit",
+        "season": ["July", "August", "September", "October"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "velvet_apple": {
+        "name": "Velvet Apple (Mabolo)",
+        "iconName": "Velvet Apple",
+        "binomial": "Diospyros blancoi",
+        "type": "Fruit",
+        "season": ["July", "August"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "hairy_lychee": {
+        "name": "Hairy Lychee (Rambutan)",
+        "iconName": "Hairy Lychee",
+        "binomial": "Nephelium lappaceum",
+        "type": "Fruit",
+        "season": ["August", "September", "October"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "lanzones": {
+        "name": "Lanzones",
+        "iconName": "Lanzones",
+        "binomial": "Lansium parasiticum",
+        "type": "Fruit",
+        "season": ["August", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "mangosteen": {
+        "name": "Mangosteen",
+        "iconName": "Mangosteen",
+        "binomial": "Garcinia mangostana",
+        "type": "Fruit",
+        "season": ["August", "September", "October"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "soursop": {
+        "name": "Soursop (Guyabano)",
+        "iconName": "Soursop",
+        "binomial": "Annona muricata",
+        "type": "Fruit",
+        "season": ["August", "September", "October", "November"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "bitter_gourd": {
+        "name": "Bitter Gourd (Ampalaya)",
+        "iconName": "Bitter Gourd",
+        "binomial": "Momordica charantia",
+        "type": "Vegetable",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "sweet_potato": {
+        "name": "Sweet Potato (Kamote)",
+        "iconName": "Sweet Potato",
+        "binomial": "Ipomoea batatas",
+        "type": "Vegetable",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "chayote": {
+        "name": "Chayote (Sayote)",
+        "iconName": "Chayote",
+        "binomial": "Sechium edule",
+        "type": "Vegetable",
+        "season": ["January", "February, March", "May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "eggplant": {
+        "name": "Eggplant (Talong)",
+        "iconName": "Eggplant",
+        "binomial": "Solanum melongena",
+        "type": "Vegetable",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "lettuce": {
+        "name": "Lettuce (Letsugas)",
+        "iconName": "Lettuce",
+        "binomial": "Lactuca sativa",
+        "type": "Vegetable",
+        "season": ["January", "February, March", "April", "May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "okra": {
+        "name": "Okra",
+        "iconName": "Okra",
+        "binomial": "Abelmoschus esculentus",
+        "type": "Vegetable",
+        "season": ["January", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "sponge_gourd": {
+        "name": "Sponge Gourd (Patola)",
+        "iconName": "Sponge Gourd",
+        "binomial": "Luffa aegyptiaca",
+        "type": "Vegetable",
+        "season": ["January", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "bok_choy": {
+        "name": "Bok Choy (Pechay)",
+        "iconName": "Bok Choy",
+        "binomial": "Brassica rapa subsp. chinensis",
+        "type": "Vegetable",
+        "season": ["January", "February, March", "April", "May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "sili": {
+        "name": "Sili",
+        "iconName": "Sili",
+        "binomial": "Capsicum annum",
+        "type": "Vegetable",
+        "season": ["January", "April", "May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "tomato": {
+        "name": "Tomato (Kamatis)",
+        "iconName": "Tomato",
+        "binomial": "Solanum lycopersicum L.",
+        "type": "Vegetable",
+        "season": ["January", "March", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "bottle_gourd": {
+        "name": "Bottle Gourd (Upo)",
+        "iconName": "Bottle Gourd",
+        "binomial": "Lagenaria siceraria",
+        "type": "Vegetable",
+        "season": ["January", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "mustard_greens": {
+        "name": "Mustard Greens (Mustasa)",
+        "iconName": "Mustard Greens",
+        "binomial": "Brassica juncea",
+        "type": "Vegetable",
+        "season": ["January"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "cauliflower": {
+        "name": "Cauliflower",
+        "iconName": "Cauliflower",
+        "binomial": "Brassica oleracea var. botrytis",
+        "type": "Vegetable",
+        "season": ["January"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "onion": {
+        "name": "Onion (Sibuyas)",
+        "iconName": "Onion",
+        "binomial": "Allium cepa",
+        "type": "Vegetable",
+        "season": ["January", "February, March", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "cabbage": {
+        "name": "Cabbage (Repolyo)",
+        "iconName": "Cabbage",
+        "binomial": "Brassica oleracea var. capitata",
+        "type": "Vegetable",
+        "season": ["January"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "ginger": {
+        "name": "Ginger (Luya)",
+        "iconName": "Ginger",
+        "binomial": "Zingiber officinale",
+        "type": "Vegetable",
+        "season": [],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "garlic": {
+        "name": "Garlic (Bawang)",
+        "iconName": "Garlic",
+        "binomial": "Allium sativum",
+        "type": "Vegetable",
+        "season": ["January", "February", "March", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "mung_bean": {
+        "name": "Mung Bean (Mongo)",
+        "iconName": "Mung Bean",
+        "binomial": "Vigna radiata",
+        "type": "Vegetable",
+        "season": ["January", "February", "April", "May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "winged_bean": {
+        "name": "Winged Bean (Sigarilyas)",
+        "iconName": "Winged Bean",
+        "binomial": "Psophocarpus tetragonolobus",
+        "type": "Vegetable",
+        "season": ["February", "May", "April", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "squash": {
+        "name": "Squash (Kalabasa)",
+        "iconName": "Squash",
+        "binomial": "Cucurbita maxima",
+        "type": "Vegetable",
+        "season": ["February", "April", "May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "lima_bean": {
+        "name": "Lima Bean (Patani)",
+        "iconName": "Lima Bean",
+        "binomial": "Phaseolus lunatus",
+        "type": "Vegetable",
+        "season": ["May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "hyacinth_bean": {
+        "name": "Hyacinth Bean (Bataw)",
+        "iconName": "Hyacinth Bean",
+        "binomial": "Lablab purpureus",
+        "type": "Vegetable",
+        "season": ["May", "June"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
+        }
+    },
+    "long_bean": {
+        "name": "Long Bean (Sitaw)",
+        "iconName": "Long Bean",
+        "binomial": "Vigna unguiculata ssp. sesquipedalis",
+        "type": "Vegetable",
+        "season": ["May", "June", "September", "October", "November", "December"],
+        "nutrients": {
+            "Calories": "110",
+            "Carbohydrates": "28g",
+            "Protein": "1g",
+            "Fat": "0g",
+            "Sugar": "15g",
+            "Fiber": "3g",
+            "Potassium": "450g",
+            "src": "https://www.hsph.harvard.edu/"
+        },
+        "preservation": {
+            "plastic_wrapping": {
+                "name": "Plastic Wrapping",
+                "description": "Wrapping banana stems in plastic preserves their freshness by limiting exposure to ethylene gas and external factors. This simple technique extends their shelf life, ensuring they remain firm and flavorful for a longer time.",
+                "ingredients": [
+                    "Plastic food wrapper"
+                ],
+                "process": [
+                    "Tear off a small piece of plastic wrap.",
+                    "Gently peel the loose outer layers of the banana stem to expose its inner core.",
+                    "Carefully wrap the plastic around the exposed stem, and securely fasten it.",
+                    "Store the banana in in a cool, dry place away from sunlight."
+                ],
+                "src": "https://www.foodstoragemoms.com/the-best-ways-to-preserve-bananas/"
+            }
         }
     }
 }

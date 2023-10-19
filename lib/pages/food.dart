@@ -42,7 +42,6 @@ class _FoodPageState extends State<FoodPage> {
     String key = widget.itemKey;
 
     nutrients.remove('src');
-    preservationKeys.remove('src');
 
     String seasons = '';
     for (int i = 0; i < seasonsList.length; i++) {
@@ -106,8 +105,18 @@ class _FoodPageState extends State<FoodPage> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 0,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['type'],
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: FHColorScheme.primaryColor
+                    ),
+                  ),
+                ),
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -268,28 +277,28 @@ class _FoodPageState extends State<FoodPage> {
               const SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Link(
-                    uri: Uri.parse(nutrients['src']),
-                    builder: (context, followLink) {
-                      return GestureDetector(
-                        onTap: followLink,
-                        child: const Text(
-                          'Source',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Link(
+              //       uri: Uri.parse(foodData['nutrients']['src']),
+              //       builder: (context, followLink) {
+              //         return GestureDetector(
+              //           onTap: followLink,
+              //           child: const Text(
+              //             'Source',
+              //             style: TextStyle(
+              //               fontSize: 18,
+              //               color: Colors.blue,
+              //               decoration: TextDecoration.underline,
+              //             ),
+              //           ),
+              //         );
+              //       },
+              //     ),
+              //   ),
+              // ),
               const SizedBox(
                 height: 10,
               )

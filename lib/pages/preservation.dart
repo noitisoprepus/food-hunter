@@ -188,7 +188,7 @@ class _PreservationPageState extends State<PreservationPage> {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Link(
-                    uri: Uri.parse(widget.preservationData['src']),
+                    uri: Uri.parse(preservationInfo['src']),
                     builder: (context, followLink) {
                       return GestureDetector(
                         onTap: followLink,
