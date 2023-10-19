@@ -1,6 +1,9 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:food_hunter/helper.dart';
+import 'package:food_hunter/pages/preservation.dart';
+import 'package:food_hunter/themes/color_scheme.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/link.dart';
 
 class FoodPage extends StatefulWidget {
   final String itemKey;
@@ -13,13 +16,6 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  final List<String> informationEntries = [
-    'Picture 1',
-    'Picture 2',
-    'Picture 3',
-    // Add more information entries here
-  ];
-
   int selectedInformationIndex = 0;
   late PageController _pageController;
 
@@ -40,173 +36,274 @@ class _FoodPageState extends State<FoodPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     Map<String, dynamic> foodData = widget.itemData;
     Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
+    Map<String, dynamic> preservation = foodData['preservation'] as Map<String, dynamic>;
+    List<String> preservationKeys = preservation.keys.toList();
+    List<String> seasonsList = List<String>.from(foodData['season']);
+    String key = widget.itemKey;
+
     nutrients.remove('src');
 
+    String seasons = '';
+    for (int i = 0; i < seasonsList.length; i++) {
+      seasons += seasonsList[i];
+      if (i == (seasonsList.length - 1)) {
+        break;
+      }
+      seasons += ', ';
+    }
+    String seasonsText = (seasons == '') ? "Available year-round" : seasons;
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Food Data'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(0.0),
-              child: SizedBox(
-                height: 220,
-                child: PageView.builder(
-                  controller: _pageController,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: informationEntries.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Row(
-                      children: [
-                        Hero(
-                          tag: widget.itemKey,
-                          child: Container(
-                            width: screenWidth,
-                            decoration: const BoxDecoration(
-                                color: Colors.blue),
-                            child: Material(
-                              type: MaterialType.transparency,
-                              child: Center(
-                                child: Text(
-                                  informationEntries[index],
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white, // Change text color as needed
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    );
-                  },
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  foodData['name'],
-                  style: const TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                  )
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  foodData['binomial'],
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
-                  )
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'PRESERVATION METHODS',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(0.0),
+                child: SizedBox(
+                  height: 220,
+                  child: Hero(
+                    tag: key,
+                    child: Material(
+                      elevation: 10,
+                      child: Image(
+                        image: AssetImage('assets/pics/foods/$key.jpg'),
+                        width: screenWidth,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['name'],
+                    style: const TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
+                    )
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['binomial'],
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    )
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    foodData['type'],
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: FHColorScheme.primaryColor
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    'Season: $seasonsText',
+                    style: const TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                    'PRESERVATION METHODS',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
+                    ),
+                  )
                 )
-              )
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0), // Horizontal padding for the entire ListView
-              child: SizedBox(
-                height: 160, // Adjust the height as needed
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 180,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: preservationKeys.length,
                   itemBuilder: (BuildContext context, int index) {
-                    // Add spacing between items
+                    bool isFirst = index == 0;
+                    bool isLast = index == (preservationKeys.length - 1);
+      
                     return Row(
                       children: [
-                        Container(
-                          width: 120, // Adjust the width as needed
-                          decoration: BoxDecoration(
-                            color: Colors.blue, // Change to your preferred background color
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Method $index',
-                              style: const TextStyle(
-                                fontSize: 18,
-                                color: Colors.white, // Change text color as needed
+                        SizedBox(width: isFirst ? 16.0 : 8.0),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PreservationPage(itemKey: key, preservationKey: preservationKeys[index], preservationData: preservation),
+                              ),
+                            );
+                          },
+                          child: Hero(
+                            tag: '${key}_${preservationKeys[index]}',
+                            child: Container(
+                              width: 180,
+                              decoration: BoxDecoration(
+                                color: FHColorScheme.primaryColor,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              clipBehavior: Clip.antiAlias,
+                              child: Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  ColorFiltered(
+                                    colorFilter: Helper.darkenFilter,
+                                    child: Image(
+                                      image: AssetImage('assets/pics/foods/preservation/${key}_${preservationKeys[index]}.jpg'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.center,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Colors.black.withOpacity(0.0),
+                                          Colors.black.withOpacity(0.7),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Material(
+                                    type: MaterialType.transparency,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(16.0),
+                                      child: Align(
+                                        alignment: Alignment.bottomLeft,
+                                        child: Text(
+                                          preservation[preservationKeys[index]]['name'],
+                                          style: GoogleFonts.hindSiliguri(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.grey[100],
+                                            height: 1.0,
+                                            shadows: [
+                                              Shadow(
+                                                color: Helper.textShadowCol,
+                                                offset: Helper.textShadowOffset,
+                                                blurRadius: Helper.textShadowBlurRadius
+                                              )
+                                            ]
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ]
                               ),
                             ),
                           ),
                         ),
-                        const SizedBox(width: 16.0), // Add horizontal spacing between items
+                        SizedBox(width: isLast ? 16.0 : 8.0),
                       ],
                     );
                   },
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                  'HEALTH BENEFITS',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                  ),
-                )
-              )
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Align(
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: DataTable(
-                  columns: const [
-                    DataColumn(label: Text('Nutrient')),
-                    DataColumn(label: Text('Amount')),
-                  ],
-                  rows: [
-                    for (var nutrientEntry in nutrients.entries)
-                      buildDataRow(nutrientEntry.key, nutrientEntry.value.toString()),
-                  ],
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                    'HEALTH BENEFITS',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: FHColorScheme.secondaryColor
+                    ),
+                  )
+                )
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: DataTable(
+                    columns: const [
+                      DataColumn(label: Text('Nutrient')),
+                      DataColumn(label: Text('Amount')),
+                    ],
+                    rows: [
+                      for (var nutrientEntry in nutrients.entries)
+                        buildDataRow(nutrientEntry.key, nutrientEntry.value.toString()),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-          ],
+              const SizedBox(
+                height: 10,
+              ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              //   child: Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: Link(
+              //       uri: Uri.parse(foodData['nutrients']['src']),
+              //       builder: (context, followLink) {
+              //         return GestureDetector(
+              //           onTap: followLink,
+              //           child: const Text(
+              //             'Source',
+              //             style: TextStyle(
+              //               fontSize: 18,
+              //               color: Colors.blue,
+              //               decoration: TextDecoration.underline,
+              //             ),
+              //           ),
+              //         );
+              //       },
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 10,
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -1,0 +1,24 @@
+{
+    "homeInfo": {
+        "info1": {
+            "info": "Support Sustainability",
+            "description": "Helps sustainable agriculture and farmer livelihoods",
+            "img": "assets/pics/preservation/farming_0.jpg"
+        },
+        "info2": {
+            "info": "Minimize Waste",
+            "description": "Preserving food reduces wastage",
+            "img": "assets/pics/preservation/waste.jpg"
+        },
+        "info3": {
+            "info": "Retain Nutrition",
+            "description": "Maintain fruits' and vegetables' nutritional value",
+            "img": "assets/pics/preservation/jars.jpg"
+        },
+        "info4": {
+            "info": "Boost Economy",
+            "description": "Creates value and stabilizes the food market",
+            "img": "assets/pics/preservation/market_1.jpg"
+        }
+    }
+}
