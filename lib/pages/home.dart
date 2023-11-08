@@ -1,11 +1,11 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/catalog.dart';
 import 'package:food_hunter/pages/food.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,10 +19,14 @@ class _HomePageState extends State<HomePage> {
 
   late Map<String, dynamic> _foodsData = {};
   late Map<String, dynamic> _preservationData = {};
-  late final List<String> _seasonalFoods = [];
+  late List<String> _seasonalFoods = [];
   late List<String> _preservationDataKeys = [];
 
+  final ScrollController _scrollController = ScrollController();
   final PageController _pageController = PageController();
+
+  bool isBannerHovered = false;
+  List<bool> isSeasonalHovered = [];
 
   @override
   void initState() {
@@ -46,14 +50,20 @@ class _HomePageState extends State<HomePage> {
       _foodsData = foodsDataMap;
     });
 
+    List<String> seasonalFoods = [];
+
     foodsDataMap.forEach((key, value) {
       List<dynamic> seasons = value['season'];
       if (seasons.contains(currMonth)) {
-        setState(() {
-          _seasonalFoods.add(key);
-        });
+        seasonalFoods.add(key);
       }
     });
+    seasonalFoods.sort();
+    setState(() {
+      _seasonalFoods = seasonalFoods;
+    });
+
+    isSeasonalHovered = List.filled(_seasonalFoods.length, false);
   }
 
   Future<void> _loadPreservationInfo() async {
@@ -77,28 +87,34 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 10.0, bottom: 16.0),
+            const Padding(
+              padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 10.0, bottom: 12.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Image(
-                    image: AssetImage('assets/pics/logo/banner-logo.png'),
+                  Image(
+                    image: AssetImage('assets/pics/logo/icon.png'),
                     height: 36,
                   ),
-                  Icon(
-                    Icons.info,
-                    color: Colors.blue[600],
-                    size: 28.0,
+                  SizedBox(
+                    width: 10,
                   ),
+                  Text(
+                    "FOOD HUNTER",
+                    style: TextStyle(
+                        fontFamily: 'Lato-Black',
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: FHColorScheme.primaryColor
+                      ),
+                    ),
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SizedBox(
-                height: screenHeight * 0.15,
-                child: GestureDetector(
+                height: screenHeight * ((screenHeight > 900) ? 0.165 : (screenHeight > 800) ? 0.155 : 0.14),
+                child: InkWell(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -107,10 +123,22 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  child: Container(
+                  onHover: (value) {
+                    setState(() {
+                      isBannerHovered = value;
+                    });
+                  },
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 250),
+                    transform: Matrix4.identity()..translate(0.0, isBannerHovered ? -2.5 : 0.0),
                     decoration: BoxDecoration(
                       color: FHColorScheme.primaryColor,
                       borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          blurRadius: 10.0,
+                        ),
+                      ],
                     ),
                     clipBehavior: Clip.antiAlias,
                     child: Stack(
@@ -138,7 +166,8 @@ class _HomePageState extends State<HomePage> {
                         Center(
                           child: Text(
                             'BROWSE FOODS',
-                            style: GoogleFonts.hindSiliguri(
+                            style: TextStyle(
+                              fontFamily: 'Lato-Black',
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
                               color: Colors.grey[100],
@@ -166,106 +195,191 @@ class _HomePageState extends State<HomePage> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                    'SEASONAL PRODUCE (${currMonth.toUpperCase()})',
+                    '${currMonth.toUpperCase()} PRODUCE',
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: FHColorScheme.primaryColor
                     ),
                   )
                 )
             ),
-            const SizedBox(
-              height: 10,
-            ),
             SizedBox(
-              height: 150,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: _seasonalFoods.length,
-                itemBuilder: (BuildContext context, int index) {
-                  bool isFirst = index == 0;
-                  bool isLast = index == (_seasonalFoods.length - 1);
-      
-                  return Row(
-                    children: [
-                      SizedBox(width: isFirst ? 16.0 : 8.0),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => FoodPage(itemKey: _seasonalFoods[index], itemData: _foodsData[_seasonalFoods[index]],),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 150,
-                          decoration: BoxDecoration(
-                            color: FHColorScheme.primaryColor,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          clipBehavior: Clip.antiAlias,
-                          child: Stack(
-                            fit: StackFit.expand,
-                            children: [
-                              ColorFiltered(
-                                colorFilter: Helper.darkenFilter,
-                                child: Image(
-                                  image: AssetImage('assets/pics/foods/${_seasonalFoods[index]}.jpg'),
-                                  fit: BoxFit.cover,
+              height: screenHeight * 0.25,
+              child: Stack(
+                children: [
+                  GestureDetector(
+                    onHorizontalDragUpdate: (details) {
+                      _scrollController.jumpTo(_scrollController.offset - details.primaryDelta! / 2);
+                    },
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      controller: _scrollController,
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: _seasonalFoods.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        bool isFirst = index == 0;
+                        bool isLast = index == (_seasonalFoods.length - 1);
+                        
+                        return Padding(
+                          padding: EdgeInsets.only(left: isFirst ? 16.0 : 8.0, right: isLast ? 16.0 : 8.0, top: 16.0, bottom: 16.0),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => FoodPage(itemKey: _seasonalFoods[index], itemData: _foodsData[_seasonalFoods[index]],),
                                 ),
-                              ),
-                              Container(
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.center,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.black.withOpacity(0.0),
-                                      Colors.black.withOpacity(0.7),
-                                    ],
+                              );
+                            },
+                            onHover: (value) {
+                              setState(() {
+                                isSeasonalHovered[index] = value;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 250),
+                              transform: Matrix4.identity()..translate(0.0, isSeasonalHovered[index] ? -2.5 : 0.0),
+                              width: 170,
+                              decoration: BoxDecoration(
+                                color: FHColorScheme.primaryColor,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    blurRadius: 10.0,
                                   ),
-                                ),
+                                ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Align(
-                                  alignment: Alignment.bottomLeft,
-                                  child: Material(
-                                    type: MaterialType.transparency,
-                                    child: Text(
-                                      _foodsData[_seasonalFoods[index]]['iconName'],
-                                      style: GoogleFonts.hindSiliguri(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey[100],
-                                        height: 1.0,
-                                        shadows: [
-                                          Shadow(
-                                            color: Helper.textShadowCol,
-                                            offset: Helper.textShadowOffset,
-                                            blurRadius: Helper.textShadowBlurRadius
-                                          )
-                                        ]
+                              clipBehavior: Clip.antiAlias,
+                              child: Stack(
+                                fit: StackFit.expand,
+                                children: [
+                                  ColorFiltered(
+                                    colorFilter: Helper.darkenFilter,
+                                    child: Image(
+                                      image: AssetImage('assets/pics/foods/${_seasonalFoods[index]}.jpg'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.center,
+                                        end: Alignment.bottomCenter,
+                                        colors: [
+                                          Colors.black.withOpacity(0.0),
+                                          Colors.black.withOpacity(0.7),
+                                        ],
                                       ),
                                     ),
                                   ),
-                                ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(16.0),
+                                    child: Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: Material(
+                                        type: MaterialType.transparency,
+                                        child: FittedBox(
+                                          child: Text(
+                                            _foodsData[_seasonalFoods[index]]['iconName']
+                                              .replaceAll(' ', '\n'),
+                                            style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.grey[100],
+                                              height: 1.0,
+                                              shadows: [
+                                                Shadow(
+                                                  color: Helper.textShadowCol,
+                                                  offset: Helper.textShadowOffset,
+                                                  blurRadius: Helper.textShadowBlurRadius
+                                                )
+                                              ]
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ]
                               ),
-                            ]
+                            ),
                           ),
-                        ),
-                      ),
-                      SizedBox(width: isLast ? 16.0 : 8.0),
-                    ],
-                  );
-                },
+                        );
+                      },
+                    ),
+                  ),
+                  // Positioned(
+                  //   left: 4,
+                  //   top: (screenHeight * 0.25 - 2 * 8 - 24) / 2,
+                  //   child: Visibility(
+                  //     visible: Platform.isWindows || Platform.isLinux || Platform.isMacOS,
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white.withOpacity(0.65),
+                  //         borderRadius: BorderRadius.circular(24),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.2),
+                  //             spreadRadius: 2,
+                  //             blurRadius: 4,
+                  //             offset: const Offset(0, 2),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       child: IconButton(
+                  //         icon: const Icon(Icons.arrow_back),
+                  //         color: Colors.black.withOpacity(0.65),
+                  //         onPressed: () {
+                  //           _scrollController.animateTo(
+                  //             _scrollController.offset - 250,
+                  //             duration: const Duration(milliseconds: 500),
+                  //             curve: Curves.easeInOut,
+                  //           );
+                  //         },
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // Positioned(
+                  //   right: 4,
+                  //   top: (screenHeight * 0.25 - 2 * 8 - 24) / 2,
+                  //   child: Visibility(
+                  //     visible: Platform.isWindows || Platform.isLinux || Platform.isMacOS,
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //         color: Colors.white.withOpacity(0.65),
+                  //         borderRadius: BorderRadius.circular(24),
+                  //         boxShadow: [
+                  //           BoxShadow(
+                  //             color: Colors.black.withOpacity(0.2),
+                  //             spreadRadius: 2,
+                  //             blurRadius: 4,
+                  //             offset: const Offset(0, 2),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       child: IconButton(
+                  //         icon: const Icon(Icons.arrow_forward),
+                  //         color: Colors.black.withOpacity(0.65),
+                  //         onPressed: () {
+                  //           _scrollController.animateTo(
+                  //             _scrollController.offset + 250,
+                  //             duration: const Duration(milliseconds: 500),
+                  //             curve: Curves.easeInOut,
+                  //           );
+                  //         },
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                ]
               ),
             ),
             const SizedBox(
-              height: 24,
+              height: 10,
             ),
             const Align(
               alignment: Alignment.centerLeft,
@@ -274,112 +388,119 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                     'WHY PRESERVE FOOD?',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: FHColorScheme.primaryColor
                     ),
                   )
                 )
             ),
-            const SizedBox(
-              height: 10,
-            ),
             SizedBox(
-              height: screenHeight * 0.325,
-              child: PageView.builder(
-                controller: _pageController,
-                scrollDirection: Axis.horizontal,
-                itemCount: _preservationData.length,
-                itemBuilder: (BuildContext context, int index) {
-                  String imgPath = _preservationData[_preservationDataKeys[index]]['img'];
-                  String infoText = _preservationData[_preservationDataKeys[index]]['info'];
-                  String descrText = _preservationData[_preservationDataKeys[index]]['description'];
-
-                  return Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Container(
-                          width: screenWidth - 32,
-                          decoration: BoxDecoration(
-                            color: FHColorScheme.primaryColor,
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          clipBehavior: Clip.antiAlias,
-                          child: Stack(
-                            fit: StackFit.expand,
-                            children: <Widget>[
-                              ColorFiltered(
-                                colorFilter: Helper.darkenFilter,
-                                child: Image(
-                                  image: AssetImage(imgPath),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Container(
-                                width: screenWidth - 32,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.center,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.black.withOpacity(0.0),
-                                      Colors.black.withOpacity(0.95),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      infoText,
-                                      style: GoogleFonts.hindSiliguri(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey[100],
-                                        shadows: [
-                                          Shadow(
-                                            color: Helper.textShadowCol,
-                                            offset: Helper.textShadowOffset,
-                                            blurRadius: Helper.textShadowBlurRadius
-                                          )
-                                        ]
-                                      ),
-                                    ),
-                                    Text(
-                                      descrText,
-                                      style: GoogleFonts.hindSiliguri(
-                                        fontSize: 22,
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.2,
-                                        color: Colors.grey[200],
-                                        shadows: [
-                                          Shadow(
-                                            color: Helper.textShadowCol,
-                                            offset: Helper.textShadowOffset,
-                                            blurRadius: Helper.textShadowBlurRadius
-                                          )
-                                        ]
-                                      ),
-                                    ),
-                                  ]
-                                ),
-                              ),
-                            ]
-                          ),
-                        ),
-                      )
-                    ]
-                  );
+              height: screenHeight * ((screenHeight > 900) ? 0.4 : (screenHeight > 800) ? 0.375 : 0.35),
+              child: GestureDetector(
+                onHorizontalDragUpdate: (details) {
+                  if (details.primaryDelta! > 0) {
+                    _pageController.previousPage(duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+                  } else if (details.primaryDelta! < 0) {
+                    _pageController.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+                  }
                 },
+                child: PageView.builder(
+                  controller: _pageController,
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: _preservationData.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    String imgPath = _preservationData[_preservationDataKeys[index]]['img'];
+                    String infoText = _preservationData[_preservationDataKeys[index]]['info'];
+                    String descrText = _preservationData[_preservationDataKeys[index]]['description'];
+                            
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0, bottom: 16.0),
+                      child: Container(
+                        width: screenWidth - 32,
+                        decoration: BoxDecoration(
+                          color: FHColorScheme.primaryColor,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 10.0,
+                            ),
+                          ],
+                        ),
+                        clipBehavior: Clip.antiAlias,
+                        child: Stack(
+                          fit: StackFit.expand,
+                          children: <Widget>[
+                            ColorFiltered(
+                              colorFilter: Helper.darkenFilter,
+                              child: Image(
+                                image: AssetImage(imgPath),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            Container(
+                              width: screenWidth - 32,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.center,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.0),
+                                    Colors.black.withOpacity(0.95),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    infoText,
+                                    style: TextStyle(
+                                      fontFamily: 'Lato-Black',
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey[100],
+                                      shadows: [
+                                        Shadow(
+                                          color: Helper.textShadowCol,
+                                          offset: Helper.textShadowOffset,
+                                          blurRadius: Helper.textShadowBlurRadius
+                                        )
+                                      ]
+                                    ),
+                                  ),
+                                  Text(
+                                    descrText,
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.2,
+                                      color: Colors.grey[200],
+                                      shadows: [
+                                        Shadow(
+                                          color: Helper.textShadowCol,
+                                          offset: Helper.textShadowOffset,
+                                          blurRadius: Helper.textShadowBlurRadius
+                                        )
+                                      ]
+                                    ),
+                                  ),
+                                ]
+                              ),
+                            ),
+                          ]
+                        ),
+                      ),
+                    );
+                  },
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

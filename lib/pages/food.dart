@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/preservation.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 
 class FoodPage extends StatefulWidget {
@@ -16,31 +15,19 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  int selectedInformationIndex = 0;
-  late PageController _pageController;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController();
-
-    _pageController.addListener(() {
-      setState(() {
-        selectedInformationIndex = _pageController.page?.round() ?? 0;
-      });
-    });
-  }
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     Map<String, dynamic> foodData = widget.itemData;
     Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
     Map<String, dynamic> preservation = foodData['preservation'] as Map<String, dynamic>;
     List<String> preservationKeys = preservation.keys.toList();
     List<String> seasonsList = List<String>.from(foodData['season']);
     String key = widget.itemKey;
-
+    String nutrientsSrc = nutrients['src'];
     nutrients.remove('src');
 
     String seasons = '';
@@ -54,23 +41,26 @@ class _FoodPageState extends State<FoodPage> {
     String seasonsText = (seasons == '') ? "Available year-round" : seasons;
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'FOOD INFO'
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(0.0),
-                child: SizedBox(
-                  height: 220,
-                  child: Hero(
-                    tag: key,
-                    child: Material(
-                      elevation: 10,
-                      child: Image(
-                        image: AssetImage('assets/pics/foods/$key.jpg'),
-                        width: screenWidth,
-                        fit: BoxFit.cover,
-                      ),
+              Container(
+                constraints: const BoxConstraints(
+                  maxHeight: 500
+                ),
+                child: Hero(
+                  tag: key,
+                  child: Material(
+                    elevation: 10,
+                    child: Image(
+                      image: AssetImage('assets/pics/foods/$key.jpg'),
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
@@ -147,22 +137,24 @@ class _FoodPageState extends State<FoodPage> {
                   )
                 )
               ),
-              const SizedBox(
-                height: 10,
-              ),
               SizedBox(
-                height: 180,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: preservationKeys.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    bool isFirst = index == 0;
-                    bool isLast = index == (preservationKeys.length - 1);
-      
-                    return Row(
-                      children: [
-                        SizedBox(width: isFirst ? 16.0 : 8.0),
-                        GestureDetector(
+                height: screenHeight * 0.25,
+                child: GestureDetector(
+                  onHorizontalDragUpdate: (details) {
+                    _scrollController.jumpTo(_scrollController.offset - details.primaryDelta! / 2);
+                  },
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    controller: _scrollController,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: preservationKeys.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      bool isFirst = index == 0;
+                      bool isLast = index == (preservationKeys.length - 1);
+                      
+                      return Padding(
+                        padding: EdgeInsets.only(left: isFirst ? 16.0 : 8.0, right: isLast ? 16.0 : 8.0, top: 16.0, bottom: 16.0),
+                        child: InkWell(
                           onTap: () {
                             Navigator.push(
                               context,
@@ -174,10 +166,15 @@ class _FoodPageState extends State<FoodPage> {
                           child: Hero(
                             tag: '${key}_${preservationKeys[index]}',
                             child: Container(
-                              width: 180,
+                              width: 170,
                               decoration: BoxDecoration(
                                 color: FHColorScheme.primaryColor,
                                 borderRadius: BorderRadius.circular(10),
+                                boxShadow: const [
+                                BoxShadow(
+                                  blurRadius: 5.0,
+                                ),
+                              ],
                               ),
                               clipBehavior: Clip.antiAlias,
                               child: Stack(
@@ -208,20 +205,24 @@ class _FoodPageState extends State<FoodPage> {
                                       padding: const EdgeInsets.all(16.0),
                                       child: Align(
                                         alignment: Alignment.bottomLeft,
-                                        child: Text(
-                                          preservation[preservationKeys[index]]['name'],
-                                          style: GoogleFonts.hindSiliguri(
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[100],
-                                            height: 1.0,
-                                            shadows: [
-                                              Shadow(
-                                                color: Helper.textShadowCol,
-                                                offset: Helper.textShadowOffset,
-                                                blurRadius: Helper.textShadowBlurRadius
-                                              )
-                                            ]
+                                        child: FittedBox(
+                                          child: Text(
+                                            preservation[preservationKeys[index]]['name']
+                                              .replaceAll(' ', '\n'),
+                                            style: TextStyle(
+                                              fontFamily: 'Lato',
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.grey[100],
+                                              height: 1.0,
+                                              shadows: [
+                                                Shadow(
+                                                  color: Helper.textShadowCol,
+                                                  offset: Helper.textShadowOffset,
+                                                  blurRadius: Helper.textShadowBlurRadius
+                                                )
+                                              ]
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -232,10 +233,9 @@ class _FoodPageState extends State<FoodPage> {
                             ),
                           ),
                         ),
-                        SizedBox(width: isLast ? 16.0 : 8.0),
-                      ],
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
               const SizedBox(
@@ -277,28 +277,40 @@ class _FoodPageState extends State<FoodPage> {
               const SizedBox(
                 height: 10,
               ),
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              //   child: Align(
-              //     alignment: Alignment.centerLeft,
-              //     child: Link(
-              //       uri: Uri.parse(foodData['nutrients']['src']),
-              //       builder: (context, followLink) {
-              //         return GestureDetector(
-              //           onTap: followLink,
-              //           child: const Text(
-              //             'Source',
-              //             style: TextStyle(
-              //               fontSize: 18,
-              //               color: Colors.blue,
-              //               decoration: TextDecoration.underline,
-              //             ),
-              //           ),
-              //         );
-              //       },
-              //     ),
-              //   ),
-              // ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Row(
+                    children: [
+                      const Text(
+                        'REFERENCES: ',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: FHColorScheme.secondaryColor,
+                        ),
+                      ),
+                      Link(
+                        uri: Uri.parse(nutrientsSrc),
+                        builder: (context, followLink) {
+                          return InkWell(
+                            onTap: followLink,
+                            child: const Text(
+                              'Link',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: FHColorScheme.primaryColor,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ]
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 10,
               )
@@ -307,12 +319,6 @@ class _FoodPageState extends State<FoodPage> {
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
   }
 
   DataRow buildDataRow(String nutrient, String amount) {

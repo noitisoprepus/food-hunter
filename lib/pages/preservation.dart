@@ -25,23 +25,26 @@ class _PreservationPageState extends State<PreservationPage> {
     List<String> instructions = List<String>.from(preservationInfo['process']);
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'PRESERVATION INFO'
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(0.0),
-                child: SizedBox(
-                  height: 220,
-                  child: Hero(
-                    tag: '${widget.itemKey}_${widget.preservationKey}',
-                    child: Material(
-                      elevation: 10,
-                      child: Image(
-                        image: AssetImage('assets/pics/foods/preservation/${widget.itemKey}_${widget.preservationKey}.jpg'),
-                        width: screenWidth,
-                        fit: BoxFit.cover,
-                      ),
+              Container(
+                constraints: const BoxConstraints(
+                  maxHeight: 500
+                ),
+                child: Hero(
+                  tag: '${widget.itemKey}_${widget.preservationKey}',
+                  child: Material(
+                    elevation: 10,
+                    child: Image(
+                      image: AssetImage('assets/pics/foods/preservation/${widget.itemKey}_${widget.preservationKey}.jpg'),
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
@@ -184,24 +187,36 @@ class _PreservationPageState extends State<PreservationPage> {
                 height: 10,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Align(
                   alignment: Alignment.centerLeft,
-                  child: Link(
-                    uri: Uri.parse(preservationInfo['src']),
-                    builder: (context, followLink) {
-                      return GestureDetector(
-                        onTap: followLink,
-                        child: const Text(
-                          'Source',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                          ),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'REFERENCES: ',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: FHColorScheme.secondaryColor,
                         ),
-                      );
-                    },
+                      ),
+                      Link(
+                        uri: Uri.parse(preservationInfo['src']),
+                        builder: (context, followLink) {
+                          return InkWell(
+                            onTap: followLink,
+                            child: const Text(
+                              'Link',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: FHColorScheme.primaryColor,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ]
                   ),
                 ),
               ),
