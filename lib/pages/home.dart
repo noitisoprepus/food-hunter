@@ -1,11 +1,11 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_hunter/helper.dart';
 import 'package:food_hunter/pages/catalog.dart';
 import 'package:food_hunter/pages/food.dart';
 import 'package:food_hunter/themes/color_scheme.dart';
+import 'dart:io';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -87,22 +87,22 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 10.0, bottom: 12.0),
               child: Row(
                 children: [
                   Image(
                     image: AssetImage('assets/pics/logo/icon.png'),
-                    height: 36,
+                    height: Platform.isWindows ? 48 : 36,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
                     "FOOD HUNTER",
                     style: TextStyle(
                         fontFamily: 'Lato-Black',
-                        fontSize: 28,
+                        fontSize: Platform.isWindows ? 32 : 28,
                         fontWeight: FontWeight.bold,
                         color: FHColorScheme.primaryColor
                       ),
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SizedBox(
-                height: screenHeight * ((screenHeight > 900) ? 0.165 : (screenHeight > 800) ? 0.155 : 0.14),
+                height: screenHeight * ((screenHeight > 1200) ? 0.165 : (screenHeight > 1100) ? 0.16 : (screenHeight > 1000) ? 0.155 : (screenHeight > 900) ? 0.15 : (screenHeight > 800) ? 0.145 : (screenHeight > 700) ? 0.14 : (screenHeight > 600) ? 0.13 : 0.125),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
@@ -196,8 +196,8 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                     '${currMonth.toUpperCase()} PRODUCE',
-                    style: const TextStyle(
-                      fontSize: 22,
+                    style: TextStyle(
+                      fontSize: Platform.isWindows ? 25 : 22,
                       fontWeight: FontWeight.bold,
                       color: FHColorScheme.primaryColor
                     ),
@@ -205,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                 )
             ),
             SizedBox(
-              height: screenHeight * 0.25,
+              height: screenHeight * ((screenHeight > 1200) ? 0.2875 : (screenHeight > 1100) ? 0.28 : (screenHeight > 1000) ? 0.2725 : (screenHeight > 900) ? 0.265 : (screenHeight > 800) ? 0.2575 : (screenHeight > 700) ? 0.25 : (screenHeight > 600) ? 0.2425 : 0.235),
               child: Stack(
                 children: [
                   GestureDetector(
@@ -240,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                             child: AnimatedContainer(
                               duration: const Duration(milliseconds: 250),
                               transform: Matrix4.identity()..translate(0.0, isSeasonalHovered[index] ? -2.5 : 0.0),
-                              width: 170,
+                              width: ((screenHeight > 900) ? 225 : (screenHeight > 800) ? 200 : 175),
                               decoration: BoxDecoration(
                                 color: FHColorScheme.primaryColor,
                                 borderRadius: BorderRadius.circular(10),
@@ -381,14 +381,14 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 10,
             ),
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                     'WHY PRESERVE FOOD?',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: Platform.isWindows ? 25 : 22,
                       fontWeight: FontWeight.bold,
                       color: FHColorScheme.primaryColor
                     ),
@@ -396,7 +396,7 @@ class _HomePageState extends State<HomePage> {
                 )
             ),
             SizedBox(
-              height: screenHeight * ((screenHeight > 900) ? 0.4 : (screenHeight > 800) ? 0.375 : 0.35),
+              height: screenHeight * ((screenHeight > 1200) ? 0.38 : (screenHeight > 1100) ? 0.375 : (screenHeight > 1000) ? 0.37 : (screenHeight > 900) ? 0.36 : (screenHeight > 800) ? 0.34 : (screenHeight > 700) ? 0.32 : (screenHeight > 600) ? 0.30 : 0.28),
               child: GestureDetector(
                 onHorizontalDragUpdate: (details) {
                   if (details.primaryDelta! > 0) {

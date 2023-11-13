@@ -17,9 +17,6 @@ class _PreservationPageState extends State<PreservationPage> {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
-
     Map<String, dynamic> preservationInfo = widget.preservationData[widget.preservationKey];
     List<String> ingredients = List<String>.from(preservationInfo['ingredients']);
     List<String> instructions = List<String>.from(preservationInfo['process']);
@@ -159,7 +156,7 @@ class _PreservationPageState extends State<PreservationPage> {
                   itemCount: instructions.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
                           '${index + 1}.',

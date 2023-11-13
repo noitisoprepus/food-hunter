@@ -17,18 +17,25 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   final ScrollController _scrollController = ScrollController();
 
+  List<bool> isMethodHovered = [];
+  bool cheat = false;
+
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     Map<String, dynamic> foodData = widget.itemData;
-    Map<String, dynamic> nutrients = foodData['nutrients'] as Map<String, dynamic>;
+    Map<String, dynamic> nutrients = Map.from(foodData['nutrients'] as Map<String, dynamic>);
     Map<String, dynamic> preservation = foodData['preservation'] as Map<String, dynamic>;
     List<String> preservationKeys = preservation.keys.toList();
     List<String> seasonsList = List<String>.from(foodData['season']);
     String key = widget.itemKey;
-    String nutrientsSrc = nutrients['src'];
+    String nutrientsSrc = foodData['nutrients']['src'] ?? '';
     nutrients.remove('src');
+
+    if (!cheat) {
+      isMethodHovered = List.filled(preservationKeys.length, false);
+      cheat = true;
+    }
 
     String seasons = '';
     for (int i = 0; i < seasonsList.length; i++) {
@@ -163,9 +170,16 @@ class _FoodPageState extends State<FoodPage> {
                               ),
                             );
                           },
+                          onHover: (value) {
+                            setState(() {
+                              isMethodHovered[index] = value;
+                            });
+                          },
                           child: Hero(
                             tag: '${key}_${preservationKeys[index]}',
-                            child: Container(
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 250),
+                              transform: Matrix4.identity()..translate(0.0, isMethodHovered[index] ? -2.5 : 0.0),
                               width: 170,
                               decoration: BoxDecoration(
                                 color: FHColorScheme.primaryColor,

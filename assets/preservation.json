@@ -6,14 +6,14 @@
             "img": "assets/pics/preservation/jars.jpg"
         },
         "info2": {
-            "info": "Support Sustainability",
-            "description": "Helps sustainable agriculture and farmer livelihoods",
-            "img": "assets/pics/preservation/farming_0.jpg"
-        },
-        "info3": {
             "info": "Minimize Waste",
             "description": "Preserving food reduces wastage",
             "img": "assets/pics/preservation/waste.jpg"
+        },
+        "info3": {
+            "info": "Support Sustainability",
+            "description": "Helps sustainable agriculture and farmer livelihoods",
+            "img": "assets/pics/preservation/farming_0.jpg"
         },
         "info4": {
             "info": "Boost Economy",
