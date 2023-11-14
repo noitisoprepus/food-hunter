@@ -2706,16 +2706,91 @@
             "src": "https://www.verywellfit.com/bitter-melon-nutrition-facts-4178970"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickle",
+                "description": "Bitter gourd pickle is a zesty and flavorful condiment made by pickling bitter gourd slices in a mixture of vinegar, salt, and aromatic spices.",
                 "ingredients": [
-                    ""
+                    "250g of bitter gourd",
+                    "1 teaspoon of mustard seeds",
+                    "1 teaspoon of fenugreek seeds",
+                    "150ml of apple cider vinegar",
+                    "60ml of mustard oil",
+                    "1/2 teaspoon of red chili powder",
+                    "8 to 9 garlic cloves",
+                    "5 to 6 green chili",
+                    "Salt, as required"
                 ],
                 "process": [
-                    ""
+                    "Rinse the bitter gourd thoroughly, slightly peeling off any bruised parts without removing the entire skin. Slice the bitter gourd vertically, remove the seeds, and chop it into small pieces.",
+                    "Sprinkle salt over the chopped bitter gourd, mix well, and let it sit for 30 minutes. Afterward, squeeze out the salty juices and rinse the bitter gourd slices in fresh water. Drain excess water and set the slices aside.",
+                    "Heat mustard oil in a pan over medium-low to medium flame until it smokes. Add mustard seeds and fenugreek seeds, frying until they crackle. Then, add sliced garlic and green chilies, frying briefly.",
+                    "Incorporate the chopped bitter gourd and sauté for 7 to 8 minutes over low to medium heat.",
+                    "Add white vinegar, salt, and red chili powder. Stir well, bringing the pickle mixture to a boil for about 3 to 4 minutes.",
+                    "Turn off the heat, allowing the pickle mixture to cool. Cover the pan with a cotton napkin instead of a lid to avoid condensation droplets.",
+                    "Once cooled completely, transfer the Bitter Gourd Pickle into a clean, sterilized jar. Seal the jar with its lid and store it in the refrigerator.",
+                    "Serve the Bitter Gourd Pickle with Indian meals such as dal-rice, sambar-rice, curd rice, or kadhi-rice."
                 ],
-                "src": ""
+                "src": "https://www.vegrecipesofindia.com/bitter-gourd-pickle-recipe-karela-pickle/#wprm-recipe-container-134077"
+            },
+            "juice": {
+                "name": "Juice",
+                "description": "Known for its potential health benefits, bitter gourd juice is crafted by blending fresh bitter gourd into a slightly bitter yet highly nutritious beverage. This juice is celebrated for its role in supporting blood sugar regulation and is consumed for both its distinctive taste and potential wellness attributes.",
+                "ingredients": [
+                    "1 large bitter gourd",
+                    "1 green/red apple",
+                    "2cm piece of ginger",
+                    "1 tablespoon of lemon juice",
+                    "1 1/2 teaspoon of salt",
+                    "1 small green chili",
+                    "Cold water"
+                ],
+                "process": [
+                    "Wash the bitter gourd thoroughly, cut it in half, and remove the seeds. Proceed to chop it into small pieces.",
+                    "Place the chopped bitter gourd in a bowl and sprinkle 1 teaspoon of salt over it. Mix thoroughly using your hands and set it aside for 10 to 15 minutes.",
+                    "Chop an apple, removing the seeds, and keep it aside.",
+                    "After 10-15 minutes, squeeze the bitter gourd to extract the juices, then discard the squeezed juices.",
+                    "Transfer the squeezed bitter gourd to a blender. Add the chopped green apple, chili, ginger, and blend everything smoothly, adding a little water as needed.",
+                    "Strain the blended mixture and then add lemon juice and salt. Mix well.",
+                    "Adjust the consistency by adding more water if the mixture is too thick.",
+                    "Pour the juice into glasses and serve it cold."
+                ],
+                "src": "https://www.yummytummyaarthi.com/bitter-gourd-juice-recipe-bitter-melon/"
+            },
+            "drying": {
+                "name": "Drying",
+                "description": "Dried bitter gourd takes the form of crisp slices that can be enjoyed as a snack or rehydrated for diverse culinary purposes. The dehydration process enhances the gourd's natural bitterness, offering a crunchy texture that adds a distinctive flair to various dishes, showcasing the adaptability of this versatile vegetable.",
+                "ingredients": [
+                    "2 cups of bitter gourd",
+                    "2 teaspoons of chili powder",
+                    "1/4 teaspoon of asafoetida powder",
+                    "1 teaspoon of salt"
+                ],
+                "process": [
+                    "Mix salt with bitter gourd pieces (remove any hard seeds) and let it sit overnight. Optionally, slightly squeeze the pieces to remove water, depending on preferred bitterness.",
+                    "Spread the salted bitter gourd pieces on plastic paper and leave them under the hot sun. After 3-4 days when slightly dried, create a paste of red chili powder and asafoetida with a teaspoon of water. Apply this paste to the bitter gourd pieces.",
+                    "Spread the pieces on the paper and sun-dry them until they become very crispy.",
+                    "Once cooled to room temperature, store the dried bitter gourd in an airtight container. When serving, fry them in oil as suggested."
+                ],
+                "src": "https://www.aayisrecipes.com/konkani-recipes/sundried-bittergourd-chips-karathe-kachrihagalkayi-sandige/"
+            },
+            "jam": {
+                "name": "Jam",
+                "description": "Bitter gourd jam presents a unique fusion of flavors by combining bitter gourd with sugar and spices.",
+                "ingredients": [
+                    "1 bitter gourd",
+                    "1/2 cup of sugar",
+                    "3/4 cup of water",
+                    "2 cardamom",
+                    "Black pepper",
+                    "Saffron"
+                ],
+                "process": [
+                    "Soak saffron strands in warm water and set them aside. Peel and wash the Bitter Gourd. Cut it into 2-inch pieces and boil in water for about 2 minutes. Drain and squeeze out excess water from the Bitter Gourd.",
+                    "Pressure cook the Bitter Gourd with a little water for one whistle. Once cooled, drain the water and squeeze out any remaining excess water.",
+                    "Boil sugar and water together. Add black pepper, cardamom, saffron strands, and the cooked bitter gourd. Cook until the bitter gourd becomes tender.",
+                    "Let it cool and store the mixture in a jar."
+                ],
+                "src": "https://www.teluguone.com/recipes/amp/content/bitter-gourd-jam-7-1445.html"
             }
         }
     },
@@ -2726,26 +2801,70 @@
         "type": "Vegetable",
         "season": [],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "112",
+            "Protein": "2.04g",
+            "Fat": "0.065g",
+            "Carbohydrates": "26.1g",
+            "Fiber": "3.9g",
+            "Sugar": "5.43g",
+            "Magnesium": "32.5mg",
+            "Phosphorus": "61.1mg",
+            "Potassium": "438mg",
+            "Sodium": "71.5mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/168482/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "roast": {
+                "name": "Roasting",
+                "description": "Sweet potatoes seasoned and cooked in an oven or on a grill until tender with a crispy exterior.",
                 "ingredients": [
-                    ""
+                    "1lb of sweet potatoes",
+                    "1 1/2 teaspoons of olive oil",
+                    "1/4 teaspoon of kosher salt",
+                    "1/8 teaspoon of ground pepper"
                 ],
                 "process": [
-                    ""
+                    "Preheat the oven to 425 degrees F and line a large rimmed baking sheet with foil, lightly coating it with cooking spray. Set the sheet aside.",
+                    "Cut unpeeled sweet potatoes into 1-inch cubes.",
+                    "In a large bowl, toss the sweet potato cubes with oil, kosher salt, and pepper.",
+                    "Arrange the seasoned sweet potatoes in a single layer on the prepared baking sheet.",
+                    "Roast in the oven for about 20 minutes, turning once, until they're lightly browned, crispy on the cut sides, and tender inside."
                 ],
-                "src": ""
+                "src": "https://www.eatingwell.com/recipe/268936/roasted-sweet-potatoes/"
+            },
+            "baked": {
+                "name": "Baking",
+                "description": "Sweet potatoes baked in the oven until tender and fluffy, often served with various toppings like butter, cinnamon, or marshmallows.",
+                "ingredients": [
+                    "Sweet potatoes"
+                ],
+                "process": [
+                    "Preheat the oven to 425°F and line a baking sheet with foil.",
+                    "Use a fork to puncture holes into the sweet potatoes and place them on the prepared baking sheet.",
+                    "Roast the sweet potatoes for 40 to 50 minutes until they are puffed up and soft inside when pierced with a fork."
+                ],
+                "src": "https://www.loveandlemons.com/baked-sweet-potato/"
+            },
+            "candy": {
+                "name": "Candied",
+                "description": "Sweet potato slices or cubes cooked in a sweet syrup made of sugar, butter, and spices until caramelized and tender, offering a sweet and decadent side dish or dessert option.",
+                "ingredients": [
+                    "6 large sweet potatoes",
+                    "1/2 cup of butter",
+                    "2 cups of white sugar",
+                    "1 teaspoon of ground cinnamon",
+                    "1 teaspoon of ground nutmeg",
+                    "Salt, to taste",
+                    "1 tablespoon of vanilla extract"
+                ],
+                "process": [
+                    "Peel the sweet potatoes and slice them into 1/4-inch-thick pieces.",
+                    "Melt butter in a sturdy skillet over medium heat. Add the sliced potatoes.",
+                    "Combine sugar, cinnamon, nutmeg, and salt in a bowl. Pour this mixture over the potatoes and stir until thoroughly combined.",
+                    "Cover the skillet, reduce the heat to low, and cook the potatoes, stirring occasionally, for about 1 hour until they become tender and candied. The sauce will darken as it cooks.",
+                    "Just before serving, stir in the vanilla. Serve the candied sweet potatoes while they're hot."
+                ],
+                "src": "https://www.allrecipes.com/recipe/9209/southern-candied-sweet-potatoes/"
             }
         }
     },
@@ -2756,26 +2875,64 @@
         "type": "Vegetable",
         "season": ["January", "February, March", "May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "162",
+            "Protein": "1.66g",
+            "Fat": "0.264g",
+            "Carbohydrates": "9.16g",
+            "Fiber": "3.45g",
+            "Sugar": "3.37g",
+            "Calcium": "34.5mg",
+            "Iron": "0.69mg",
+            "Magnesium": "24.4mg",
+            "Phosphorus": "36.5mg",
+            "Potassium": "254mg",
+            "Sodium": "4.06mg",
+            "Zinc": "1.5mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170402/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "soup": {
+                "name": "Chayote Soup",
+                "description": "A comforting and flavorful soup made using chayote squash, often combined with other vegetables and seasonings, creating a nourishing and hearty dish.",
                 "ingredients": [
-                    ""
+                    "4 tablespoons of butter",
+                    "4 tablespoons of olive oil",
+                    "1 white onion",
+                    "5 garlic cloves",
+                    "8 chayote",
+                    "1 potato",
+                    "1 teaspoon of pepper flakes",
+                    "4 cups of chicken broth",
+                    "2 tablespoons of kosher salt"
                 ],
                 "process": [
-                    ""
+                    "Heat butter and olive oil in a large skillet over medium heat. Sauté onion and garlic until the onion turns translucent. Add chayotes, potato, and chili flakes. Reduce heat to low, cover, and cook for 30-45 minutes until chayote is tender and releases its juices. Let it cool slightly.",
+                    "Using a blender, puree the mixture in batches until smooth. Chayotes have high water content, so you may not need extra liquid. If required, add chicken broth to aid blending.",
+                    "Transfer the puree back to the pot. Stir in chicken broth for desired consistency. Add salt or powdered chicken bullion. Simmer on low for 15 minutes.",
+                    "Serve the soup hot. Garnish with freshly scooped pomegranate arils and toasted pine nuts."
                 ],
-                "src": ""
+                "src": "https://lolascocina.com/chayote-soup/"
+            },
+            "roast": {
+                "name": "Roasting",
+                "description": "Roasted chayote presents a delightful dish where the chayote squash is seasoned, oven-baked until tender, offering a deliciously caramelized and flavorful side or main dish.",
+                "ingredients": [
+                    "3 chayote",
+                    "2 tablespoons of olive oil",
+                    "0.5 teaspoon of salt",
+                    "0.5 teaspoon of black pepper",
+                    "0.5 teaspoon of za'atar",
+                    "3 tablespoons of freshly grated parmesan cheese"
+                ],
+                "process": [
+                    "Preheat the oven to 400°F (about 200°C).",
+                    "Wash and dry the chayotes. Slice them, remove the seeds, and keep the skin on. Place the slices in a bowl.",
+                    "Add olive oil, salt, pepper, and za'atar to the slices. Toss thoroughly to season all slices. Place them in a large baking tray, optionally drizzling extra olive oil on the tray or using parchment paper to prevent sticking.",
+                    "Bake for approximately 30 minutes or until the chayotes are easily pierced with a fork.",
+                    "Sprinkle parmesan cheese evenly over the slices. It doesn't need to cover them entirely. Bake for an additional 10 minutes or until the parmesan cheese turns golden.",
+                    "Allow cooling for a few minutes, then serve on a platter as a flavorful side dish. Enjoy!"
+                ],
+                "src": "https://mediterraneanlatinloveaffair.com/roasted-chayote-squash-with-parmesan/"
             }
         }
     },
@@ -2786,26 +2943,61 @@
         "type": "Vegetable",
         "season": [],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "137",
+            "Protein": "5.37g",
+            "Fat": "0.986g",
+            "Carbohydrates": "32.2g",
+            "Fiber": "16.4g",
+            "Sugar": "19.3g",
+            "Calcium": "49.3mg",
+            "Iron": "1.26mg",
+            "Magnesium": "76.7mg",
+            "Phosphorus": "132mg",
+            "Potassium": "1250mg",
+            "Sodium": "11mg",
+            "Zinc": "0.877mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169228/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Eggplant Pickle",
+                "description": "Eggplant pickle is a tangy condiment made by marinating eggplant slices in spices and vinegar, offering a flavorful addition to various dishes.",
                 "ingredients": [
-                    ""
+                    "4 1/4 cups of water",
+                    "4 1/4 cups of white wine vinegar",
+                    "3 tablespoons of kosher salt",
+                    "2 1/4 lbs of eggplants",
+                    "1-2 tablespoon of dried oregano",
+                    "1-2 red chili peppers",
+                    "4 garlic cloves",
+                    "1 cup of sunflower oil",
+                    "1 cup of extra virgin olive oil"
                 ],
                 "process": [
-                    ""
+                    "In a pot, bring water, vinegar, and salt to a boil.",
+                    "Prepare the eggplant by removing the green ends. Slice in half lengthwise, then cut into 1/2-inch slices. Cut the slices into 1/2-inch batons. Place them into the boiling brine for 3 minutes, ensuring they stay submerged if they float.",
+                    "Combine oregano, chile, garlic, and both oils. Drain the eggplant and add it to the oil mixture. Mix thoroughly.",
+                    "Sterilize canning jars by placing them in boiling water for 5 minutes. Transfer the eggplant and oil mixture into the canning jars, then seal them tightly."
                 ],
-                "src": ""
+                "src": "https://www.food.com/recipe/pickled-eggplant-aubergine-jamie-oliver-321642"
+            },
+            "roast": {
+                "name": "Roasted Eggplant",
+                "description": "Roasted eggplant is a simple yet delicious dish where eggplant is cooked in the oven until tender and slightly charred, bringing out its rich, savory flavor.",
+                "ingredients": [
+                    "1 medium eggplant",
+                    "1 1/2 tablespoon oil",
+                    "1/2 teaspoon fine sea salt"
+                ],
+                "process": [
+                    "Preheat the oven to 425°F (220°C) and line a baking sheet with parchment paper or a silicone baking mat.",
+                    "Cut the eggplant into 1-inch cubes or 1-inch-thick slices, ensuring thicker pieces for better tenderness and caramelization.",
+                    "Place the eggplant in a large bowl and toss with 1/2 teaspoon of fine sea salt and 1 ½ tablespoons of oil. Optionally, add the spice blend evenly over the eggplant and mix thoroughly.",
+                    "Spread the oil-coated eggplant on the prepared baking sheet, ensuring they're not crowded.",
+                    "Roast the eggplant for 20 minutes, stir, and continue roasting for another 10 to 15 minutes until tender and caramelized. If the eggplant appears dry during roasting, add a little more oil (about 1/2 tablespoon).",
+                    "Serve immediately or store in an airtight container for up to 4 days. Optionally, garnish with fresh mint before serving."
+                ],
+                "src": "https://www.inspiredtaste.net/51624/roasted-eggplant/"
             }
         }
     },
@@ -2816,26 +3008,76 @@
         "type": "Vegetable",
         "season": ["January", "February, March", "April", "May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "54",
+            "Protein": "4.9g",
+            "Fat": "0.54g",
+            "Carbohydrates": "10.3g",
+            "Fiber": "4.68g",
+            "Sugar": "2.81g",
+            "Calcium": "130mg",
+            "Iron": "3.1mg",
+            "Magnesium": "46.8mg",
+            "Phosphorus": "104mg",
+            "Potassium": "698mg",
+            "Sodium": "101mg",
+            "Zinc": "0.648mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169249/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "water": {
+                "name": "In Water",
+                "description": "Store lettuce by placing the base of the lettuce head in a jar or container filled with water. This method helps keep the leaves hydrated and fresh for longer periods in the refrigerator.",
                 "ingredients": [
-                    ""
+                    "Fresh lettuce"
                 ],
                 "process": [
-                    ""
+                    "Keep the lettuce head intact without removing the core or leaves. Only the stem stays submerged in water.",
+                    "Place the lettuce head in a vase or narrow bowl filled with enough water to cover the stem.",
+                    "Store the lettuce in the refrigerator, allowing you to pluck leaves as needed while keeping the rest fresh."
                 ],
-                "src": ""
+                "src": "https://tastegreatfoodie.com/the-best-way-to-store-lettuce/"
+            },
+            "pickle": {
+                "name": "Pickled Lettuce",
+                "description": "Lettuce pickles involve preserving lettuce leaves by marinating them in a solution of vinegar, spices, and seasoning. The pickling process imparts tangy flavors and helps extend the shelf life of lettuce.",
+                "ingredients": [
+                    "Lettuce",
+                    "4 large garlic cloves",
+                    "1 medium bunch fresh dill",
+                    "1/2 cup of dried cranberries, tart cherries, or raisins",
+                    "1 cup of boiled warm water",
+                    "1/2 cup of red wine or apple cider vinegar",
+                    "2 teaspoons kosher salt",
+                    "2 tablspoons of sugar",
+                    "1/2 teaspoon of red pepper plakes"
+                ],
+                "process": [
+                    "Cut green leaf lettuce into 3/4-inch wide ribbons; for iceberg lettuce, core it, slice in half, and then cut into 3/4-inch wide ribbons. Transfer to a large bowl and mix with garlic, dill, and dried berries.",
+                    "Combine water, vinegar, sugar, salt, and red pepper flakes in a measuring cup. Stir until the sugar and salt dissolve. Allow the mixture to cool to room temperature.",
+                    "Pour the prepared liquid over the lettuce in the bowl. Cover the bowl with a plate slightly smaller in diameter and place a weight on top to press the lettuce. Let it sit for approximately 2 hours.",
+                    "Pack the pickled lettuce tightly into a quart container and pour the pickling liquid over it. Cover and refrigerate until ready to use. The pickled lettuce will remain fresh in the refrigerator for more than a week."
+                ],
+                "src": "https://food52.com/recipes/19023-shalotta-mom-s-pickled-lettuce-condiment"
+            },
+            "jam": {
+                "name": "Lettuce Jam",
+                "description": "Lettuce jam is made by cooking lettuce leaves with sugar, sometimes incorporating additional fruits or flavors. It results in a sweet spread or condiment with a unique taste profile, combining the sweetness of the fruit with the mildness of lettuce.",
+                "ingredients": [
+                    "6 tablespoons of vegetable oil",
+                    "300g assorted lettuce",
+                    "2 large shallots",
+                    "1 1/2 tablespoons of capers",
+                    "8 cornichons",
+                    "3 tablespoons of Dijon mustard",
+                    "Fine sea salt"
+                ],
+                "process": [
+                    "Heat a large pan over high heat. Add 4 tablespoons (60 ml) of oil. Once the oil shimmers, add the lettuce. Allow the lettuce to cook undisturbed for about 2 minutes until the moisture evaporates. Stir occasionally for an additional 1 to 2 minutes until the leaves are dry but not burnt. This should take a total of 3 to 4 minutes. Transfer the cooked lettuce to a plate and refrigerate until very cold.",
+                    "Return the large pan to medium-high heat and add the remaining 2 tablespoons of oil. Cook the shallots until translucent, approximately 2 to 3 minutes. Remove from heat and let both the cooked lettuce and shallots cool completely on the plate.",
+                    "In a food processor, combine capers, cornichons, and mustard. Pulse the mixture to chop, leaving it slightly chunky. Add the chilled cooked lettuce and shallots to the food processor. Process until the mixture forms a creamy paste or dip consistency. Season the dip with salt to taste.",
+                    "Store the finished dip in an airtight container in the refrigerator for 2 to 3 days. Other greens like mixed chicories or head lettuce can also be used in this recipe."
+                ],
+                "src": "https://food52.com/recipes/70196-lettuce-jam"
             }
         }
     },
@@ -2846,26 +3088,83 @@
         "type": "Vegetable",
         "season": ["January", "April", "May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "31.4",
+            "Protein": "1.83g",
+            "Fat": "0.18g",
+            "Carbohydrates": "7.08g",
+            "Fiber": "3.04g",
+            "Sugar": "1.41g",
+            "Calcium": "77.9mg",
+            "Iron": "0.589mg",
+            "Magnesium": "54.2mg",
+            "Phosphorus": "58mg",
+            "Potassium": "284mg",
+            "Sodium": "6.65mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169260/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickled Okra",
+                "description": "Okra preserved in a brine or vinegar solution, resulting in a tangy and flavorful snack or addition to dishes. The pickling process enhances its taste and extends its shelf life.",
                 "ingredients": [
-                    ""
+                    "28oz of okra",
+                    "1.5 cups of water",
+                    "1.5 cups of white vinegar",
+                    "3 tablespoons of pickling salt",
+                    "2 cloves of garlic",
+                    "1 teaspoon of coriander seeds",
+                    "1 teaspoon of peppercorn",
+                    "Fresh dill"
                 ],
                 "process": [
-                    ""
+                    "Wash jars thoroughly and dry them in the oven at 325°F/160°C for 10-15 minutes until completely dry. Prepare a large pot for water bath canning if needed.",
+                    "Rinse and dry the okra. Trim the stems to ¼ inch without cutting through the pods.",
+                    "In a saucepan, combine vinegar, water, coriander seeds, peppercorns, and pickling salt. Boil, then simmer on low until ready to use.",
+                    "Place garlic cloves and dill in each jar. Pack the okra tightly into the jars, leaving ½-inch headspace. Pour hot brine over the okra, ensuring it's submerged.",
+                    "Tap the jars to release air bubbles and run a knife between the okra and the jar sides. Ensure proper headspace and submersion.",
+                    "Wipe jar rims, secure lids finger-tight. For quick pickled okra, refrigerate for 24-48 hours. For water bath canning, proceed to next step.",
+                    "Optional: Submerge sealed jars in boiling water for 15 minutes. Turn off heat, wait 5 minutes, then remove jars to cool on a towel-lined counter.",
+                    "Refrigerate fridge pickled okra for 1-2 months. Store canned okra in a cool, dark place for up to a year. Always use clean utensils for longer shelf life."
                 ],
-                "src": ""
+                "src": "https://www.alphafoodie.com/pickled-okra/"
+            },
+            "canning": {
+                "name": "Canning",
+                "description": "Okra that has been processed and sealed in cans, preserving its freshness and flavor. Canned okra maintains its texture and can be conveniently stored for future use in various recipes.",
+                "ingredients": [
+                    "2 quarts of chopped okra",
+                    "8 tablespoons of apple cider vinegar",
+                    "1 1/2 tablepoon of sea salt",
+                    "7 cups of filtered water"
+                ],
+                "process": [
+                    "Wash and cut okra into bite-size pieces, removing the ends.",
+                    "Prepare boiling water in a large pot and submerge jars, then simmer. In a small pan, prepare boiling water for rings and lids, then simmer.",
+                    "In the large pot, add filtered water, salt, and ACV, bring to a boil. Add the prepared okra and cook for 6 minutes.",
+                    "Using a jar lifter, remove a jar from boiling water and place a canning funnel on top.",
+                    "Fill the jar with okra using a slotted spoon, leaving a 1-inch headspace. Gently shake to settle the okra.",
+                    "Use a stainless measuring cup to pour boiling liquid over the okra, ensuring it's covered and leaving a 1-inch headspace.",
+                    "Remove air bubbles by gently tapping the jar. Use a damp towel to clean the jar rim.",
+                    "Use tongs to remove a lid and ring from boiling water, place on the jar, and tighten (use a towel if hot).",
+                    "As the jar cools, listen for a pop sound indicating it's sealed. Repeat steps for additional jars if using pints or doubling the recipe."
+                ],
+                "src": "https://www.thehealthnutmama.com/how-to-can-okra/"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Fresh okra that has been washed, sliced, and frozen. Freezing preserves the okra's nutrients and texture, making it a convenient option for use in soups, stews, or stir-fries.",
+                "ingredients": [
+                    "Fresh okras"
+                ],
+                "process": [
+                    "Wash and drain the okra thoroughly. Remove the stems and slice it into rounds, about 1/2 inch thick. Alternatively, freeze the whole okra if preferred.",
+                    "Arrange the sliced okra in a single layer on a parchment-lined baking sheet to prevent sticking together.",
+                    "Place the baking sheet in the freezer and freeze for a minimum of 4 hours.",
+                    "Transfer the frozen okra to a ziplock freezer bag or freezer container, ensuring they come off easily due to being frozen individually.",
+                    "Label the freezer bag/container with the date and keep it frozen for 10-12 months.",
+                    "When ready to use, remove the desired amount from the bag. For soups or stews, no need to thaw. For frying, thaw and drain the okra completely before use."
+                ],
+                "src": "https://www.daringgourmet.com/how-to-freeze-okra/"
             }
         }
     },
@@ -2876,26 +3175,60 @@
         "type": "Vegetable",
         "season": ["January", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "100",
+            "Protein": "1.17g",
+            "Fat": "0.61g",
+            "Carbohydrates": "25.53g",
+            "Fiber": "5.2g",
+            "Sugar": "9.2g",
+            "Magnesium": "36mg",
+            "Potassium": "806mg",
+            "Phosphorus": "55mg",
+            "Sodium": "37mg",
+            "Calcium": "16mg",
+            "src": "https://www.healthbenefitstimes.com/sponge-gourd-nutritional-value/"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "drying": {
+                "name": "Dried Patola",
+                "description": "Creating loofah sponges from sponge gourds is an easy way to make natural exfoliators for bathing and skincare.",
                 "ingredients": [
-                    ""
+                    "Mature sponge gourd"
                 ],
                 "process": [
-                    ""
+                    "Harvest mature sponge gourds with dark yellow or brown skin, ensuring they contain the most fiber for sponge-making.",
+                    "Peel the gourds easily by whacking them to loosen the dry skin; ensure it is separated from the fiber before peeling.",
+                    "Remove seeds and sap by shaking the gourd or squeezing it to expel the seeds and sap through the natural hole in the gourd's length.",
+                    "Wash the gourds with soapy water and then dry them either in sunlight or using an oven. This prepares them for the next stages of processing into loofah sponges."
                 ],
-                "src": ""
+                "src": "https://mb.com.ph/2022/05/04/how-to-turn-patola-into-loofah-sponges/"
+            },
+            "soup": {
+                "name": "Patola Soup",
+                "description": "Sponge gourd soup is a light and nutritious dish made primarily from sponge gourd, often cooked with other vegetables, spices, and sometimes with a broth base. It's known for its delicate flavor and health benefits, commonly enjoyed as a comforting meal.",
+                "ingredients": [
+                    "3 medium patola",
+                    "1 tablespoon of canola oil",
+                    "1 onion",
+                    "2 garlic cloves",
+                    "1/2lb of ground pork",
+                    "1 tablespoon of fish sauce",
+                    "2 cups of water",
+                    "2oz miswa noodles",
+                    "Salt and pepper, to taste"
+                ],
+                "process": [
+                    "Remove ends from patola and discard. Peel the gourd using a vegetable peeler. Slice it crosswise into ¼-inch thick pieces.",
+                    "Heat oil in a wide pan over medium heat. Cook onions and garlic until softened.",
+                    "Add pork and cook until lightly browned, breaking it apart using a spoon.",
+                    "Stir in fish sauce and cook for 1 to 2 minutes.",
+                    "Pour water into the pan, bring it to a boil, and skim off any scum.",
+                    "Reduce heat and simmer for about 10 minutes until pork is tender.",
+                    "Add patola and cook for 3 to 5 minutes until tender-crisp.",
+                    "Add miswa noodles and cook for 1 to 2 minutes until softened.",
+                    "Season with salt and pepper as desired. Serve hot."
+                ],
+                "src": "https://www.kawalingpinoy.com/miswa-at-patola-soup/"
             }
         }
     },
@@ -2906,56 +3239,170 @@
         "type": "Vegetable",
         "season": ["January", "February, March", "April", "May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "9.1",
+            "Fat": "0.1g",
+            "Sodium": "45.5mg",
+            "Carbohydrates": "1.5g",
+            "Fiber": "0.7g",
+            "Sugar": "0.8g",
+            "Protein": "1.1g",
+            "Vitamin K": "252mg",
+            "src": "https://www.verywellfit.com/carb-information-for-bok-choy-2241765"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "freezing": {
+                "name": "Freezing",
+                "description": "Bok choy can be frozen after being blanched briefly and then placed in airtight containers or freezer bags, ensuring its freshness for future use.",
                 "ingredients": [
-                    ""
+                    "Fresh bok choy"
                 ],
                 "process": [
-                    ""
+                    "Gently wipe bok choy using a damp paper towel to remove dirt. Avoid washing it under running water.",
+                    "Chop bok choy into pieces, including both leaves and stems.",
+                    "Portion chopped bok choy into quart-sized freezer bags, about 2 cups per bag.",
+                    "Flatten freezer bags to remove air, using a straw to extract excess air before sealing.",
+                    "Label bags with contents and date.",
+                    "Store bok choy in the freezer for preservation."
                 ],
-                "src": ""
+                "src": "https://brooklynfarmgirl.com/how-to-freeze-bok-choy-without-it-turning-mushy/"
+            },
+            "fermentation": {
+                "name": "Fermentation",
+                "description": "Fermented bok choy involves soaking the vegetable in a brine solution, allowing natural fermentation to occur, resulting in a tangy and flavorful pickled product rich in probiotics.",
+                "ingredients": [
+                    "400g of baby bok choy",
+                    "1 teaspoon of dried basil",
+                    "2 slices of lemon",
+                    "20g of unrefined sea salt",
+                    "400g of filtered water",
+                    "1/4 cup of sliced green cabbage leaves (Optional)"
+                ],
+                "process": [
+                    "Cleanse your fermentation equipment: Wash the jar, weight, and lid thoroughly.",
+                    "Gently rinse baby bok choy with cool water.",
+                    "Chop the bok choy or keep it whole if it fits well in the jar.",
+                    "Prepare your kitchen scale: Place it on the counter, turn it on, and set it to measure in grams.",
+                    "Use a bowl on the scale, zero the scale, and add bok choy until it reaches 400 grams.",
+                    "Set the bowl of bok choy aside. Put another bowl on the scale, zero it, and measure out 20 grams of salt.",
+                    "Place the clean fermenting jar on the scale, zero it again, and add 400 grams of filtered water.",
+                    "Add bok choy, salt, and chosen spices to the water-filled jar. Secure the lid and shake for approximately 3 minutes until the salt dissolves.",
+                    "Remove the lid and position the glass fermentation weight in the jar, ensuring the bok choy, basil, and lemon pieces are fully submerged.",
+                    "Seal the jar with a mason jar lid and let it ferment for a minimum of 21 days. Expect bubbling in the initial days; remember to burp the jar during this period. Re-adjust the fermentation weight and rinse the lid whenever necessary."
+                ],
+                "src": "https://cultured.guru/blog/easy-lacto-fermented-bok-choy"
             }
         }
     },
-    "sili": {
-        "name": "Sili",
-        "iconName": "Sili",
-        "binomial": "Capsicum annum",
+    "chili": {
+        "name": "Chili Pepper (Sili)",
+        "iconName": "Chili Pepper",
+        "binomial": "Capsicum annuum",
         "type": "Vegetable",
         "season": ["January", "April", "May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "18",
+            "Protein": "0.842g",
+            "Fat": "0.198g",
+            "Carbohydrates": "3.96g",
+            "Fiber": "0.675g",
+            "Sugar": "2.38g",
+            "Calcium": "6.3mg",
+            "Iron": "0.464mg",
+            "Magnesium": "10.4mg",
+            "Phosphorus": "19.4mg",
+            "Potassium": "145mg",
+            "Sodium": "4.05mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170106/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "fermentation": {
+                "name": "Fermentation",
+                "description": "Tangy and spicy hot sauce made from fermented chili peppers, boasting a robust, complex flavor profile.",
                 "ingredients": [
-                    ""
+                    "1lb of chili peppers",
+                    "1 quart of unchlorinated water",
+                    "3 tablespoons of salt",
+                    "1/2-1 cup of white wine vinegar"
                 ],
                 "process": [
-                    ""
+                    "Roughly chop the chili peppers and pack them into a ball jar, ensuring 1 inch of headspace. Use Mason jars or similar vessels for fermentation.",
+                    "Combine 1 quart of unchlorinated water with 3 tablespoons of sea salt. Pour the brine over the peppers to cover them entirely. Check daily and keep the peppers submerged to prevent spoilage. One method is using a partially filled baggie to press the peppers below the brine.",
+                    "Seal the jar and place it away from direct sunlight for at least a week at temperatures between 55-75°F. Monitor the fermentation activity, burping the jar occasionally. After 1-2 weeks, the brine will turn cloudy and taste acidic.",
+                    "Drain the fermented peppers while keeping the brine aside.",
+                    "Combine the fermented peppers in a blender with 1/2 cup of the reserved brine and 1/2 cup vinegar. Adjust quantities to taste preferences. Blend until smooth.",
+                    "Optional: Transfer the blended sauce to a pot, bring it to a quick boil, then simmer for 15 minutes to halt fermentation. Skip this step if you prefer continued fermentation. Refrigerate in sealed containers.",
+                    "Optional: Strain the mixture to remove solids for a smoother consistency or use as-is for a thicker hot sauce. Bottle and store in the refrigerator."
                 ],
-                "src": ""
+                "src": "https://www.chilipeppermadness.com/recipes/fermented-hot-sauce/"
+            },
+            "oil": {
+                "name": "Chili Oil",
+                "description": "Infused oil featuring the zesty heat of chili peppers, perfect for enhancing various dishes and adding a spicy kick.",
+                "ingredients": [
+                    "1 cup of canola oil",
+                    "Crushed dried chili peppers",
+                    "Seasonings (Optional)"
+                ],
+                "process": [
+                    "Combine chili flakes and other spices in a heatproof bowl. Mix thoroughly.",
+                    "Heat oil on medium-high in a small pot, avoiding smoking. Remove from heat if it starts to smoke excessively.",
+                    "Carefully pour the hot oil over the chili flakes and spices. It will sizzle. Stir well. Allow it to cool and strain if preferred.",
+                    "Transfer the chili oil to a glass container. Use immediately or store for later use."
+                ],
+                "src": "https://www.chilipeppermadness.com/cooking-with-chili-peppers/how-to-make-chili-oil/"
+            },
+            "jelly": {
+                "name": "Pepper Jelly",
+                "description": "A sweet and spicy condiment, combining the heat of chili peppers with a gel-like texture, versatile as a spread or glaze.",
+                "ingredients": [
+                    "4-5 cups of very finely chopped chili peppers",
+                    "1 1/4 cup of apple cider vinegar",
+                    "1/4 cup of lime juice",
+                    "1 teaspoon of salt",
+                    "1.75oz of pectine",
+                    "5 cups of sugar"
+                ],
+                "process": [
+                    "Combine finely chopped peppers, sugar, vinegar, lime juice, and salt in a large pan. Bring to a boil, then lower heat and simmer for 10 minutes, stirring frequently.",
+                    "Stir in pectin and boil for an additional minute while stirring constantly. Remove from heat and cool for 5 minutes.",
+                    "Ladle the hot liquid into clean jars, leaving 1/4 inch space at the top. Seal the jars with lids and cool overnight in the refrigerator until the mixture sets into jelly."
+                ],
+                "src": "https://www.chilipeppermadness.com/recipes/pepper-jelly/"
+            },
+            "pickle": {
+                "name": "Pickled Peppers",
+                "description": "Peppers preserved in a vinegar-based brine, offering a tangy and flavorful addition to meals or as a standalone snack.",
+                "ingredients": [
+                    "3-4 cups of chili peppers",
+                    "1 cup of white vinegar",
+                    "1 cup of water",
+                    "4 garlic cloves",
+                    "3 tablespoons of black peppercorns",
+                    "2 tablespoons of pickling salt",
+                    "2 tablespoons of sugar"
+                ],
+                "process": [
+                    "Wash and dry the chili peppers. Cut large ones into small chunks. For small peppers, leave them whole and poke holes in them for the pickling solution. Pack them into a cleaned quart jar.",
+                    "In a large pot, combine vinegar, water, garlic, peppercorns, salt, and sugar. Stir well.",
+                    "Heat the mixture and bring it to a quick boil, then reduce the heat and simmer for approximately 2 minutes. Allow it to cool slightly.",
+                    "Pour the brine over the peppers in the jar, ensuring they are fully submerged, and seal the jar tightly. Let it cool, then store it in the refrigerator."
+                ],
+                "src": "https://www.chilipeppermadness.com/chili-pepper-recipes/pickled-peppers/pickled-peppers/"
+            },
+            "dehydration": {
+                "name": "Dehydration",
+                "description": "Dried chili peppers with an intensified flavor, suitable for grinding into spice blends or rehydrating for cooking.",
+                "ingredients": [
+                    "1lb of fresh chili pepper pods"
+                ],
+                "process": [
+                    "Wash and dry fresh chili peppers thoroughly. Discard any peppers showing signs of spoilage or rot.",
+                    "While wearing gloves, remove the stems. For thicker peppers, slice them into rings, and for thinner ones, halve them. If preferred, leave them whole, noting it will lengthen the dehydration process.",
+                    "Arrange the prepared peppers evenly on the dehydrator trays for proper heat distribution.",
+                    "Switch on the dehydrator at 135-140 degrees F (or per your dehydrator's instructions).",
+                    "Once dried, grind the peppers into a fine powder using a spice grinder. Store the powder in baggies or containers. Keep in a dark, cool place like your pantry for prolonged freshness."
+                ],
+                "src": "https://www.chilipeppermadness.com/preserving-chili-peppers/how-to-dehydrate-chili-peppers-and-make-chili-powders/"
             }
         }
     },
@@ -2984,7 +3431,7 @@
             "src": "https://www.verywellfit.com/tomatoes-nutrition-facts-calories-and-health-benefits-4119981"
         },
         "preservation": {
-            "powdering": {
+            "powder": {
                 "name": "Tomato Powder",
                 "description": "Preserving tomatoes by making tomato powder involves dehydrating ripe tomatoes and grinding them into a fine powder. This process intensifies the tomatoes' flavor and allows for easy storage. The resulting powder can be used as a versatile seasoning, adding a rich tomato taste to soups, sauces, and various dishes.",
                 "ingredients": [
@@ -3001,47 +3448,77 @@
             },
             "canning": {
                 "name": "Canning",
-                "description": "",
+                "description": "Canning tomatoes involves preserving fresh tomatoes by sealing them in sterilized jars with heat processing. It retains their freshness for an extended time, usually up to a year, making them available for use in cooking throughout the year.",
                 "ingredients": [
-                    "Fresh tomatoes"
+                    "12lbs of ripe tomatoes",
+                    "4 teaspoons of kosher salt",
+                    "4 tablespoons of lemon juice",
+                    "4 sterilized quart jars with lids and rims"
                 ],
                 "process": [
-                    "Dry the tomatoes by sun-drying or by using a dehydrator."
+                    "Score an X on the bottom of each tomato. Boil a large pot of water and place the tomatoes in batches. Once the skins begin to retract (about 1 minute), transfer the tomatoes to cold water to halt cooking and loosen the skins.",
+                    "Peel off the tomato skins and remove the stems. Pack the peeled and cored tomatoes firmly into sterilized jars, leaving a 1/2-inch space at the top.",
+                    "Add 1 teaspoon of Kosher salt and 1 tablespoon of bottled lemon juice per quart jar. Secure the lids and rims tightly.",
+                    "Create a boiling water bath in a deep pot. Submerge the jars in the water bath using a wire jar rack. Process the jars for 45 minutes once the water reaches a boil.",
+                    "After processing, remove the rack and place it on a heatproof surface. Cover the jars with a clean dish towel and let them cool at room temperature for several hours.",
+                    "Check the seals for proper processing, date the jars, and store them in a cool, dark place (like a pantry). These canned tomatoes will stay good for up to a year."
                 ],
-                "src": "https://www.thespruceeats.com/how-to-can-tomatoes-p2-2216509"
+                "src": "https://food52.com/recipes/347-grandma-s-canned-tomatoes"
             },
             "freezing": {
                 "name": "Freezing",
-                "description": "",
+                "description": "Freezing tomatoes involves preserving them by freezing whole or chopped tomatoes. It's a simple method that retains their flavor and nutrients for later use in soups, sauces, or stews.",
                 "ingredients": [
                     "Fresh tomatoes"
                 ],
                 "process": [
-                    "Dry the tomatoes by sun-drying or by using a dehydrator."
+                    "Begin by washing and drying the tomatoes thoroughly.",
+                    "Lay the tomatoes on a rimmed baking dish and freeze until they are firm, typically around an hour or longer based on their size.",
+                    "Once frozen, transfer the tomatoes into a freezer bag. You can also opt for a food storage container or jar, although removing air might be challenging with these options. Squeeze out as much air as possible and seal the bag securely.",
+                    "Return the bag to the freezer for storage."
                 ],
-                "src": "https://www.thespruceeats.com/how-to-freeze-tomatoes-2217649"
+                "src": "https://www.yummymummykitchen.com/2020/10/how-to-freeze-tomatoes.html"
             },
             "drying": {
                 "name": "Drying",
-                "description": "",
+                "description": "Drying tomatoes involves dehydrating them to remove moisture, preserving them for an extended period. This method concentrates their flavor and makes them a flavorful addition to various dishes like salads, pasta, or as a snack.",
                 "ingredients": [
-                    "Fresh tomatoes"
+                    "2lbs of tomatoes",
+                    "1 tablespoon of olive oil",
+                    "Spices (Optional)"
                 ],
                 "process": [
-                    "Dry the tomatoes by sun-drying or by using a dehydrator."
+                    "Preheat the oven to 200 F and position the rack in the center. Rinse the tomatoes under cool water and thoroughly dry them using paper towels or a clean kitchen towel.",
+                    "Hull or core each tomato, then remove the seeds and excess juice using a teaspoon or the tip of a dinner knife.",
+                    "Cut smaller tomatoes into quarters and larger ones into bite-size pieces.",
+                    "Place the tomato pieces in a large bowl and drizzle with olive oil and preferred seasonings, tossing gently to coat evenly.",
+                    "Arrange the cut tomatoes on a wire rack set over a large rimmed baking sheet, ensuring about 1-inch space between pieces.",
+                    "Transfer to the preheated oven. Check the tomatoes every 30 minutes after the first hour, removing them when the edges curl up, and they shrink by about one-third, approximately 2 to 3 hours based on humidity and tomato juiciness.",
+                    "Let them cool at the plump-dry stage or return them to the oven for an additional 3 to 4 hours for a chewier texture, if desired."
                 ],
                 "src": "https://www.thespruceeats.com/oven-dried-tomatoes-recipe-2217296"
             },
             "paste": {
                 "name": "Tomato Paste",
-                "description": "",
+                "description": "Tomato paste is a thick and concentrated paste made from cooked tomatoes. It's commonly used to intensify flavor in sauces, soups, stews, and other dishes, providing a rich and robust tomato taste.",
                 "ingredients": [
-                    "Fresh tomatoes"
+                    "10lbs of fresh tomatoes",
+                    "2 tablespoons of olive oil",
+                    "2 teaspoons of sea salt",
+                    "1/2 teaspoon of citric acid"
                 ],
                 "process": [
-                    "Dry the tomatoes by sun-drying or by using a dehydrator."
+                    "Preheat the oven to 350°F and position two racks in the oven to divide it into thirds.",
+                    "Quarter the tomatoes and simmer them with olive oil in a large pot over medium-high heat until soft and the skins loosen.",
+                    "Pass the cooked tomatoes through a food mill, sieve, or chinois to separate the pulp from seeds and skins. Stir sea salt and citric acid or lemon juice into the pulp, discarding the seeds and skins.",
+                    "Spread the pulp onto two large, rimmed baking sheets or a large roasting pan.",
+                    "Bake the tomato pulp in the oven, stirring every 30 minutes and rotating the sheets for even reduction. Combine into one sheet as it thickens.",
+                    "Continue baking until the paste is shiny, brick-colored, and reduced by more than half, approximately 3 to 4 hours.",
+                    "Divide the paste into 4-ounce jars, leaving 3/4-inch headspace.",
+                    "Option 1 - Process the jars in a boiling water bath for 15 minutes. Store in a cool, dark place for up to 1 year. Refrigerate after opening for up to 1 week.",
+                    "Option 2 - Refrigerate or freeze the paste. Place it into clean half or quarter pint jars, top with olive oil, and refrigerate for 3 to 4 weeks or freeze for up to 9 months."
                 ],
-                "src": "https://www.thespruceeats.com/easy-homemade-tomato-paste-recipe-2216043"
+                "src": "https://www.thekitchn.com/how-to-make-tomato-paste-cooking-lessons-from-the-kitchn-206853"
             }
         }
     },
@@ -3052,26 +3529,71 @@
         "type": "Vegetable",
         "season": ["January", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "14",
+            "Carbohydrates": "3.39g",
+            "Protein": "0.62g",
+            "Fat": "0.02g",
+            "Cholesterol": "0mg",
+            "Fiber": "0.5g",
+            "Sodium": "2mg",
+            "Potassium": "150mg",
+            "Calcium": "26mg",
+            "src": "https://www.nutrition-and-you.com/bottle-gourd.html"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "condiment": {
+                "name": "Thecha",
+                "description": "Bottle gourd thecha is a spicy Maharashtrian condiment made by crushing or pounding roasted bottle gourd with chili, garlic, and spices.",
                 "ingredients": [
-                    ""
+                    "50g bottle gourd peel",
+                    "4 green chilies",
+                    "20g of fresh coriander",
+                    "4 garlic cloves",
+                    "5 tablespoons of sunflower oil",
+                    "1 teaspoon of mustard seeds",
+                    "1 tablespoon of sesame seeds",
+                    "1/4 teaspoon of turmeric powder",
+                    "1/8 teaspoon of asafoetida",
+                    "1/4 teaspoon of dried mango powder",
+                    "2 tablespoons of peanut powder",
+                    "2 tablespoons of grated dry coconut",
+                    "1 teaspoon of caster sugar (Optional)",
+                    "Salt, to taste"
                 ],
                 "process": [
-                    ""
+                    "Heat two tablespoons of oil in a kadhai and roast grated bottle gourd on medium heat until light golden brown. Set aside.",
+                    "Grind coriander, green chilies, and garlic into a coarse paste.",
+                    "In the same kadhai, heat the remaining oil and splutter mustard seeds. Add the ground paste from step 2 and roast until garlic and chilies are cooked, stirring continuously (about 2-4 minutes).",
+                    "Add sesame seeds and roast for a couple of minutes. Add more oil if necessary.",
+                    "Incorporate asafoetida, turmeric, and amchoor powder, then add the roasted bottle gourd and grated coconut. Cook until light brown.",
+                    "Stir in roasted and ground peanut powder. Season with salt (and sugar) to taste. Continue cooking until coconut and bottle gourd turn crisp and golden brown.",
+                    "Store in a dry, airtight jar."
                 ],
-                "src": ""
+                "src": "https://zanzaneetkitchen.com/bottle-gourd-peel-thecha/"
+            },
+            "pickle": {
+                "name": "Pickle",
+                "description": "Bottle gourd pickle is a tangy and spicy Indian condiment made by pickling bottle gourd with various spices, oil, and vinegar or lemon juice.",
+                "ingredients": [
+                    "1 bottle gourd",
+                    "4-5 tablespoons of mustard oil",
+                    "1 teaspoon of turmeric powder",
+                    "2 tablespoon of red chili powder",
+                    "2 garlic cloves",
+                    "1 teaspoon of roasted cumin seeds",
+                    "1 teaspoon of coriander seeds",
+                    "1 teaspoon of roasted mustard seeds",
+                    "1/2 teaspoon of roasted fenugreek seeds",
+                    "1 tablespoon of salt"
+                ],
+                "process": [
+                    "Cut the Bottle Gourd into small pieces, leaving the skin on.",
+                    "Boil them with Turmeric powder for approximately 10 minutes.",
+                    "Once cooked, spread the pieces on a clean, dry plate to completely dry. Meanwhile, prepare a clean, sterilized glass jar and add all the other ingredients to it.",
+                    "Once the Bottle Gourd pieces are fully dried, add them to the jar and shake thoroughly. Place the jar in sunlight for 3-4 days.",
+                    "Refrigerate the pickle for prolonged freshness and best results. Enjoy this delightful pickle for an extended period."
+                ],
+                "src": "https://cookpad.com/in/recipes/12147515-bottle-gourd-pickle"
             }
         }
     },
@@ -3082,26 +3604,62 @@
         "type": "Vegetable",
         "season": ["January"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "27",
+            "Protein": "2.86g",
+            "Fat": "0.42g",
+            "Carbohydrates": "4.67g",
+            "Fiber": "3.2g",
+            "Sugar": "1.32g",
+            "Calcium": "115mg",
+            "Iron": "1.64mg",
+            "Magnesium": "32mg",
+            "Phosphorus": "58mg",
+            "Potassium": "384mg",
+            "Sodium": "20mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169256/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickle",
+                "description": "Pickled mustard greens involve preserving the greens in a brine or vinegar solution, lending a tangy flavor.",
                 "ingredients": [
-                    ""
+                    "3 1/2 mustard greens",
+                    "1.5oz of ginger",
+                    "Sea salt",
+                    "Granulated sugar",
+                    "10 cups of water",
+                    "7 tablespoons of white vinegar"
                 ],
                 "process": [
-                    ""
+                    "Trim mustard greens, soak, and clean thoroughly by soaking, rinsing, and repeating the process three times.",
+                    "Boil water, add salt, and blanch mustard greens for 30 seconds; cool in a sheet pan.",
+                    "Blanch sliced ginger in the same water and cool it to room temperature.",
+                    "Rub salt over cooled mustard greens and place them in a bowl; cover with ginger-infused blanching liquid.",
+                    "Press down the greens with a plate and weight; let them sit for 24 hours.",
+                    "Disinfect a jar, lift the greens out of the brine, and squeeze excess liquid; place them and ginger slices in the jar.",
+                    "Add salt, sugar, vinegar, and brine into the jar, ensuring all greens are submerged.",
+                    "Cover with plastic wrap and airtight lid, label, and keep in a cool, dark place for 2 days.",
+                    "Refrigerate for 7 days or until the greens turn dull green before consuming."
                 ],
-                "src": ""
+                "src": "https://thewoksoflife.com/pickled-mustard-greens-haam-choy/"
+            },
+            "fermentation": {
+                "name": "Fermentation",
+                "description": "Fermented mustard greens undergo a fermentation process, resulting in a sour, tangy taste, often produced by lacto-fermentation.",
+                "ingredients": [
+                    "1lb of mustard greens",
+                    "4 garlic cloves",
+                    "4 Thai chiles",
+                    "4 cups of cold water",
+                    "2 tablespoons of sea salt"
+                ],
+                "process": [
+                    "Chop mustard greens into bite-size pieces, rinse, and drain in a colander. Pat them dry with a towel.",
+                    "Layer greens, garlic, and chiles in a large bowl. Sprinkle with sea salt, cover lightly, and let them sweat for 15-20 minutes.",
+                    "Transfer the salted mixture into a wide-mouth quart canning jar. Press down to release juices and cover with non-chlorinated water. Use a fermentation weight to keep everything submerged.",
+                    "Attach an airlock or silicone fermenting lid. Allow fermentation at room temperature for 5-7 days. Refrigerate once properly fermented for enhanced flavor over time."
+                ],
+                "src": "https://www.rebootedmom.com/fermented-mustard-greens/"
             }
         }
     },
@@ -3112,26 +3670,79 @@
         "type": "Vegetable",
         "season": ["January"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "25",
+            "Protein": "1.92g",
+            "Fat": "0.28g",
+            "Carbohydrates": "4.97g",
+            "Fiber": "2g",
+            "Sugar": "1.91g",
+            "Calcium": "22mg",
+            "Iron": "0.42mg",
+            "Magnesium": "15mg",
+            "Phosphorus": "44mg",
+            "Potassium": "299mg",
+            "Sodium": "30mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169986/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Cauliflower Pickle",
+                "description": "A tangy and flavorful condiment made by pickling cauliflower florets with spices and brine, delivering a unique taste.",
                 "ingredients": [
-                    ""
+                    "1 tablespoon of pickling spice",
+                    "1 cauliflower head",
+                    "1 cup of cider vinegar",
+                    "1 cup of water",
+                    "1 teaspoon of pickling salt",
+                    "1/2 teaspoon of sugar"
                 ],
                 "process": [
-                    ""
+                    "Distribute pickling spice between 2 jars (8-ounce) or 1 jar (16-ounce).",
+                    "Chop cauliflower into small florets, eliminating large stems or leaves. Fill the prepared jar(s) with the cauliflower.",
+                    "Combine vinegar, water, pickling salt, and sugar in a small saucepan. Bring to a boil, stirring to dissolve salt and sugar.",
+                    "Pour the mixture over cauliflower, leaving a ¼-inch space at the top of the jar. Ensure the cauliflower is fully submerged; if needed, add more brine or cauliflower. Remove air bubbles using a chopstick.",
+                    "Seal the jar(s) and let them cool to room temperature before placing in the refrigerator."
                 ],
-                "src": ""
+                "src": "https://www.stetted.com/pickled-cauliflower/"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Preserve cauliflower's freshness and nutrients by blanching florets, freezing them on a tray, and transferring them to airtight containers for long-term storage.",
+                "ingredients": [
+                    "1 cauliflower head",
+                    "1 large pot of boiling water",
+                    "1 large bowl of ice water"
+                ],
+                "process": [
+                    "Clean the cauliflower and cut it into halves and then quarters. Remove the florets and cut them into smaller pieces, if needed.",
+                    "Start blanching by boiling a large pot of water. Add the cauliflower and let it simmer for 1-2 minutes. Use a slotted spoon or skimmer to remove it from the pot.",
+                    "Immediately place the cauliflower in a bowl of ice water to stop the cooking process. Allow it to cool for around 2 minutes.",
+                    "Drain the cauliflower and gently pat the florets dry to remove excess moisture.",
+                    "Spread the cauliflower evenly on a baking sheet and freeze it for 1-2 hours.",
+                    "Transfer the frozen cauliflower to freezer bags or containers and store in the freezer for several months."
+                ],
+                "src": "https://downshiftology.com/recipes/how-to-freeze-cauliflower/"
+            },
+            "fermentation": {
+                "name": "Fermentation",
+                "description": "An inventive method to enhance cauliflower's taste and shelf life by fermenting it with salt and spices, providing a tangy, probiotic-rich side dish or ingredient.",
+                "ingredients": [
+                    "4 cups of non-chlorinated water",
+                    "2 tablespoons of sea salt",
+                    "1 cauliflower head",
+                    "3 hot peppers (Optional)",
+                    "3 garlic cloves (Optional)"
+                ],
+                "process": [
+                    "Wash 3 pint-sized jars thoroughly. Prepare a brine by mixing water and salt until the salt dissolves completely.",
+                    "Place one pepper and one garlic clove in each pint-sized jar, either whole or sliced.",
+                    "Cut the cauliflower into bite-sized pieces and distribute them among the jars.",
+                    "Pour the brine over the cauliflower to cover. If needed, add water to top off each jar.",
+                    "Use a glass weight to keep the cauliflower submerged under the brine. Seal the jar with an airlock system or loosely screw on a lid.",
+                    "Set the jars in a place where they won't be disturbed to ferment for 3-5 days (place them in a pan to catch any potential overflow).",
+                    "Test the cauliflower after a few days. If satisfied with the fermentation level, seal the jars and refrigerate. If not ready, leave them out for another day or two. Remember to use a clean utensil to remove cauliflower to avoid contaminating the brine."
+                ],
+                "src": "https://www.attainable-sustainable.net/lacto-fermented-cauliflower/"
             }
         }
     },
@@ -3142,26 +3753,82 @@
         "type": "Vegetable",
         "season": ["January", "February, March", "April", "May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "40",
+            "Protein": "1.1g",
+            "Fat": "0.1g",
+            "Carbohydrates": "9.34g",
+            "Fiber": "1.7g",
+            "Sugar": "4.24g",
+            "Calcium": "23mg",
+            "Iron": "0.21mg",
+            "Magnesium": "10mg",
+            "Phosphorus": "29mg",
+            "Potassium": "146mg",
+            "Sodium": "4mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170000/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickled Onions",
+                "description": "Onion pickle is a tangy and flavorful condiment made by marinating sliced onions in a mixture of vinegar, spices, and sometimes sugar. It's allowed to rest for some time to develop its flavors and is commonly used as a relish or side dish.",
                 "ingredients": [
-                    ""
+                    "4 cups of red onions",
+                    "1 1/2 cups of apple cider vinegar",
+                    "1/2 cup of water",
+                    "1/2 cup of granulated sugar",
+                    "1 tablespoon of pickling salt",
+                    "1 teaspoon of mustard seed",
+                    "1/2 teaspoon of celery seed",
+                    "1/2 teaspoon of red pepper flakes"
                 ],
                 "process": [
-                    ""
+                    "Place dry whole spices at the base of a 1-quart jar.",
+                    "Add sliced raw onion or whole pearl/pickling onions along with other required vegetables, ensuring 1/2 inch space at the top.",
+                    "Combine vinegar, water, sugar, salt, and ground spices in a stainless steel saucepan. Simmer, stirring to dissolve.",
+                    "Pour the hot brine over the onions, maintaining 1/2 inch space from the lid.",
+                    "Seal the jar with its lid and refrigerate to store."
                 ],
-                "src": ""
+                "src": "https://practicalselfreliance.com/pickled-onions/"
+            },
+            "canning": {
+                "name": "Canning",
+                "description": "Canning onions involves preserving onions in jars through a heat-processing method.",
+                "ingredients": [
+                    "2lbs of onions",
+                    "4-5 cups of water"
+                ],
+                "process": [
+                    "Set up the pressure canner by placing the rack inside and adding boiling water according to the user manual. Boil water separately in a cooking pot.",
+                    "Prepare onions by washing, trimming, peeling, and cutting them into 2-inch pieces.",
+                    "Pack the canning jars tightly with the onion pieces, leaving 1 ½ inches of space at the top.",
+                    "Pour boiling water over the onions in each jar, maintaining a 1-inch headspace using a canning funnel and ladle.",
+                    "Eliminate air bubbles from the jars using a non-metallic tool.",
+                    "Clean the jar rims and seal them by placing lids and bands, tightening them finger-tight.",
+                    "Carefully place the filled jars into the prepped pressure canner.",
+                    "Seal the canner, bring it to a boil, and vent for 10 minutes or until the vent closes automatically.",
+                    "Maintain pressure at 11 PSI for a dial gauge or 10 PSI for a weighted gauge and process the jars for 40 minutes.",
+                    "Turn off the heat and allow the canner to cool completely before opening. Remove the jars and let them cool on the counter. Label and store in a cool, dark place."
+                ],
+                "src": "https://getbusygardening.com/canning-onions/"
+            },
+            "jam": {
+                "name": "Jam",
+                "description": "Onion jam is a sweet-savory spread made by caramelizing onions with sugar, vinegar, and often spices until they achieve a jam-like consistency. It's a versatile condiment that pairs well with cheeses, meats, or used as a spread on sandwiches or crackers.",
+                "ingredients": [
+                    "4lbs of sliced sweet yellow onions",
+                    "4 tablespoons of extra virgin olive oil",
+                    "1 1/2 cup of granulated sugar",
+                    "1 1/2 cup of balsamic vinegar",
+                    "2 tablespoons of finely minced summer savory",
+                    "2 teaspoons of sea salt",
+                    "1 teaspoon of ground black pepper"
+                ],
+                "process": [
+                    "Heat olive oil and onions in a large, heavy saucepan over medium heat. Cook for about 10-15 minutes until the onions turn golden, stirring occasionally.",
+                    "Add sugar and balsamic vinegar to the pan. Cook for an additional 45 minutes or longer until the mixture thickens to a syrupy consistency. Add salt, pepper, and herbs as desired.",
+                    "Continue with the canning process or let the jam cool and transfer it into an airtight container for storing in the refrigerator."
+                ],
+                "src": "https://www.attainable-sustainable.net/caramelized-onion-jam-recipe/"
             }
         }
     },
@@ -3172,26 +3839,56 @@
         "type": "Vegetable",
         "season": ["January"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "25",
+            "Protein": "1.28g",
+            "Fat": "0.1g",
+            "Carbohydrates": "5.8g",
+            "Fiber": "2.5g",
+            "Sugar": "3.2g",
+            "Calcium": "40mg",
+            "Iron": "0.47mg",
+            "Magnesium": "12mg",
+            "Phosphorus": "26mg",
+            "Potassium": "170mg",
+            "Sodium": "18mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169975/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickled Cabbage",
+                "description": "Pickled cabbage involves fermenting shredded cabbage in a brine solution, resulting in a tangy, flavorful dish.",
                 "ingredients": [
-                    ""
+                    "1 small cabbage",
+                    "2 medium carrots",
+                    "1 medium bell pepper",
+                    "2 cups of water",
+                    "7 tablespoons of sugar",
+                    "1 tablespoon of salt",
+                    "6 tablespoons of distilled white vinegar",
+                    "1/3 cup of olive oil"
                 ],
                 "process": [
-                    ""
+                    "Slice cabbage and bell pepper thinly, and shred the carrot. Combine these vegetables in a bowl.",
+                    "Pack the mixed vegetables tightly into a glass jar.",
+                    "Boil water, sugar, and salt in a saucepan. Remove from heat and add vinegar and olive oil. Stir and pour this marinade into the jar with the vegetables.",
+                    "Let the mixture cool completely, then refrigerate. Allow at least 12 hours for pickling before serving."
                 ],
-                "src": ""
+                "src": "https://cooktoria.com/pickled-cabbage/"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Frozen cabbage is blanched and frozen, preserving its texture and nutrients for later use in various recipes.",
+                "ingredients": [
+                    "1 cabbage head"
+                ],
+                "process": [
+                    "Prepare cabbage by removing damaged leaves, washing, and drying it. Slice into desired shapes: shreds or wedges.",
+                    "Boil a large pot of water and prepare a bowl with ice water. Boil the cabbage: 30-60 seconds for shreds, 1-2 minutes for wedges.",
+                    "Remove cabbage with a slotted spoon and plunge into the ice water. Let it cool, drain, and pat dry.",
+                    "Spread the blanched cabbage on a baking sheet lined with parchment paper. Freeze it for 1-2 hours until solid.",
+                    "Transfer frozen cabbage to freezer bags, remove air, and seal. Store in the freezer for up to 6 months."
+                ],
+                "src": "https://itsavegworldafterall.com/how-to-freeze-cabbage/"
             }
         }
     },
@@ -3202,26 +3899,79 @@
         "type": "Vegetable",
         "season": [],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "80",
+            "Protein": "1.82g",
+            "Fat": "0.75g",
+            "Carbohydrates": "17.8g",
+            "Fiber": "2g",
+            "Sugar": "1.7g",
+            "Calcium": "16mg",
+            "Iron": "0.6mg",
+            "Magnesium": "43mg",
+            "Phosphorus": "34mg",
+            "Potassium": "415mg",
+            "Sodium": "13mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169231/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "preserve": {
+                "name": "Ginger Preserve",
+                "description": "Sweet and candied ginger slices preserved in sugar syrup, often used as a sweet condiment or a snack.",
                 "ingredients": [
-                    ""
+                    "500g of fresh ginger",
+                    "500g of sugar",
+                    "3 cloves",
+                    "2pcs of cinnamon",
+                    "1/2 teaspoon of salt",
+                    "1l of water"
                 ],
                 "process": [
-                    ""
+                    "Peel and wash ginger, then slice into thin 1-inch slivers.",
+                    "Boil ginger with sugar, salt, cinnamon, cloves in 1 liter of water until sugar melts and mixture thickens.",
+                    "Stir often to avoid burning.",
+                    "Simmer until sugar starts to crystallize.",
+                    "Remove from heat, spread on a greased plate to dry.",
+                    "Once dry and cool, store in clean jars for later use."
                 ],
-                "src": ""
+                "src": "https://www.bawarchi.com/recipe/ginger-preserve-oetah1gbfeecf.html"
+            },
+            "jam": {
+                "name": "Ginger Jam",
+                "description": "A spreadable jam made from ginger, sugar, and sometimes citrus, offering a sweet and tangy flavor, ideal for toast or pastries.",
+                "ingredients": [
+                    "2 cups of grated ginger",
+                    "2 cups of water",
+                    "Juice and zest from 2 lemons",
+                    "2 cups of sugar",
+                    "1/4 teaspoon of butter"
+                ],
+                "process": [
+                    "Wash, peel, and grate ginger finely. Place in a 2-quart saucepan.",
+                    "Add water, lemon juice, lemon zest, and sugar, stirring until sugar dissolves completely.",
+                    "Place the pan over medium heat, bringing it to a rapid boil. Add butter to prevent foaming. Cook until the jam reaches 220°F on a candy thermometer.",
+                    "Remove from heat, skim off any foam, ensuring the jam's surface is clear.",
+                    "Spoon the hot jam into sanitized jars. Cover with two-part lids. Seal jars in a boiling water bath for 10 minutes.",
+                    "Remove jars from the water bath and allow them to cool completely. Label with the date before storing."
+                ],
+                "src": "https://joybileefarm.com/easy-ginger-jam/"
+            },
+            "pickle": {
+                "name": "Pickled Ginger",
+                "description": "Thinly sliced ginger marinated in a mixture of vinegar and sugar, commonly served as a palate cleanser or accompaniment to sushi.",
+                "ingredients": [
+                    "10oz of ginger",
+                    "1/2 cup of rice vinegar",
+                    "1/2 cup of boiling hot water",
+                    "1/4 cup of honey or maple syrup",
+                    "1 teaspoon of kosher salt"
+                ],
+                "process": [
+                    "Prep the ginger by thinly slicing it with a vegetable peeler or mandoline.",
+                    "Place the sliced ginger into a glass storage container.",
+                    "Add the vinegar, hot water, honey, and salt. Stir the mixture well to combine.",
+                    "Cover the jar and let it sit at room temperature for 1 hour, then refrigerate for a minimum of 4 hours before consuming. When serving, use clean utensils to avoid contamination and prolong storage."
+                ],
+                "src": "https://downshiftology.com/recipes/quick-pickled-ginger/"
             }
         }
     },
@@ -3232,26 +3982,69 @@
         "type": "Vegetable",
         "season": ["January", "February", "March", "April", "May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
+            "Calories": "4.5",
             "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Sodium": "0.5mg",
+            "Carbohydrates": "1g",
+            "Fiber": "0.1g",
+            "Sugar": "0g",
+            "Protein": "0.2g",
+            "Vitamin C": "0.9mg",
+            "Zinc": "0.04mcg",
+            "src": "https://www.verywellfit.com/garlic-nutrition-facts-calories-and-health-benefits-4114318"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "oil": {
+                "name": "In Oil",
+                "description": "Garlic cloves stored in oil, typically used as a flavor enhancer in various dishes, providing a rich, infused garlic taste.",
                 "ingredients": [
-                    ""
+                    "150g of garlic",
+                    "100ml olive oil",
+                    "1/2 teaspoon of black peppercorns",
+                    "1/2 teaspoon of pickling spice",
+                    "Salt, to taste"
                 ],
                 "process": [
-                    ""
+                    "Peel garlic cloves and boil in salted water for 2 minutes.",
+                    "Dry garlic on kitchen paper and let it cool.",
+                    "Sterilize small jars, then fill them with the garlic, oil, and spices.",
+                    "Seal the jars and store in a dark place for 2 months before use.",
+                    "The garlic will remain crisp for 3 months, then soften.",
+                    "Use in salads, mashed potatoes, soups, pasta, and more."
                 ],
-                "src": ""
+                "src": "https://larderlove.com/preserved-garlic-oil/"
+            },
+            "pickle": {
+                "name": "Pickled Garlic",
+                "description": "Garlic cloves pickled in vinegar or brine, offering a tangy, slightly acidic flavor, often used as a condiment or added to salads and antipasti.",
+                "ingredients": [
+                    "1/4 cups of canning salt",
+                    "5 cups of white vinegar",
+                    "2lbs of peeled fresh garlic",
+                    "1 teaspoon of crushed red pepper flakes",
+                    "4 fresh dill heads"
+                ],
+                "process": [
+                    "Mix canning salt and vinegar in a large saucepan. Bring to a boil, then simmer for 10 minutes (maintain at 180 degrees).",
+                    "Pack garlic into 4 sterilized pint jars, leaving a 1/2-inch headspace. Add 1/4 teaspoon red pepper flakes and 1 head of dill to each jar. (For fresh dill, use 1/2 cup per jar.)",
+                    "Use a ladle to distribute the hot pickling liquid equally among the jars, leaving a 1/2-inch headspace. Remove air bubbles, clean the jar rims, position lids on jars, and adjust bands to fingertip-tight.",
+                    "Refrigerate until pickled to taste (recommended at least 3 weeks in the refrigerator). Store in the refrigerator for up to 4 months. Alternatively, follow sealing instructions below, but note that refrigeration is necessary for long-term storage; it won't be shelf-stable."
+                ],
+                "src": "https://www.culinaryhill.com/pickled-garlic-recipe/"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Garlic cloves frozen whole or chopped, preserving their flavor and allowing for extended storage, ideal for cooking and seasoning various dishes without compromising taste.",
+                "ingredients": [
+                    "5 bulbs of garlic cloves"
+                ],
+                "process": [
+                    "Peel the garlic cloves by hand, with a peeler tube, or use the shaking method inside a mason jar to remove the peels efficiently.",
+                    "Remove any green sprouts or brown stems from the peeled garlic cloves using a paring knife.",
+                    "Place the garlic cloves in a food processor fitted with a metal blade. Pulse in short bursts until the garlic is uniformly minced. Remember to scrape down the sides as needed. You can stop when it's minced or continue until it becomes a paste.",
+                    "Transfer the garlic paste into small freezer-safe storage bags. Optionally, use a knife to create 1-inch squares, approximately equal to 1 teaspoon of garlic paste, before freezing."
+                ],
+                "src": "https://feelgoodfoodie.net/recipe/freezing-garlic/"
             }
         }
     },
@@ -3262,26 +4055,60 @@
         "type": "Vegetable",
         "season": ["January", "February", "April", "May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "45.1",
+            "Protein": "3.11g",
+            "Fat": "0.149g",
+            "Carbohydrates": "8.14g",
+            "Fiber": "2.12g",
+            "Sugar": "0.858g",
+            "Calcium": "17.2mg",
+            "Iron": "0.876mg",
+            "Magnesium": "24.6mg",
+            "Phosphorus": "47.7mg",
+            "Potassium": "162mg",
+            "Sodium": "1.95mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174256/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "paste": {
+                "name": "Mongo Paste",
+                "description": "Mung bean paste is a smooth, velvety paste made from cooked and mashed mung beans. It's a versatile ingredient used in various sweet and savory dishes in Asian cuisine.",
                 "ingredients": [
-                    ""
+                    "100g of split yellow mung beans",
+                    "300ml of water",
+                    "100g  of sugar",
+                    "50g of oil",
+                    "30g of all-purpose flour"
                 ],
                 "process": [
-                    ""
+                    "Rinse mung beans thoroughly and drain.",
+                    "Soak for 1 hour in hot water or 4 hours in room temperature water. Drain and steam over high heat for about 20 minutes until easily mashed.",
+                    "Place beans in a dish, add water, cook for 8 minutes under pressure, then release the pressure and drain excess liquid.",
+                    "Cook mashed beans in a pan with sugar, oil, and flour until dry, non-sticky, and glossy.",
+                    "Refrigerate for up to one week or freeze for up to 6 months in a freezer bag."
                 ],
-                "src": ""
+                "src": "https://whattocooktoday.com/mung-bean-paste.html"
+            },
+            "popsicle": {
+                "name": "Popsicle",
+                "description": "Mung bean popsicles are frozen desserts made from blended mung beans, often sweetened with sugar or other natural sweeteners. They offer a refreshing and nutritious treat, especially in warmer climates.",
+                "ingredients": [
+                    "10oz of dried mung beans",
+                    "9 1/2 cups of cold water",
+                    "2 1/2 tablespoons of sweet rice flour",
+                    "8oz of rock sugar"
+                ],
+                "process": [
+                    "Rinse mung beans, soak in 9 cups of water for at least 2 hours. Dissolve rice flour with ½ cup water, set aside.",
+                    "Add sugar to soaked beans, boil covered. Simmer 30-35 mins until beans are soft but firm.",
+                    "Bring mixture to a boil, add rice flour mixture. Stir quickly, turn off heat.",
+                    "Drain and set aside a cup of cooked beans to cool.",
+                    "Cool soup, pulse in blender to break down beans, not into a puree.",
+                    "Add reserved beans to molds, pour blended soup with space at the top.",
+                    "Remove air bubbles, cover, insert sticks, and freeze for about 6 hours until solid.",
+                    "To retrieve, briefly defrost mold and store wrapped in plastic in a freezer bag."
+                ],
+                "src": "https://thewoksoflife.com/mung-bean-popsicles/"
             }
         }
     },
@@ -3292,26 +4119,78 @@
         "type": "Vegetable",
         "season": ["February", "May", "April", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "148",
+            "Protein": "11.6g",
+            "Fat": "0.9g",
+            "Carbohydrates": "28.1g",
+            "Calcium": "30mg",
+            "Iron": "2mg",
+            "Magnesium": "24mg",
+            "Phosphorus": "45mg",
+            "Potassium": "586mg",
+            "Sodium": "35mg",
+            "Zinc": "1.39mg",
+            "Copper": "1.39mg",
+            "Manganese": "0.532mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/170070/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "pickle": {
+                "name": "Pickle",
+                "description": "Winged bean pickle is a tangy and flavorful condiment made by pickling winged beans along with spices and vinegar, offering a zesty addition to meals.",
                 "ingredients": [
-                    ""
+                    "20 winged bean pods",
+                    "1 teaspoon of pepper",
+                    "1 carrot",
+                    "1 tablespoon of mustard",
+                    "10 beans",
+                    "2 tablespoons of ginger",
+                    "15 green chilies",
+                    "1 tablespoon of garlic",
+                    "1 large onion",
+                    "Salt",
+                    "1 cup of vinegar",
+                    "1/4 teaspoon of turmeric",
+                    "1 tablespoon of chili powder"
                 ],
                 "process": [
-                    ""
+                    "Blend garlic, ginger, mustard, and pepper with vinegar until smooth.",
+                    "Slice winged bean pods lengthwise and chop into 1-inch pieces.",
+                    "Halve the beans lengthwise and cut into 1-inch pieces.",
+                    "Cut carrots into 1-inch pieces and split the green chilies.",
+                    "Combine sugar, chili powder, salt, and ground ingredients with vinegar.",
+                    "Bring the mixture to a boil.",
+                    "Add winged beans and green chilies, cook for two minutes.",
+                    "Remove from heat, add carrots and onions, mix well.",
+                    "Bottle the mixture once cooled."
                 ],
-                "src": ""
+                "src": "https://www.echocommunity.org/en/resources/9a0768b7-f2fd-4717-8711-57482bac3821"
+            },
+            "chutney": {
+                "name": "Chutney",
+                "description": "Winged bean chutney is a savory spread or sauce prepared with winged beans, blended with various spices, and often served as a delicious accompaniment to meals.",
+                "ingredients": [
+                    "10 winged beans",
+                    "2 fresh green tomatoes",
+                    "1 tablespoon of chopped ginger",
+                    "2 tablespoons of grated coconut",
+                    "1 tablespoon of Urad dal",
+                    "1/4 lemon sized tamarind",
+                    "2 teaspoon Jeera/Cumin",
+                    "Salt, to taste",
+                    "6 green chili",
+                    "1/2 cup of chopped coriander",
+                    "2 teaspoons of oil"
+                ],
+                "process": [
+                    "Heat oil in a pan. Add jeera and urad dal. Once golden brown, add chopped winged beans, ginger, and green tomatoes.",
+                    "Cook until winged beans soften and tomatoes begin to break down. Add green chilies, salt, tamarind, fresh coriander, and grated coconut.",
+                    "Mix for 2-3 minutes. Turn off heat and let it cool.",
+                    "Grind the mixture to a smooth paste and set aside.",
+                    "Heat oil in a pan. Add channa dal and urad dal. Once golden, add mustard seeds, curry leaves, and asafoetida. Remove from heat.",
+                    "Pour the tempering over the chutney. Serve with Idli, Dosa, Paniyaram, or Hot Rice and Ghee. Enjoy!"
+                ],
+                "src": "https://preethicuisine.com/winged-bean-green-tomato-chutney/"
             }
         }
     },
@@ -3322,26 +4201,79 @@
         "type": "Vegetable",
         "season": ["February", "April", "May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
+            "Calories": "63",
             "Protein": "1g",
             "Fat": "0g",
-            "Sugar": "15g",
+            "Carbohydrates": "16g",
             "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Sugar": "3g",
+            "src": "https://www.webmd.com/diet/health-benefits-squash"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "freezing": {
+                "name": "Freezing",
+                "description": "Preserve squash by washing, slicing, blanching, and freezing it for long-term storage without compromising taste and quality.",
                 "ingredients": [
-                    ""
+                    "Squash"
                 ],
                 "process": [
-                    ""
+                    "Wash and drain the squash in a colander to remove excess moisture.",
+                    "Trim off both ends and cut the squash into 1-inch cubes or thin slices about 1/4-inch thick.",
+                    "For freezing squash intended for frying, toss the squash cubes or slices in a large stainless steel bowl with your preferred coating.",
+                    "Arrange the coated squash in a single layer on a sheet pan lined with parchment paper. Layer with additional parchment paper between each squash layer.",
+                    "Place the sheet pan in the freezer for several hours or overnight until the squash is frozen.",
+                    "Once frozen, transfer the squash to a ziplock bag. This method prevents sticking and allows you to portion out the squash as needed for cooking."
                 ],
-                "src": ""
+                "src": "https://www.thehealthnutmama.com/how-to-freeze-squash/"
+            },
+            "pickle": {
+                "name": "Piackled Squash",
+                "description": "Transform squash into tangy, flavorful pickles by preserving it in a brine solution with vinegar, spices, and herbs, creating a zesty accompaniment.",
+                "ingredients": [
+                    "2 1/2 lbs of squash, sliced into rounds",
+                    "2 small onions, thinly sliced",
+                    "1 green bell pepper",
+                    "1/4 cup of salt",
+                    "2 1/4 cups of white sugar",
+                    "2 cups of distilled white vinegar",
+                    "2 teaspoons of mustard seed",
+                    "1 teaspoon of ground turmeric",
+                    "1 teaspoon of celery seed"
+                ],
+                "process": [
+                    "Combine squash, onions, and bell pepper in a large pot. Sprinkle salt over the mixture and let it sit for 2 hours, stirring occasionally to release liquid.",
+                    "In a separate saucepan, mix sugar, vinegar, mustard seed, turmeric, and celery seed. Bring this mixture to a boil.",
+                    "Drain and pour the briny liquid over the salted vegetables in the pot. Allow them to stand for an additional 2 hours.",
+                    "Bring the vegetable mixture to a boil, then reduce the heat and simmer for roughly 5 minutes.",
+                    "Fill sterilized 1-pint jars with the mixture, leaving 1/4 inch of space from the top. Remove air bubbles by running a knife along the jar's insides. Clean the jar rims with a damp paper towel. Seal with lids and tighten the rings.",
+                    "Process the jars in a simmering water bath for about 10 minutes to ensure a complete seal."
+                ],
+                "src": "https://www.allrecipes.com/recipe/93027/pickled-squash/"
+            },
+            "canning": {
+                "name": "Canning",
+                "description": "Process and can squash using heat to sterilize and seal it in jars, ensuring its long-term shelf stability while preserving its taste and texture.",
+                "ingredients": [
+                    "4-6 squash, chopped and seeds removed",
+                    "2 tablespoons of white vinegar",
+                    "4-6 cups of water",
+                    "1/4 cups of kosher salt",
+                    "1 tablespoon of sugar (Optional)",
+                    "4 garlic cloves (Optional)",
+                    "4 sprigs of fresh dill (Optional)"
+                ],
+                "process": [
+                    "Choose fresh squash without bruises or soft spots. Wash the squash under cold water and pat dry.",
+                    "Cut off the ends and slice the remaining squash into 1-inch slices, cubes, or sticks based on preference.",
+                    "Sterilize canning jar lids and rings following the manufacturer's instructions.",
+                    "Pack blanched squash tightly into jars, leaving 1 inch of space at the top.",
+                    "In a separate pot, boil 4 cups of water, vinegar, and salt for 2-3 minutes until the salt dissolves.",
+                    "Pour hot brine over the squash, ensuring ½ inch of headspace. Remove air bubbles and wipe jar rims clean.",
+                    "Seal the jars tightly and process them in a boiling water bath for 10-15 minutes based on jar size and altitude.",
+                    "Remove jars from the water bath and let cool on a towel-lined countertop for 12-24 hours.",
+                    "Check lids for a secure seal by pressing the center. Store sealed jars in a cool, dark place for up to a year."
+                ],
+                "src": "https://ronalyntalston.com/canning-squash-for-frying/"
             }
         }
     },
@@ -3352,26 +4284,59 @@
         "type": "Vegetable",
         "season": ["May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "115",
+            "Protein": "7.8g",
+            "Fat": "0.38g",
+            "Carbohydrates": "20.9g",
+            "Fiber": "7g",
+            "Sugar": "2.9g",
+            "Calcium": "17mg",
+            "Iron": "2.39mg",
+            "Magnesium": "43mg",
+            "Phosphorus": "111mg",
+            "Potassium": "508mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/174253/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "canning": {
+                "name": "Canning",
+                "description": "Preserving lima beans in a pressure canner with salt and water, preserving their freshness and flavor for long-term storage.",
                 "ingredients": [
-                    ""
+                    "Lima beans",
+                    "Salt"
                 ],
                 "process": [
-                    ""
+                    "Wash the lima beans thoroughly, removing any debris or damaged beans.",
+                    "Pre-soak the beans overnight or quick soak by boiling them for 2 minutes, then soaking for 1 hour.",
+                    "Partially cook the beans in fresh water by boiling for 30 minutes.",
+                    "Add desired salt amounts to each jar (1/2 tsp per pint, 1 tsp per quart).",
+                    "Fill jars with beans and the cooking water, leaving 1 1/2 inches of headspace for beans and 1 inch for water above them.",
+                    "Remove air bubbles, adjust headspace, clean jar rims, and seal with lids and screw bands.",
+                    "Place jars in the pressure canner and process according to altitude and canner instructions.",
+                    "Bring the canner to a boil, allow steam to vent for 10 minutes, then add weights to build pressure.",
+                    "Process for the required time at the correct pressure.",
+                    "Turn off heat and wait for pressure to reach zero. Remove weights, open the lid slightly, and wait 5 minutes.",
+                    "Remove the lid and take out the jars, placing them on a towel to cool for about 12 hours.",
+                    "Check seals, clean jars, and store them in a cool, dark place."
                 ],
-                "src": ""
+                "src": "https://www.simplycanning.com/how-to-can-lima-beans/"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "Blanching fresh lima beans, cooling them, and freezing to preserve their texture and taste for later use.",
+                "ingredients": [
+                    "Lima beans"
+                ],
+                "process": [
+                    "Prepare the beans by washing and trimming if needed.",
+                    "Bring a pot of water to a boil.",
+                    "Water blanch the beans based on their size: 2 minutes for small beans, 3 minutes for medium beans, and 4 minutes for large beans.",
+                    "Promptly remove the blanched beans and cool them in ice water to stop the cooking process.",
+                    "Drain the beans thoroughly after cooling.",
+                    "Package the blanched beans, leaving 1/2-inch headspace to allow for expansion.",
+                    "Seal the packaging and place it in the freezer to freeze."
+                ],
+                "src": "https://nchfp.uga.edu/how/freeze/bean_lima.html#:~:text=Wash%2C%20shell%20and%20sort%20according,Seal%20and%20freeze."
             }
         }
     },
@@ -3382,26 +4347,34 @@
         "type": "Vegetable",
         "season": ["May", "June"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "": "Per 100g",
+            "Calories": "117",
+            "Fat": "0.6g",
+            "Sodium": "7mg",
+            "Potassium": "337mg",
+            "Carbohydrates": "21g",
+            "Protein": "8g",
+            "Calcium": "0.04mg",
+            "src": "https://www.lybrate.com/topic/hyacinth-beans-sem-ki-phali-benefits-and-side-effects"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "freezing": {
+                "name": "Freezing",
+                "description": "Freezing hyacinth beans involves blanching the prepared beans in boiling water for a brief time, cooling them rapidly in ice water, draining excess moisture, and then storing them in suitable freezer-safe containers or bags for freezing.",
                 "ingredients": [
-                    ""
+                    "Fresh hyacinth bean pods",
+                    "Wash the hyacinth beans thoroughly and place them in a muslin cloth, tying it securely with a rope.",
+                    "Once the water is boiling, immerse the pack of beans in the hot water and let it cook for 2 minutes.",
+                    "Remove the pack from the hot water and immediately place it in the prepared ice water.",
+                    "Untie the cloth and remove the beans. Rinse them in a colander under running water.",
+                    "Let the beans stand for 10-15 minutes.",
+                    "Pat dry the beans using a cloth or paper towel and ensure they are completely dry.",
+                    "Store the dry beans in a zip-lock bag or airtight container and freeze."
                 ],
                 "process": [
-                    ""
+                    "Prepare ice water and bring a pot of water to a rolling boil."
                 ],
-                "src": ""
+                "src": "https://www.spicingyourlife.com/how-to-freeze-beans-fresh-pigeon-pea/"
             }
         }
     },
@@ -3412,26 +4385,69 @@
         "type": "Vegetable",
         "season": ["May", "June", "September", "October", "November", "December"],
         "nutrients": {
-            "Calories": "110",
-            "Carbohydrates": "28g",
-            "Protein": "1g",
-            "Fat": "0g",
-            "Sugar": "15g",
-            "Fiber": "3g",
-            "Potassium": "450g",
-            "src": "https://www.hsph.harvard.edu/"
+            "Calories": "47",
+            "Protein": "2.8g",
+            "Fat": "0.4g",
+            "Carbohydrates": "8.35g",
+            "Calcium": "50mg",
+            "Iron": "0.47mg",
+            "Magnesium": "44mg",
+            "Phosphorus": "59mg",
+            "Potassium": "240mg",
+            "Sodium": "4mg",
+            "Zinc": "0.37mg",
+            "src": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/169222/nutrients"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "fermentation": {
+                "name": "Fermentation",
+                "description": "Long beans undergoing fermentation to develop tangy flavors and transformed textures.",
                 "ingredients": [
-                    ""
+                    "2lbs of long beans",
+                    "2 inches sliced ginger root",
+                    "2 whole star anise",
+                    "2 tablespoons of red sichuan peppercorns",
+                    "1 cinnamon stick",
+                    "3 bay leaves",
+                    "3 tablespoons of sea salt",
+                    "2 tablespoons of rock sugar",
+                    "6 cups of filtered water",
+                    "1/4 cup of Erguotou"
                 ],
                 "process": [
-                    ""
+                    "Prepare the long beans by washing and removing tough ends.",
+                    "Arrange the long beans in a large glass jar, either stacking them in spirals or cutting them to fit.",
+                    "Add sliced ginger, star anise, Sichuan peppercorns, cinnamon stick, bay leaves, salt, sugar, water, and erguotou to cover the vegetables. Seal the jar.",
+                    "Allow the Chinese long beans to ferment in a cool, dark area at room temperature for approximately 10 days. During fermentation, CO2 will be released, so release air pressure from the jar daily.",
+                    "As fermentation progresses, the flavor intensifies. Transfer the fermented long beans to cold storage to halt fermentation. They can be refrigerated for several months."
                 ],
-                "src": ""
+                "src": "https://www.yangsnourishingkitchen.com/chinese-long-bean-recipe-fermented-long-beans/"
+            },
+            "pickle": {
+                "name": "Pickle",
+                "description": "Long beans preserved in a brine or vinegar solution, offering a tangy and crisp taste.",
+                "ingredients": [
+                    "2lbs of long beans",
+                    "1 cup of white vinegar",
+                    "1 tablespoon of pickling salt",
+                    "6 garlic cloves",
+                    "2 bay leaves",
+                    "2 star anise",
+                    "1 teaspoon of black peppercorns",
+                    "1/2 teaspoon of red pepper flakes"
+                ],
+                "process": [
+                    "Prepare a boiling water bath canner and sterilize two wide-mouth pint jars. Simmer lids in a saucepan with water over low heat.",
+                    "Wash and trim the beans.",
+                    "In a small pot, simmer vinegar with pickling salt and 1 cup of water.",
+                    "Divide garlic and spices between the two pint jars.",
+                    "Pack the beans tightly into the jars in a spiral arrangement.",
+                    "Pour the brine over the beans, tapping jars to release air bubbles. Add more brine if needed.",
+                    "Wipe jar rims, apply lids and rings, and process in a hot water bath for 10 minutes.",
+                    "Remove jars from the canner and allow them to cool. Check lids to ensure a proper seal.",
+                    "Let the jars sit for at least 2 weeks before consuming to ensure adequate pickling."
+                ],
+                "src": "https://www.seriouseats.com/pickled-chinese-long-beans"
             }
         }
     },
@@ -3442,25 +4458,53 @@
         "type": "Vegetable / Herb",
         "season": [],
         "nutrients": {
-            "Calories": "187",
-            "Carbohydrates": "7g",
-            "Protein": "2g",
-            "Fat": "16.2g",
-            "Sugar": "2.1g",
-            "Fiber": "4.6g",
-            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+            "": "Per 100g",
+            "Calories": "64",
+            "Carbohydrates": "8.28g",
+            "Fiber": "2g",
+            "Fat": "1.4g",
+            "Protein": "9.4g",
+            "Vitamin C": "51.7g",
+            "Calcium": "185mg",
+            "Iron": "4mg",
+            "Magnesium": "42mg",
+            "Phosphorus": "112mg",
+            "Potassium": "337mg",
+            "Sodium": "9mg",
+            "src": "https://natureclaim.com/nutrition/info/moringa-leaf/"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "powder": {
+                "name": "Moringa Powder",
+                "description": "Finely ground powder made from dried moringa leaves, rich in nutrients, vitamins, and antioxidants, used for boosting nutrition in various foods and beverages.",
                 "ingredients": [
-                    ""
+                    "5 cups of fresh moringa leaves"
                 ],
                 "process": [
-                    ""
+                    "Obtain fresh tender moringa leaves. Pluck the leaves, discard stems, and wash them thoroughly 2-3 times. Spread them on a napkin to absorb excess moisture.",
+                    "Spread the washed leaves in a colander or on a napkin in a covered, shaded area for drying. Alternatively, dry them under a fan if sunlight isn't available (avoid direct sunlight to retain the vibrant green color).",
+                    "Leaves will dry in 1-2 days. Once crisp, gently remove any remaining stems and crush the leaves. Grind the leaves to a powder in a mixer and store in an airtight container.",
+                    "The powder remains fresh at room temperature for up to 6 months; refrigeration is suitable for bulk quantities. Note: After 6 months, potency might decrease slightly, but it's still usable. Use small quantities due to potential slight bitterness in taste."
                 ],
-                "src": ""
+                "src": "https://maayeka.com/2018/09/moringa-leaves-powder.html"
+            },
+            "tea": {
+                "name": "Moringa Tea",
+                "description": "A herbal infusion brewed from dried moringa leaves, known for its health benefits, providing a nutritious beverage with a slightly earthy flavor and often consumed for its medicinal properties.",
+                "ingredients": [
+                    "10-15 moringa leaves",
+                    "3 cups of filtered water",
+                    "1-inch ginger",
+                    "1-inch turmeric"
+                ],
+                "process": [
+                    "Bring water to a boil in a pot over medium heat.",
+                    "Add ginger and turmeric roots to the boiling water. Cover the pot and reduce heat to simmer for 15 minutes.",
+                    "Add moringa leaves or powder to the pot. Remove it from the heat and allow the tea to steep for 5 minutes.",
+                    "Pass the tea through a sieve to strain out the leaves, yielding a bright yellow tea.",
+                    "Serve and enjoy your revitalizing ginger, turmeric, and moringa tea."
+                ],
+                "src": "https://healthiersteps.com/recipe/moringa-tea/"
             }
         }
     },
@@ -3471,25 +4515,42 @@
         "type": "Herb",
         "season": [],
         "nutrients": {
-            "Calories": "187",
-            "Carbohydrates": "7g",
-            "Protein": "2g",
-            "Fat": "16.2g",
-            "Sugar": "2.1g",
-            "Fiber": "4.6g",
-            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+            "": "Per 100g",
+            "Calories": "24",
+            "Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "0mg",
+            "Carbohydrates": "6g",
+            "Sugar": "0g",
+            "Fiber": "0g",
+            "Protein": "35g",
+            "src": "https://www.recipal.com/ingredients/19060-nutrition-facts-calories-protein-carbs-fat-pandan-leaves"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "freezing": {
+                "name": "Freezing",
+                "description": "Preserve pandan leaves by sealing them in airtight containers or freezer bags for later use.",
                 "ingredients": [
-                    ""
+                    "Pandan leaves"
                 ],
                 "process": [
-                    ""
+                    "Freeze knotted pandan leaves in a container for storage lasting up to 6 months without losing aroma."
                 ],
-                "src": ""
+                "src": "https://www.nyonyacooking.com/ingredients/pandan-leaves~BJF-IPsDMqZQ"
+            },
+            "juice": {
+                "name": "Pandan Extract",
+                "description": "Extract the essence of pandan leaves by blending them with water, then straining and storing the liquid for culinary applications.",
+                "ingredients": [
+                    "6 pandan leaves",
+                    "250ml water"
+                ],
+                "process": [
+                    "Wash the pandan leaves thoroughly. Trim off any browned or dried edges and remove the bitter white parts of the leaves.",
+                    "If utilizing the leaves for their aroma, tie them into a knot to release the scent effectively.",
+                    "To create a thicker pandan extract, blend 6 pandan leaves with 250 ml of water until finely processed. Strain the mixture and refrigerate it until a dark green sediment forms at the bottom, which might take around 3 days. Discard the light green water, and the dark green sediment is your pandan extract. This extract remains usable for up to 5 days and yields about 1 to 1.5 tablespoons of thick pandan extract."
+                ],
+                "src": "https://www.nyonyacooking.com/ingredients/pandan-leaves~BJF-IPsDMqZQ"
             }
         }
     },
@@ -3500,25 +4561,56 @@
         "type": "Vegetable / Spice",
         "season": [],
         "nutrients": {
-            "Calories": "187",
-            "Carbohydrates": "7g",
-            "Protein": "2g",
-            "Fat": "16.2g",
-            "Sugar": "2.1g",
-            "Fiber": "4.6g",
-            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+            "Calories": "29",
+            "Protein": "0.91g",
+            "Fat": "0.31g",
+            "Carbohydrates": "6.31g",
+            "Fiber": "2.1g",
+            "Sugar": "0.3g",
+            "src": "https://www.medicalnewstoday.com/articles/306981"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "powder": {
+                "name": "Turmeric Powder",
+                "description": "Ground from dried turmeric roots, this vibrant spice adds color and earthy flavor to various dishes. It's known for its potent health benefits and culinary versatility.",
                 "ingredients": [
-                    ""
+                    "Fresh turmeric rhizomes"
                 ],
                 "process": [
-                    ""
+                    "Rinse the turmeric rhizomes without peeling or boiling them beforehand.",
+                    "Slice the turmeric rhizomes thinly, aiming for approximately 1/8-inch thick and consistent slices.",
+                    "Arrange the turmeric slices in a single layer on food dehydrator racks or a baking sheet (if using an oven).",
+                    "Dehydrate the turmeric at 100-110°F in a food dehydrator or at the lowest oven heat setting.",
+                    "Drying time varies, typically taking several hours to a couple of days, depending on thickness and equipment used.",
+                    "Ensure the turmeric slices are fully dried; they should easily crack instead of bending.",
+                    "Grind the dried turmeric into powder using a blender, food processor, or coffee grinder.",
+                    "Strain the powdered turmeric through a fine mesh strainer, sifting it into a bowl.",
+                    "Re-process any remaining hard bits to create a finer powder.",
+                    "Store the turmeric powder in an airtight glass container, like a sealed mason jar.",
+                    "Keep the container in a dry, cool place, such as a pantry, for storage lasting over a year."
                 ],
-                "src": ""
+                "src": "https://homesteadandchill.com/how-to-make-turmeric-powder/"
+            },
+            "jam": {
+                "name": "Turmeric Jam",
+                "description": "A unique condiment made by cooking turmeric with sugar or honey to create a sweet, tangy spread. Its golden hue and distinct taste offer a twist to traditional jams, perfect for pairing with bread or cheese.",
+                "ingredients": [
+                    "100-150g fresh turmeric",
+                    "1/4 cup of sugar",
+                    "1/4 cup of water",
+                    "1 pinch of cinnamon powder"
+                ],
+                "process": [
+                    "Wash and peel the turmeric before grating or finely chopping it.",
+                    "In a deep pan, combine sugar and water, then bring to a boil on high heat for about 2 minutes.",
+                    "Add the grated turmeric to the boiling sugar mixture.",
+                    "Boil the mixture on high heat until it thickens, which should take approximately 10 minutes.",
+                    "Turn off the heat and stir in cinnamon powder.",
+                    "Let the mixture cool down entirely.",
+                    "Store the prepared jam in an airtight container.",
+                    "Place the container in the refrigerator for storage."
+                ],
+                "src": "https://priyascurrynation.com/preserve-fresh-turmeric/"
             }
         }
     },
@@ -3529,25 +4621,47 @@
         "type": "Herb",
         "season": [],
         "nutrients": {
-            "Calories": "187",
-            "Carbohydrates": "7g",
-            "Protein": "2g",
-            "Fat": "16.2g",
-            "Sugar": "2.1g",
-            "Fiber": "4.6g",
-            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+            "Calories": "2.7",
+            "Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "0.3mg",
+            "Carbohydrates": "0.7g",
+            "Fiber": "0.4g",
+            "Sugar": "0g",
+            "Protein": "0.1g",
+            "Calcium": "16mg",
+            "Iron": "0.4mg",
+            "Potassium": "12.6mg",
+            "src": "https://www.nutritionix.com/food/oregano"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "drying": {
+                "name": "Dried Oregano",
+                "description": "Dehydrated leaves of the oregano herb, used as a versatile seasoning in culinary preparations for their aromatic and herbaceous taste.",
                 "ingredients": [
-                    ""
+                    "Oregano sprigs"
                 ],
                 "process": [
-                    ""
+                    "Prepare the oregano, avoiding washing if possible. If washing is necessary, ensure complete drying before dehydrating.",
+                    "Arrange the oregano sprigs in a single layer on the dehydrator tray, leaving space between each sprig.",
+                    "Set the dehydrator to 95°F and dehydrate the oregano for 8-10 hours. If the sprigs are brittle and completely dry, remove them. For any residual moisture, continue dehydrating for an extra hour.",
+                    "After dehydration, allow the oregano to cool briefly, then transfer it to an airtight container for storage or immediate use in recipes."
                 ],
-                "src": ""
+                "src": "https://ladyleeshome.com/how-to-dry-oregano/"
+            },
+            "powder": {
+                "name": "Oregano Powder",
+                "description": "Ground form of dried oregano leaves, used to season various dishes, providing a concentrated flavor profile.",
+                "ingredients": [
+                    "20-25 oregano leaves"
+                ],
+                "process": [
+                    "Clean and dry ajwain leaves thoroughly under a fan to remove excess moisture.",
+                    "Spread the leaves on a microwave-safe plate and microwave in intervals, such as 3 minutes initially, then 2 minutes, checking intermittently until completely dry (approximately 6 minutes in total).",
+                    "Crush the dried leaves by hand or in a mixer to create ajwain leaf powder, resembling the aroma of fresh oregano.",
+                    "Store the powdered leaves in an airtight container or the refrigerator for a shelf life of up to 6 months."
+                ],
+                "src": "https://cookpad.com/in/recipes/12200554-homemade-oregano-powder"
             }
         }
     },
@@ -3558,25 +4672,72 @@
         "type": "Vegetable / Herb",
         "season": [],
         "nutrients": {
-            "Calories": "187",
+            "Calories": "30",
+            "Protein": "1g",
+            "Fat": "0g",
             "Carbohydrates": "7g",
-            "Protein": "2g",
-            "Fat": "16.2g",
-            "Sugar": "2.1g",
-            "Fiber": "4.6g",
-            "src": "https://www.everydayhealth.com/diet-nutrition/diet/coconut-nutrition-facts-health-benefits-beauty-benefits-recipes/"
+            "Fiber": "0g",
+            "Sugar": "0g",
+            "src": "https://www.webmd.com/diet/lemongrass-health-benefits"
         },
         "preservation": {
-            "": {
-                "name": "",
-                "description": "",
+            "paste": {
+                "name": "Lemongrass Paste",
+                "description": "A concentrated blend of finely ground lemongrass, used to enhance flavors in various dishes, sauces, or marinades.",
                 "ingredients": [
-                    ""
+                    "1 cup of minced lemongrass",
+                    "12 garlic cloves",
+                    "1 whole chopped shallots",
+                    "2 whole serrano peppers",
+                    "1/4 cup vegan worcesershire sauce",
+                    "1/4 cup of sugar",
+                    "1/4 cup of galangal root",
+                    "1 teaspoon of turmeric powder",
+                    "1/2 teaspoon of salt",
+                    "1/4 cup of lime zest"
                 ],
                 "process": [
-                    ""
+                    "Remove and discard the dry outer layers of lemongrass. Cut off the bottom 2 inches of each stalk and discard. Slice the lemongrass stalks finely and set aside.",
+                    "Chop shallots, Serrano peppers, and galangal root.",
+                    "Combine all ingredients in a food processor or blender. Process until smooth and pasty, scraping down the sides occasionally for even mixing."
                 ],
-                "src": ""
+                "src": "https://greenheartlove.com/lemongrass-paste/"
+            },
+            "pickle": {
+                "name": "Pickle",
+                "description": "Lemongrass preserved in a brine solution, adding a tangy flavor to dishes and suitable for using as a condiment or flavor enhancer.",
+                "ingredients": [
+                    "Lemongrass",
+                    "1 cup of boiling water",
+                    "1 tablespoon of salt",
+                    "1 teaspoon of sugar"
+                ],
+                "process": [
+                    "Remove the green stems from the lemongrass, keeping only the white part for flavor. Cut into 3cm lengths.",
+                    "Use a food processor or blender to finely chop the lemongrass.",
+                    "Sterilize a jar by placing it in a cold oven and heating it to 150 degrees Celsius. Let it sit for 10 minutes.",
+                    "Place the chopped lemongrass into the hot, sterilized jar.",
+                    "Prepare a brine by combining 1 cup of boiling water with 1 tablespoon of salt and 1 teaspoon of sugar. Mix well.",
+                    "Pour the brine over the lemongrass in the jar, ensuring it's completely covered with the liquid.",
+                    "Seal the jar, allow it to cool, then store it in the refrigerator until ready to use."
+                ],
+                "src": "http://merrynsmenu.blogspot.com/2013/04/preserving-lemongrass-in-brine.html"
+            },
+            "freezing": {
+                "name": "Freezing",
+                "description": "A method of preserving lemongrass by freezing, allowing it to retain its aroma and taste for use in recipes.",
+                "ingredients": [
+                    "Lemongrass"
+                ],
+                "process": [
+                    "Trim the outer leaves and top part of the lemongrass, keeping the bottom part for cooking. Save the top parts for tea or marinades.",
+                    "Process the bottom part of the lemongrass by pureeing, mincing, or chopping it.",
+                    "For preservation, freeze the lemongrass in small portions.",
+                    "Wrap the lemongrass in plastic wrap and place it in a sealed jar, double freezer bag, or plastic freezer container to prevent drying or odors.",
+                    "For long-term preservation (several months), use a vacuum pack to freeze the lemongrass.",
+                    "Separate the inner green leaves, chop or cut them, and freeze in another sealable bag."
+                ],
+                "src": "https://cookingchew.com/freeze-lemongrass.html"
             }
         }
     }
